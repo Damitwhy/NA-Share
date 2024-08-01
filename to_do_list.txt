@@ -1,0 +1,52 @@
+Create Templates:
+
+Index with rated stories...
+About
+Contacts
+Login
+Signup
+Stories with CRUD
+
+Events add events to Index
+
+Account DASH Board
+
+edit stories, rate stories, add stories to favourites.
+
+Add ideation here and to the Project Readme...
+
+
+
+
+
+
+
+
+
+
+
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/na-social-site.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd na-social-site
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Set up environment variables:
+    - Create a `.env` file in the root directory.
+    - Add the following variables:
+        ```env
+        MONGO_URI=your_mongodb_connection_string
+        JWT_SECRET=your_secret_key
+        ```
+
+5. Start the development server:
+    ```bash
+    npm run dev
+    ```
