@@ -1,3 +1,6 @@
 {
-    "recommendations": []
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "hookyqr.beautify"
+    ]
 }
