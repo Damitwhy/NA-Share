@@ -6,6 +6,7 @@ Contacts
 Login
 Signup
 Stories with CRUD
+internal messaging service.
 
 Events add events to Index
 
