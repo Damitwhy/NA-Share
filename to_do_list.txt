@@ -1,3 +1,6 @@
+Installed Django
+applied first migration
+
 Create Templates:
 
 Index with rated stories...
