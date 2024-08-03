@@ -2,6 +2,8 @@
     "recommendations": [
         "esbenp.prettier-vscode",
         "hookyqr.beautify",
-        "ms-vscode.live-server"
+        "ms-vscode.live-server",
+        "github.copilot",
+        "github.copilot-chat"
     ]
 }
