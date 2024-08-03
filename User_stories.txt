@@ -1,0 +1,83 @@
+Creating user stories for a Kanban board is essential for outlining the functionality and user experience of your Narcotics Anonymous Django site. Here are some detailed user stories broken down into various categories:
+
+Sure, here are the updated user stories including the functionality to rate user stories:
+
+### User Registration and Authentication
+1. **User Registration**
+   - As a new user, I want to register an account with my email and password so that I can log in and use the site.
+2. **User Login**
+   - As a registered user, I want to log in with my email and password so that I can access my account.
+3. **Password Reset**
+   - As a user who has forgotten my password, I want to reset it via email so that I can regain access to my account.
+
+### User Profile
+4. **View Profile**
+   - As a user, I want to view my profile so that I can see my personal information and activity.
+5. **Edit Profile**
+   - As a user, I want to edit my profile information (name, email, bio, etc.) so that I can keep my details up to date.
+
+### Shares (Stories)
+6. **Create Share**
+   - As a logged-in user, I want to create and submit a new share so that I can tell my story.
+7. **Edit Share**
+   - As a user, I want to edit my own share so that I can update or correct my story.
+8. **Delete Share**
+   - As a user, I want to delete my own share so that I can remove content I no longer want to be public.
+9. **View Share**
+   - As any visitor, I want to view a list of shares so that I can read other users' stories.
+10. **Approve Share (Admin)**
+    - As an admin, I want to approve or reject new shares before they are posted so that I can ensure the content is appropriate.
+
+### Comments
+11. **Add Comment**
+    - As a logged-in user, I want to comment on a share so that I can provide feedback or support.
+12. **Edit Comment**
+    - As a user, I want to edit my comment so that I can correct or update my feedback.
+13. **Delete Comment**
+    - As a user, I want to delete my comment so that I can remove feedback I no longer want to share.
+
+### Messaging
+14. **Send Message**
+    - As a logged-in user, I want to send a private message to another user so that I can communicate directly.
+15. **Receive Message**
+    - As a user, I want to receive messages from other users so that I can read their private communications.
+16. **Delete Message**
+    - As a user, I want to delete messages from my inbox so that I can manage my conversations.
+
+### Rating Stories
+17. **Rate Share**
+    - As a logged-in user, I want to rate a share on a scale of 1 to 5 so that I can express my opinion about the quality of the story.
+18. **View Share Rating**
+    - As any visitor, I want to view the average rating of a share so that I can see how others have rated it.
+
+### Admin Features
+19. **View All Shares**
+    - As an admin, I want to view all submitted shares so that I can manage content on the site.
+20. **Approve/Reject Shares**
+    - As an admin, I want to approve or reject shares so that only appropriate content is published.
+21. **Manage Users**
+    - As an admin, I want to manage user accounts (edit, deactivate) so that I can maintain site integrity.
+
+### External Links and Services
+22. **View Services Page**
+    - As a user, I want to view a page of off-site service links so that I can access additional resources.
+23. **Add Service Link (Admin)**
+    - As an admin, I want to add new service links to the services page so that users have access to current resources.
+24. **Edit Service Link (Admin)**
+    - As an admin, I want to edit existing service links so that information is accurate.
+25. **Delete Service Link (Admin)**
+    - As an admin, I want to delete outdated or irrelevant service links so that the page remains useful.
+
+### Miscellaneous
+26. **Search Shares**
+    - As a user, I want to search for shares by keywords so that I can find specific stories or topics.
+27. **Like/Dislike Share**
+    - As a user, I want to like or dislike a share so that I can express my opinion about the content.
+
+### Security and Privacy
+28. **Report Share**
+    - As a user, I want to report a share that violates the community guidelines so that the admin can take appropriate action.
+29. **Privacy Settings**
+    - As a user, I want to manage my privacy settings so that I can control who sees my information and activity.
+
+These updated user stories now include the functionality for users to rate stories, adding a new dimension to the user interaction and feedback on the platform.

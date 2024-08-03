@@ -1,0 +1,1 @@
+Project: to create a Narcotics Anonymous Django site for users to post their stories as shares, comment on other user stories, message other users. with full C.R.U.D functionality, admin to approve posts.
