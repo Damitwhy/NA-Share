@@ -35,8 +35,7 @@ ALLOWED_HOSTS = ['localhost','.ws.codeinstitute-ide.net','.herokuapp.com']
 # Specify the custom user model
 AUTH_USER_MODEL = 'core.User'
 
-# Site ID for Django Allauth
-SITE_ID = 1
+
 
 
 # Application definition
@@ -49,6 +48,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third-party apps
+    'django_summernote',
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -65,25 +66,26 @@ AUTHENTICATION_BACKENDS = [
 # Django Allauth settings
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+# Site ID for Django Allauth
+SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
     # Django Allauth middleware    
     'allauth.account.middleware.AccountMiddleware',
-    'allauth.account.middleware.AuthenticationMiddleware',
     
-    'allauth.account.middleware.SessionAuthenticationMiddleware', 
-    'allauth.socialaccount.middleware.SocialAccountMiddleware',
 ]
 
 ROOT_URLCONF = 'na_share.urls'
@@ -157,6 +159,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
