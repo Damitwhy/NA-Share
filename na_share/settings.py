@@ -32,6 +32,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','.ws.codeinstitute-ide.net','.herokuapp.com']
 
+# Specify the custom user model
+AUTH_USER_MODEL = 'core.User'
+
+# Site ID for Django Allauth
+SITE_ID = 1
+
 
 # Application definition
 
@@ -42,8 +48,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third-party apps
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # Local apps
     'core',
 ]
+
+# Authentication backends
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+# Django Allauth settings
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +78,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Django Allauth middleware    
+    'allauth.account.middleware.AccountMiddleware',
+    'allauth.account.middleware.AuthenticationMiddleware',
+    
+    'allauth.account.middleware.SessionAuthenticationMiddleware', 
+    'allauth.socialaccount.middleware.SocialAccountMiddleware',
 ]
 
 ROOT_URLCONF = 'na_share.urls'
@@ -86,6 +117,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.herokuapp.com",
     "http://localhost:8000",
 ]
+
 
 
 # Password validation
