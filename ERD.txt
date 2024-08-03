@@ -1,0 +1,179 @@
+Here's an Entity-Relationship Diagram (ERD) for a social Narcotics Anonymous users' site. 
+The site includes functionalities for posting stories as shares, 
+allowing comments and ratings on shares, and enabling users to private message each other.
+
+### Entities and Attributes
+
+1. **User**
+   - `user_id` (PK)
+   - `username`
+   - `password`
+   - `email`
+   - `date_joined`
+
+2. **Share**
+   - `share_id` (PK)
+   - `user_id` (FK to User)
+   - `title`
+   - `content`
+   - `date_posted`
+   - `average_rating`
+
+3. **Comment**
+   - `comment_id` (PK)
+   - `share_id` (FK to Share)
+   - `user_id` (FK to User)
+   - `content`
+   - `date_posted`
+
+4. **Rating**
+   - `rating_id` (PK)
+   - `share_id` (FK to Share)
+   - `user_id` (FK to User)
+   - `rating_value` (e.g., 1 to 5)
+   - `date_rated`
+
+5. **Message**
+   - `message_id` (PK)
+   - `sender_id` (FK to User)
+   - `receiver_id` (FK to User)
+   - `content`
+   - `date_sent`
+
+### Relationships
+
+1. A **User** can create many **Shares**.
+2. A **Share** belongs to one **User**.
+3. A **Share** can have many **Comments**.
+4. A **Comment** belongs to one **Share** and one **User**.
+5. A **Share** can have many **Ratings**.
+6. A **Rating** belongs to one **Share** and one **User**.
+7. A **User** can send many **Messages** to other **Users**.
+8. A **Message** is sent by one **User** and received by one **User**.
+
+### ERD Diagram
+
+Here is a textual representation of the ERD:
+
+```plaintext
++------------+       +------------+       +------------+       +------------+       +------------+
+|   User     |       |   Share    |       |  Comment   |       |   Rating   |       |  Message   |
++------------+       +------------+       +------------+       +------------+       +------------+
+| user_id (PK) |     | share_id (PK) |    | comment_id (PK) |  | rating_id (PK) |   | message_id (PK) |
+| username    |-----<| user_id (FK)  |  >-| share_id (FK)   | >-| share_id (FK)  |  >-| sender_id (FK)   |
+| password    |     | title         |     | user_id (FK)    |  | user_id (FK)   |  >-| receiver_id (FK) |
+| email       |     | content       |     | content       |   | rating_value  |   | content           |
+| date_joined |     | date_posted   |     | date_posted   |   | date_rated    |   | date_sent         |
++------------+     +------------+     +------------+     +------------+     +------------+
+```
+
+### Explanation:
+
+1. **User** table:
+   - Contains information about users registered on the site.
+
+2. **Share** table:
+   - Contains stories shared by users.
+
+3. **Comment** table:
+   - Contains comments made by users on different shares.
+
+4. **Rating** table:
+   - Contains ratings given by users to different shares.
+
+5. **Message** table:
+   - Contains private messages exchanged between users.
+
+This ERD structure allows for a clear understanding of how the different entities in the system interact with each other, providing a robust foundation for the site's database schema.
+
+To incorporate the requirement that shares need to be moderated and won't be displayed until authorized by an admin, we can add an additional attribute to the **Share** entity and introduce an **Admin** entity for managing the moderation process.
+
+### Updated Entities and Attributes
+
+1. **User**
+   - `user_id` (PK)
+   - `username`
+   - `password`
+   - `email`
+   - `date_joined`
+
+2. **Admin**
+   - `admin_id` (PK)
+   - `username`
+   - `password`
+   - `email`
+   - `date_joined`
+
+3. **Share**
+   - `share_id` (PK)
+   - `user_id` (FK to User)
+   - `title`
+   - `content`
+   - `date_posted`
+   - `is_approved` (boolean)
+   - `admin_id` (FK to Admin, nullable)
+   - `average_rating`
+
+4. **Comment**
+   - `comment_id` (PK)
+   - `share_id` (FK to Share)
+   - `user_id` (FK to User)
+   - `content`
+   - `date_posted`
+
+5. **Rating**
+   - `rating_id` (PK)
+   - `share_id` (FK to Share)
+   - `user_id` (FK to User)
+   - `rating_value` (e.g., 1 to 5)
+   - `date_rated`
+
+6. **Message**
+   - `message_id` (PK)
+   - `sender_id` (FK to User)
+   - `receiver_id` (FK to User)
+   - `content`
+   - `date_sent`
+
+### Updated Relationships
+
+1. A **User** can create many **Shares**.
+2. A **Share** belongs to one **User**.
+3. A **Share** can have many **Comments**.
+4. A **Comment** belongs to one **Share** and one **User**.
+5. A **Share** can have many **Ratings**.
+6. A **Rating** belongs to one **Share** and one **User**.
+7. A **User** can send many **Messages** to other **Users**.
+8. A **Message** is sent by one **User** and received by one **User**.
+9. An **Admin** can approve many **Shares**.
+10. A **Share** is approved by one **Admin** (or none if not yet approved).
+
+### Updated ERD Diagram
+
+Here is a textual representation of the updated ERD:
+
+```plaintext
++------------+       +------------+       +------------+       +------------+       +------------+       +------------+
+|   User     |       |   Admin    |       |   Share    |       |  Comment   |       |   Rating   |       |  Message   |
++------------+       +------------+       +------------+       +------------+       +------------+       +------------+
+| user_id (PK) |     | admin_id (PK) |    | share_id (PK) |    | comment_id (PK) |  | rating_id (PK) |   | message_id (PK) |
+| username    |-----<| username     |  >-| user_id (FK)   |  >-| share_id (FK)   |  >-| share_id (FK)  |  >-| sender_id (FK)   |
+| password    |     | password     |     | title         |     | user_id (FK)    |  | user_id (FK)   |  >-| receiver_id (FK) |
+| email       |     | email        |     | content       |     | content       |   | rating_value  |   | content           |
+| date_joined |     | date_joined  |     | date_posted   |     | date_posted   |   | date_rated    |   | date_sent         |
++------------+     +------------+     | is_approved   |   +------------+     +------------+     +------------+
+                                      | admin_id (FK) | 
+                                      | average_rating|
+                                      +------------+
+```
+
+### Explanation:
+
+1. **Admin** table:
+   - Contains information about admins who can approve shares.
+
+2. **Share** table:
+   - Added `is_approved` attribute to indicate whether the share has been approved.
+   - Added `admin_id` attribute to indicate which admin approved the share (nullable until approved).
+
+This updated ERD provides a comprehensive structure that includes moderation of shares by admins.
