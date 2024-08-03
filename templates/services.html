@@ -1,0 +1,117 @@
+{% load static %}
+
+{% url 'home' as home_url %}
+{% url 'about' as about_url %}
+{% url 'services' as services_url %}
+{% url 'contact' as contact_url %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NA-Share</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- styles -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home' %}"><img>NA-Share |</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'services' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            {% block content %}
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Service Links.</h1>
+                    <p>For Narcotics Anonymous related services off site</p>
+                    <ul>
+                        <li><a href="https://www.na.org/">NA World Services</a></li>
+                        <li><a href="https://www.na.org/?ID=PR-index">Public Relations</a></li>
+                        <li><a href="https://www.na.org/?ID=lit-index">Literature</a></li>
+                        <li><a href="https://www.na.org/?ID=ips-index">Informational Pamphlets</a></li>
+                        <li><a href="https://www.na.org/?ID=ips-index">NAWS News</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <h2>NA Videos</h2>
+                    <p>Here are some videos from the NA World Services YouTube channel</p>
+                    <div class="video-container d-flex">
+                        <div class="video-item">
+                            <iframe width="330" height="ms-auto"
+                                src="https://www.youtube.com/embed/FHv2Vc8CQkg?si=6JTltiiiojFDOv1I" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="video-item">
+                            <iframe width="330" height="ms-auto"
+                                src="https://www.youtube.com/embed/93pfA-HlC8M?si=WC8d-OxRKzKVdhCm" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                        <div class="video-item">
+                            <iframe width="330" height="ms-auto"
+                                src="https://www.youtube.com/embed/i4lacsGD6mo?si=WRkgW_aILhCwiYYQ" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <ul class="list-unstyled d-flex justify-content-start">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <p>&copy; 2024 NA-Share</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+        <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/a7ac5ccec3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

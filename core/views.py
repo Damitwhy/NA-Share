@@ -7,4 +7,10 @@ def home(request):
     return render(request, 'core/home.html')
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'core/about.html')
+
+def contact(request):
+    return render(request, 'core/contact.html')
+
+def services(request):
+    return render(request, 'core/services.html')
