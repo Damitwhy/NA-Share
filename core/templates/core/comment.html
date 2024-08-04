@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h3>Welcome, {{ user.username }}!</h3>
+
+<h2>Comment and Rate: {{ share.title }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+{% else %}
+    <h3>Welcome, Anonymous!</h3>
+    <p>Please <a href="{% url 'login' %}">login</a> to comment and rate.</p>
+{% endif %}
+{% endblock %}

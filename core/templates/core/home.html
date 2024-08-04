@@ -5,11 +5,19 @@
     <div class="col-md-8">
         <h2>Stories</h2>
         <!-- start for loop -->
+        {% for share in shares %}
         <div class="story-container">
-            <h2 class="story-title">{{ story.title }}</h2>
-            <p class="story-content">{{ story.content }}</p>
+            <h2 class="story-title">{{ share.title }}</h2>
+            <p class="story-content">{{ share.content }}</p>
+            <p class="story-status">Status: {{ share.get_status_display }}</p>
+            <p class="story-rating">Average Rating: {{ share.average_rating }}</p>
+            <p class="story-createdOn">Created at: {{ share.created_at }}</p>
+            <p class="story-updatedOn">Updated at: {{ share.updated_at }}</p>
+            <a href="{% url 'core:share_detail' share.id %}">Read More,</a>
+            <a href="{% url 'comment' share.id %}">Comment and Rate</a>
         </div>
         <!-- end for loop -->
+        {% endfor %}
     </div>
     <div class="col-md-4 stories-sidebar">
         <h2>Anonymous</h2>
