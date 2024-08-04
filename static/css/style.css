@@ -58,3 +58,7 @@ a:hover {
     padding: 1em;
     border-radius: 0.25em;
 }
+
+.note-group-select-from-files {
+    display: none;
+  }

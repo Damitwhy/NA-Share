@@ -15,6 +15,7 @@
         {% slot body %}
             {% csrf_token %}
             {{ redirect_field }}
+            <input type="hidden" name="next" value="{{ request.path }}">
         {% endslot %}
         {% slot actions %}
             {% element button type="submit" %}

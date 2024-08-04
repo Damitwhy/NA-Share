@@ -33,20 +33,20 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% if user.is_authenticated %}
-                
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_logout' %}">Logout |</a>
 
-                    <a class="nav-link" aria-current="page" href="{% url 'create_share' %}">Share</a>
-                
+                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                    href="{% url 'account_logout' %}">Logout |</a>
+
+                <a class="nav-link" aria-current="page" href="{% url 'create_share' %}">Share</a>
+
                 {% else %}
-                
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_signup' %}">Register | </a>                          
-                
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'account_login' %}">Login | </a>
-                
+
+                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                    href="{% url 'account_signup' %}">Register | </a>
+
+                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                    href="{% url 'account_login' %}">Login | </a>
+
                 {% endif %}
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
@@ -99,6 +99,11 @@
         </script>
         <!-- fontawesome -->
         <script src="https://kit.fontawesome.com/a7ac5ccec3.js" crossorigin="anonymous"></script>
+        {% block extra_js %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote.min.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+            
+        {% endblock %}
 </body>
 
 </html>

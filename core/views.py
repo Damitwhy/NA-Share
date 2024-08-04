@@ -35,7 +35,7 @@ def comment(request, share_id):
             comment.user = request.user
             comment.share = share
             comment.save()
-            return redirect('stories_detail', share_id=share.id)
+            return redirect('comment', share_id=share.id)
     else:
         form = CommentForm()
     return render(request, 'core/stories_detail.html', {'form': form, 'share': share})
