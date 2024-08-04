@@ -8,5 +8,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('contact/', views.contact, name='contact'),
     path('services/', views.services, name='services'),
+    path('stories/<int:share_id>/', views.stories_detail, name='stories_detail'),
     # Add more URL patterns here
 ]

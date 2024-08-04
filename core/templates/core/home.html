@@ -6,22 +6,31 @@
         <h2>Stories</h2>
         <!-- start for loop -->
         {% for share in shares %}
+        {% if share.get_status_display == 'Approved' %}
+
         <div class="story-container">
             <h2 class="story-title">{{ share.title }}</h2>
-            <p class="story-content">{{ share.content|safe }}</p>
-            <p class="story-status">Status: {{ share.get_status_display }}</p>
+            <p class="story-content">{{ share.content|safe }}</p>  
             <p class="story-rating">Average Rating: {{ share.average_rating }}</p>
             <p class="story-createdOn">Created at: {{ share.created_at }}</p>
-            <p class="story-updatedOn">Updated at: {{ share.updated_at }}</p>
+            
             <!-- add button to view detail -->
+            <a href="{% url 'stories_detail' share.id %}">View Detail</a>
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
         </div>
-        <!-- end for loop -->
+        {% endif %}
         {% endfor %}
+        <!-- end for loop -->
     </div>
-    <div class="col-md-4 stories-sidebar">
+    </div>
+    <div class="col-md-4 stories-sidebar order-md-first"></div>
+        {% if user.is_authenticated %}
+        <h2>Welcome Back {{ user.username }}</h2>
+        {% else %}
         <h2>Anonymous</h2>
+        {% endif %}
         <p>Want to share your story? <a href="{% url 'create_share' %}">Click here</a></p>
+    </div>
     </div>
 </div>
 {% endblock %}

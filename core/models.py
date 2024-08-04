@@ -25,7 +25,7 @@ class Share(models.Model):
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
     average_rating = models.FloatField(default=0)
     class Meta:
-        ordering = ["-created_on"]
+        ordering = ["-created_at"]
     
     def __str__(self):
         return f"Title: {self.title} | Written by: {self.user}"
@@ -39,7 +39,7 @@ class Comment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
     class Meta:
-        ordering = ["created_on"]
+        ordering = ["created_at"]
 
     def __str__(self):
         return f"Comment {self.content} by {self.user}"
