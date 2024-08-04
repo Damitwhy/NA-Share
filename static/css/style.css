@@ -43,3 +43,10 @@ a:hover {
 }
 
 /* Add more styles as needed */
+.story-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 10px;
+}

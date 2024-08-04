@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','.ws.codeinstitute-ide.net','.herokuapp.com']
 
 # Specify the custom user model
 AUTH_USER_MODEL = 'core.User'
