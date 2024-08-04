@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 # from .models import Post
-from .models import Share
-from .forms import CommentForm
+from .models import Share, Comment
+from .forms import CommentForm, ShareForm
 
 # Create your views here.
 def home(request):
@@ -18,7 +18,7 @@ def contact(request):
 def services(request):
     return render(request, 'core/services.html')
 
-# custom view for comments
+# Comment view
 def comment(request, share_id):
     share = get_object_or_404(Share, pk=share_id)
     if request.method == 'POST':
@@ -31,3 +31,16 @@ def comment(request, share_id):
     else:
         form = CommentForm()
     return render(request, 'core/comment.html', {'form': form, 'share': share})
+
+# Share create view
+def create_share(request):
+    if request.method == 'POST':
+        form = ShareForm(request.POST)
+        if form.is_valid():
+            share = form.save(commit=False)
+            share.user = request.user
+            share.save()
+            return redirect('home')
+    else:
+        form = ShareForm()
+    return render(request, 'core/create_share.html', {'form': form})

@@ -22,4 +22,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),  # Allauth URL patterns
     # Your app URLs
     path('', include('core.urls'), name='core_urls'),
+    path('summernote/', include('django_summernote.urls')),
 ]

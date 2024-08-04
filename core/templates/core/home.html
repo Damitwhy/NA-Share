@@ -8,12 +8,12 @@
         {% for share in shares %}
         <div class="story-container">
             <h2 class="story-title">{{ share.title }}</h2>
-            <p class="story-content">{{ share.content }}</p>
+            <p class="story-content">{{ share.content|safe }}</p>
             <p class="story-status">Status: {{ share.get_status_display }}</p>
             <p class="story-rating">Average Rating: {{ share.average_rating }}</p>
             <p class="story-createdOn">Created at: {{ share.created_at }}</p>
             <p class="story-updatedOn">Updated at: {{ share.updated_at }}</p>
-            <a href="{% url 'core:share_detail' share.id %}">Read More,</a>
+            <!-- add button to view detail -->
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
         </div>
         <!-- end for loop -->
@@ -21,7 +21,7 @@
     </div>
     <div class="col-md-4 stories-sidebar">
         <h2>Anonymous</h2>
-        <p>Want to share your story? <a href="#">Click here</a></p>
+        <p>Want to share your story? <a href="{% url 'create_share' %}">Click here</a></p>
     </div>
 </div>
 {% endblock %}
