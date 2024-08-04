@@ -3,11 +3,14 @@ applied first migration
 
 Create Templates:
 
-Index with rated stories...
-About
-Contacts
-Login
-Signup
+take some functionality out of summernote for front end so no uploads are possible
+
+
+DONE Index with rated stories...
+DONE About
+DONE Contacts
+DONE Login
+DONE Signup
 Stories with CRUD
 internal messaging service.
 
