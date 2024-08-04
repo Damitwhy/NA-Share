@@ -16,6 +16,7 @@
 
             {% if share.user == request.user %}
             <a href="{% url 'edit_share' share.id %}">Edit Share</a>
+            
             {% else %}
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
             {% endif %}

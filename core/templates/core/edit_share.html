@@ -2,14 +2,19 @@
 
 {% block content %}
 {% if request.user.is_authenticated %}
+<div class="delete-container">
 <h2>Edit Your Share</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save Changes</button>
 </form>
+
+</div>
 {% else %}
+<div class="delete-container">
     <h3>Welcome, Anonymous!</h3>
     <p>Please <a href="{% url 'login' %}">login</a> to share your story.</p>
+</div>
 {% endif %}
 {% endblock %}
