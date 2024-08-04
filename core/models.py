@@ -17,21 +17,33 @@ class Share(models.Model):
         ('approved', 'Approved'),
         ('rejected', 'Rejected'),
     ]
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shares')
+    title = models.CharField(max_length=200, unique=True)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
-    average_rating = models.FloatField(default=0.0)
+    average_rating = models.FloatField(default=0)
+    class Meta:
+        ordering = ["-created_on"]
+    
+    def __str__(self):
+        return f"Title: {self.title} | Written by: {self.user}"
 
 class Comment(models.Model):
-    share = models.ForeignKey(Share, on_delete=models.CASCADE, related_name='comment')
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    share = models.ForeignKey(Share, on_delete=models.CASCADE, related_name='comments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
     content = models.TextField()
     rating = models.IntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    approved = models.BooleanField(default=False)
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.content} by {self.user}"
+    
 
 class Message(models.Model):
     sender = models.ForeignKey(User, related_name='sent_messages', on_delete=models.CASCADE)
