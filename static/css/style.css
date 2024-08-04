@@ -61,4 +61,19 @@ a:hover {
 
 .note-group-select-from-files {
     display: none;
-  }
+}
+
+.comment-container {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment {
+    margin: 3px;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 5px;
+
+}

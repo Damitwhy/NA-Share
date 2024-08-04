@@ -22,10 +22,11 @@ def services(request):
 
 def stories_detail(request, share_id):
     share = get_object_or_404(Share, id=share_id)
-    return render(request, 'core/stories_detail.html', {'share': share})
+    comments = Comment.objects.filter(share=share)
+    return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments})
 
 # Comment view
-@login_required
+
 def comment(request, share_id):
     share = get_object_or_404(Share, id=share_id)
     if request.method == 'POST':
@@ -35,10 +36,11 @@ def comment(request, share_id):
             comment.user = request.user
             comment.share = share
             comment.save()
-            return redirect('comment', share_id=share.id)
+            return redirect('stories_detail', share_id=share.id)
     else:
         form = CommentForm()
-    return render(request, 'core/stories_detail.html', {'form': form, 'share': share})
+    comments = Comment.objects.filter(share=share)
+    return render(request, 'core/stories_detail.html', {'form': form, 'share': share, 'comments': comments})
 
 # Share create view
 @login_required
