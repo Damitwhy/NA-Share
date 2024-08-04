@@ -6,6 +6,7 @@ from .models import Share, Comment
 from .forms import CommentForm, ShareForm
 
 # Create your views here.
+
 def home(request):
     shares = Share.objects.all()
     return render(request, 'core/home.html', {'shares': shares})
@@ -37,9 +38,10 @@ def comment(request, share_id):
             return redirect('stories_detail', share_id=share.id)
     else:
         form = CommentForm()
-    return render(request, 'stories_detail.html', {'form': form, 'share': share})
+    return render(request, 'core/stories_detail.html', {'form': form, 'share': share})
 
 # Share create view
+@login_required
 def create_share(request):
     if request.method == 'POST':
         form = ShareForm(request.POST)
@@ -51,3 +53,16 @@ def create_share(request):
     else:
         form = ShareForm()
     return render(request, 'core/create_share.html', {'form': form})
+
+# Share edit view
+@login_required
+def edit_share(request, share_id):
+    share = get_object_or_404(Share, id=share_id)
+    if request.method == 'POST':
+        form = ShareForm(request.POST, instance=share)
+        if form.is_valid():
+            form.save()
+            return redirect('stories_detail', share_id=share.id)
+    else:
+        form = ShareForm(instance=share)
+    return render(request, 'core/edit_share.html', {'form': form})
