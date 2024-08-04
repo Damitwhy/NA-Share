@@ -26,10 +26,10 @@ class Share(models.Model):
     average_rating = models.FloatField(default=0.0)
 
 class Comment(models.Model):
-    share = models.ForeignKey(Share, on_delete=models.CASCADE, related_name='comments')
+    share = models.ForeignKey(Share, on_delete=models.CASCADE, related_name='comment')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
-    rating = models.IntegerField()
+    rating = models.IntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
