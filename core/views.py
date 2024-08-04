@@ -20,7 +20,7 @@ def services(request):
 
 # Comment view
 def comment(request, share_id):
-    share = get_object_or_404(Share, pk=share_id)
+    share = get_object_or_404(Share, id=share_id)
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
