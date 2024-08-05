@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if request.user.is_authenticated %}
+{% if request.user.is_authenticated and share.user == request.user %}
 <div class="delete-container">
 <h2>Edit Your Share</h2>
 <form method="post">
@@ -9,7 +9,7 @@
     {{ form.as_p }}
     <button type="submit">Save Changes</button>
 </form>
-
+<a href="{% url 'delete_share' share.id %}">Delete this Share</a>
 </div>
 {% else %}
 <div class="delete-container">
