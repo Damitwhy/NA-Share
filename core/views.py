@@ -25,7 +25,7 @@ def contact(request):
             # Assuming you have a predefined user for the team
             team_user = User.objects.get(username='Admin')
             message = Message(
-                sender=request.user,
+                sender=request.user if request.user.is_authenticated else None,
                 receiver=team_user,
                 content=form.cleaned_data['message']
             )

@@ -21,6 +21,7 @@ class ContactForm(forms.Form):
     email = forms.EmailField(required=True)
     message = forms.CharField(widget=forms.Textarea)
     
+    
 class SearchForm(forms.Form):
     query = forms.CharField()
     
