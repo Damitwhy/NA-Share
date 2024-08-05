@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('', include('core.urls'), name='core_urls'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),  # Allauth URL patterns
-    # Your app URLs
-    path('', include('core.urls'), name='core_urls'),
+    # Your app URLs go here    
     path('summernote/', include('django_summernote.urls')),
 ]

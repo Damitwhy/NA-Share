@@ -15,3 +15,5 @@ class ShareForm(forms.ModelForm):
         widgets = {
             'content': SummernoteWidget(),
         }
+
+
