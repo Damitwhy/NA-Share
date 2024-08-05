@@ -1,0 +1,234 @@
+[
+{
+    "model": "core.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$bzgd8C9Z9ArrXfBBvzuiq0$59qeAi8EbkDJXNrMwEivxMvmXxEOlw6yGUBlW5OkHH4=",
+        "last_login": "2024-08-03T23:47:11Z",
+        "is_superuser": false,
+        "username": "Purerarez",
+        "first_name": "",
+        "last_name": "",
+        "email": "ken@purerarez.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-03T23:47:11Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$tHnFve9Yy7UIWnGz0pnLnX$hS26fJTzEqfo3DKUy5B5ksoP4XOEsEQNOj+9N74iP9M=",
+        "last_login": "2024-08-04T22:37:50.318Z",
+        "is_superuser": true,
+        "username": "Admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy01@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-03T23:48:31Z",
+        "is_admin": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$XFOjcNdJ18NBDA3fdEdilH$8872hsFVRBjmSl7LLHEGdcVHNu84z1fONpZ5MyyapI8=",
+        "last_login": "2024-08-05T00:19:40.145Z",
+        "is_superuser": true,
+        "username": "Ken",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy01@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-04T05:40:11Z",
+        "is_admin": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$rKSWYRoblfw4GQmGuN2gvL$oNr7LW0MAOPRp6ckX4viT4upfQsJmNXHMvG1Oh0Edtk=",
+        "last_login": "2024-08-04T22:17:04.556Z",
+        "is_superuser": false,
+        "username": "Fred",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy3@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-04T22:17:04.074Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.share",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "title": "My first share",
+        "content": "<p>Hi I'm Fred, And I'm an addict.</p><p>It the end of 2020 and I'd been 3months without taking any thing, about to be convicted of shotting the light and dark and my baby boy was born.&nbsp;</p><p>I kept stringing the courts along pleading not guilty for a year whilst waiting for my baby son (my first son) to be born, so he could see me, feel me hold him and maybe get to hear me sing to him.</p><p>I was an addict, still am though I've not indulged in 4 years as of two months ago. from the moment my partner had told me she was pregnant I started to make the change but literally days before my home was raided and i was charged with supply of class A...</p><p>If you want to know more of my struggle book mark this share by rating and commenting. I will continue to add to it and reveal the path that lead me here.</p>",
+        "created_at": "2024-08-04T02:52:50.538Z",
+        "updated_at": "2024-08-04T08:49:55.008Z",
+        "status": "approved",
+        "average_rating": 0.0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "title": "Best Day Of My Life",
+        "content": "<p>I lost every thing, my home, my partner, I was even on my way to prison.</p><p>I realised I couldn't get much lower in my life, \"<i>Jails, Institutions and Death</i>\". That's when I first heard of NA or the first time I thought to myself 'why not? what have you got left to lose.', Looking back now I think besides being there for the birth of my children and the day I was born, I think going to my first NA meeting is what turned it around for me so it became like a new Best Day of My Life...</p>",
+        "created_at": "2024-08-04T06:26:45.472Z",
+        "updated_at": "2024-08-04T18:11:40.458Z",
+        "status": "approved",
+        "average_rating": 5.0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "title": "It's So Good",
+        "content": "<p>Today I woke up, I talked to my Higher Power, Never responds but I know that at some point during the day I will have a coincidental happening that will remind me that, <b>that same power is all round me</b>, guiding me whilst I float though the ether without the need to worry.\r\n</p><p><img src=\"https://ukna.org/sites/default/files/card/2021-11/professionals-2b.svg\" style=\"width: 25%;\"><img src=\"https://ukna.org/sites/default/files/card/2022-01/newcomer_0.svg\" style=\"width: 25%;\">\r\n</p><p>Yes its just so good, being clean, no chasing, relaxed and loving what life offers me now...</p>",
+        "created_at": "2024-08-04T08:46:10.183Z",
+        "updated_at": "2024-08-04T23:21:37.992Z",
+        "status": "approved",
+        "average_rating": 6.0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 4,
+    "fields": {
+        "user": 2,
+        "title": "Stopped To Think",
+        "content": "<p>Having found a spot to sit and taking a sip of cool ice tea from the cup of the flask I&nbsp;<span style=\"line-height: var(--cib-type-body1-stronger-line-height); font-variation-settings: var(--cib-type-body1-stronger-font-variation-settings);\">brought, I looked out at the lake in the local community park area.</span></p><p>Sometimes I have to catch my breath, when I remember where I was this time last year and much my life has changed since.</p><p>Yeah taking time out to work through some of the regret is a big thing for me. The loss will always be hard, but I'm not hiding from it in the first drug of choice any more.</p><p>Yes as I sit here and look out, for some reason I have two tunes playing in my head one of them being \"promise me\" by Beverley Craven and the other \"on the dock of the bay\", strange how it's there in the back ground, I must find the lyrics and work out what message is there waiting to be heard.</p><p><br></p>",
+        "created_at": "2024-08-04T16:03:29.423Z",
+        "updated_at": "2024-08-04T19:50:17.260Z",
+        "status": "approved",
+        "average_rating": 0.0
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 3,
+    "fields": {
+        "share": 1,
+        "user": 2,
+        "content": "great share",
+        "rating": 5,
+        "created_at": "2024-08-04T03:58:16.752Z",
+        "updated_at": "2024-08-04T23:17:04.875Z",
+        "approved": true
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 7,
+    "fields": {
+        "share": 3,
+        "user": 2,
+        "content": "Awesome, Keep listening for the Natural Mystic.",
+        "rating": 10,
+        "created_at": "2024-08-04T20:16:21.455Z",
+        "updated_at": "2024-08-04T23:17:42.042Z",
+        "approved": true
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 8,
+    "fields": {
+        "share": 3,
+        "user": 2,
+        "content": "Awesome, Keep listening for the Natural Mystic.",
+        "rating": 10,
+        "created_at": "2024-08-04T20:21:27.503Z",
+        "updated_at": "2024-08-04T20:21:27.503Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 9,
+    "fields": {
+        "share": 3,
+        "user": 2,
+        "content": "Awesome, Keep listening for the Natural Mystic.",
+        "rating": 10,
+        "created_at": "2024-08-04T20:22:26.494Z",
+        "updated_at": "2024-08-04T20:22:26.494Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 10,
+    "fields": {
+        "share": 4,
+        "user": 3,
+        "content": "I've had days like this, enjoy them! \r\n\r\noh I have ho hey playing over in my head...",
+        "rating": 9,
+        "created_at": "2024-08-05T00:26:23.249Z",
+        "updated_at": "2024-08-05T00:26:23.249Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 11,
+    "fields": {
+        "share": 4,
+        "user": 3,
+        "content": "I'm here again and I'll keep coming back!",
+        "rating": 12,
+        "created_at": "2024-08-05T00:31:03.529Z",
+        "updated_at": "2024-08-05T00:31:03.529Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 12,
+    "fields": {
+        "share": 4,
+        "user": 3,
+        "content": "I'm here again and I'll keep coming back!",
+        "rating": 12,
+        "created_at": "2024-08-05T00:31:46.486Z",
+        "updated_at": "2024-08-05T00:31:46.486Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 13,
+    "fields": {
+        "share": 4,
+        "user": 3,
+        "content": "I'm here again and I'll keep coming back!",
+        "rating": 12,
+        "created_at": "2024-08-05T00:32:15.535Z",
+        "updated_at": "2024-08-05T00:32:15.535Z",
+        "approved": false
+    }
+}
+]

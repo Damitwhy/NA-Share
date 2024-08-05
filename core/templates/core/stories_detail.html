@@ -6,14 +6,14 @@
     <div class="col-md-8">
         <h1>Detailed View:</h1>
         <!-- start for loop -->
-        <div class="story-container">
-            <h2 class="story-title">{{ share.title }}</h2>
-            <p class="story-content">{{ share.content|safe }}</p>
-            <p class="story-rating">Average Rating: {{ share.average_rating }}</p>
-            <p class="story-createdOn">Created at: {{ share.created_at }}</p>
-            <p class="story-updatedOn">Updated at: {{ share.updated_at }}</p>
-            <p class="story-status">Status: {{ share.get_status_display }}</p>
-
+        <div class="share-container">
+            <h2 class="share-title">{{ share.title }}</h2>
+            <p class="share-content">{{ share.content|safe }}</p>
+            <p class="share-rating">Average Rating: {{ share.average_rating }}</p>
+            <p class="share-createdOn">Created at: {{ share.created_at }}</p>
+            <p class="share-updatedOn">Updated at: {{ share.updated_at }}</p>
+            <p class="share-status">Status: {{ share.get_status_display }}</p>
+            <p class="share-username">By:{{ share.user }}</p>
             {% if share.user == request.user %}
             <a href="{% url 'edit_share' share.id %}">Edit Share</a>
             
@@ -31,7 +31,7 @@
             {% else %}
             <h2>Anonymous</h2>
             {% endif %}
-            <p>Want to share your story? <a href="{% url 'create_share' %}">Click here</a></p>
+            <p>Want to share your share? <a href="{% url 'create_share' %}">Click here</a></p>
         </div>
         <div class="comment-container">
             <h3>Comments:</h3>
@@ -39,7 +39,8 @@
             {% for comment in comments %}
             <div class="comment">
                 <p>{{ comment.content }}</p>
-                <p>Rating: {{ comment.rating }}</p>
+                <p class="share-rating">Rating: {{ comment.rating }}</p>
+                <p class="comment-by">By: {{ comment.user }}</p>
                 <p>Created at: {{ comment.created_at }}</p>
             </div>
             {% endfor %}
