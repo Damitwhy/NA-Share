@@ -36,11 +36,12 @@ def comment(request, share_id):
             comment.user = request.user
             comment.share = share
             comment.save()
-            return redirect('stories_detail', share_id=share.id)
+            return redirect('/', share_id=share.id)
     else:
         form = CommentForm()
     comments = Comment.objects.filter(share=share)
-    return render(request, 'core/stories_detail.html', {'form': form, 'share': share, 'comments': comments})
+    return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments})
+
 
 # Share create view
 @login_required
@@ -68,3 +69,10 @@ def edit_share(request, share_id):
     else:
         form = ShareForm(instance=share)
     return render(request, 'core/edit_share.html', {'form': form})
+
+@login_required
+def delete_share(request, share_id):
+    share = get_object_or_404(Share, id=share_id)
+    share.delete()
+    return redirect('home')
+

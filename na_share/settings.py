@@ -108,6 +108,29 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'na_share.wsgi.application'
 
+# django summernote settings
+def is_admin_or_superuser(user):
+    return user.is_authenticated and (user.is_superuser or user.is_staff)
+
+
+SUMMERNOTE_CONFIG = {
+    'attachment_require_authentication': True,  # Ensure only authenticated users can upload
+    'attachment_require_permissions': (is_admin_or_superuser,),  # Custom permission check
+    'disable_upload': True,  # Enable uploads, but restrict them with the custom permission check
+    'summernote': {
+        'toolbar': [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['fontname', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['height', ['height']],
+            ['table', ['table']],
+            ['insert', ['link']],  # Allow image and video uploads
+            ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

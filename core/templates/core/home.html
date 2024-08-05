@@ -16,10 +16,12 @@
             
             <!-- add button to view detail -->
             <a href="{% url 'stories_detail' share.id %}">View Detail</a>
+            {% if share.user == request.user %}
+            <a href="{% url 'edit_share' share.id %}">Edit Share</a>
+            <a href="{% url 'delete_share' share.id %}">Delete this Share</a>
+            {% else %}
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
-        {% if share.user == request.user %}
-            <P>This is your Share so you can </P><a href="{% url 'edit_share' share.id %}">Edit Share</a>
-        {% endif %}
+            {% endif %}
         </div>
         {% endif %}
         {% endfor %}
