@@ -16,8 +16,7 @@ class ShareForm(forms.ModelForm):
             'content': SummernoteWidget(),
         }
 
-class ContactForm(forms.Form):
-    name = forms.CharField(max_length=100)
+class ContactForm(forms.Form):    
     email = forms.EmailField(required=True)
     message = forms.CharField(widget=forms.Textarea)
     
