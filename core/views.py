@@ -96,7 +96,7 @@ def edit_share(request, share_id):
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Your Share was successfully updated.')
-                return redirect('home', share_id=share.id)
+                return redirect('/', share_id=share.id)
         else:
             form = ShareForm(instance=share)
         return render(request, 'core/edit_share.html', {'form': form})
