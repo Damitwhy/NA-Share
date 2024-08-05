@@ -91,9 +91,12 @@ def edit_share(request, share_id):
 @login_required
 def delete_share(request, share_id):    
     share = get_object_or_404(Share, id=share_id)
-    if request.method == 'POST':
-        share.delete()
-        messages.success(request, 'Your Share was successfully deleted from NA-Share.')
+    if request.user == share.user:
+        if request.method == 'POST':
+            share.delete()
+            messages.success(request, 'Your Share was successfully deleted from NA-Share.')
+            return redirect('home')
+        return render(request, 'core/delete_share.html', {'share': share})
+    else:
+        messages.error(request, 'You are not authorized to delete this Share.')
         return redirect('home')
-    return render(request, 'core/delete_share.html', {'share': share})
-

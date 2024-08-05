@@ -2,14 +2,14 @@
 
 
 {% block content %}
-{% if request.user.is_authenticated %}
+{% if request.user.is_authenticated and share.user == request.user %}
 <div class="delete-container">
     <h2>Delete Your Share</h2>
     <form method="post">
         {% csrf_token %}
         <p>Are you sure you want to delete this share?</p>
         <button type="submit">Yes, Delete</button>
-        
+
         <a href="{% url 'home' %}">Cancel</a>
     </form>
 </div>
