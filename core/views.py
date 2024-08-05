@@ -47,19 +47,22 @@ def stories_detail(request, share_id):
 
 def comment(request, share_id):
     share = get_object_or_404(Share, id=share_id)
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.user = request.user
-            comment.share = share
-            comment.save()
-            return redirect('/', share_id=share.id)
+    if request.user != share.user:        
+        if request.method == 'POST':
+            form = CommentForm(request.POST)
+            if form.is_valid():
+                comment = form.save(commit=False)
+                comment.user = request.user
+                comment.share = share
+                comment.save()
+                return redirect('/', share_id=share.id)
+        else:
+            form = CommentForm()
+        comments = Comment.objects.filter(share=share)
+        return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments})
     else:
-        form = CommentForm()
-    comments = Comment.objects.filter(share=share)
-    return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments})
-
+        messages.error(request, 'You are not authorized to comment on your own Share.')
+        return redirect('home')
 
 # Share create view
 @login_required
@@ -70,6 +73,7 @@ def create_share(request):
             share = form.save(commit=False)
             share.user = request.user
             share.save()
+            messages.success(request, 'Your Share was successfully created.')
             return redirect('home')
     else:
         form = ShareForm()
@@ -79,15 +83,21 @@ def create_share(request):
 @login_required
 def edit_share(request, share_id):
     share = get_object_or_404(Share, id=share_id)
-    if request.method == 'POST':
-        form = ShareForm(request.POST, instance=share)
-        if form.is_valid():
-            form.save()
-            return redirect('stories_detail', share_id=share.id)
+    if request.user == share.user:
+        if request.method == 'POST':
+            form = ShareForm(request.POST, instance=share)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Your Share was successfully updated.')
+                return redirect('home', share_id=share.id)
+        else:
+            form = ShareForm(instance=share)
+        return render(request, 'core/edit_share.html', {'form': form})
     else:
-        form = ShareForm(instance=share)
-    return render(request, 'core/edit_share.html', {'form': form})
-
+        messages.error(request, 'You are not authorized to edit this Share.')
+        return redirect('home')
+    
+# Share delete view
 @login_required
 def delete_share(request, share_id):    
     share = get_object_or_404(Share, id=share_id)

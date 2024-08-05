@@ -1,31 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if request.user.is_authenticated and share.user == request.user %}
+<div class="edit-container">
+{% if request.user.is_authenticated %}
     <h2>Edit Your Share</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Save Changes</button>
     </form>
-    <a href="{% url 'delete_share' share.id %}">Delete this Share</a>
+    
 {% else %}
     <h3>Welcome, Anonymous!</h3>
-    <p>Please <a href="{% url 'login' %}">login</a> to share your story.</p>
+    <p>Please <a href="{% url 'account_login' %}">login</a> to share your story.</p>
 {% endif %}
-<div class="delete-container">
-<h2>Edit Your Share</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save Changes</button>
-</form>
-<a href="{% url 'delete_share' share.id %}">Delete this Share</a>
-</div>
-{% else %}
-<div class="delete-container">
-    <h3>Welcome, Anonymous!</h3>
-    <p>Please <a href="{% url 'login' %}">login</a> to share your story.</p>
-</div>
-{% endif %}
+
+
 {% endblock %}
