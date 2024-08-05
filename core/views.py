@@ -7,6 +7,8 @@ from .forms import CommentForm, ShareForm
 
 # Create your views here.
 
+
+
 def home(request):
     shares = Share.objects.all()
     return render(request, 'core/home.html', {'shares': shares})
