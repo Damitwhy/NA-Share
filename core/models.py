@@ -23,7 +23,7 @@ class Share(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
-    average_rating = models.FloatField(default=0)
+    average_rating = models.IntegerField(default=0)
     class Meta:
         ordering = ["-created_at"]
     

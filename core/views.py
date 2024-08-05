@@ -2,12 +2,19 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 # from .models import Post
-from .models import Share, Comment, Message, User
+from .models import Share, Comment, Message, User, Rating
 from .forms import CommentForm, ShareForm, ContactForm
 from django.contrib import messages
 
 
 # Create your views here.
+
+def get_average_rating_for_share(share_id):
+    """
+    Returns the average rating for a specific share.
+    """
+    average_rating = Rating.objects.filter(share_id=share_id).aggregate(Avg('score'))['score__avg']
+    return average_rating
 
 
 def home(request):
@@ -110,3 +117,5 @@ def delete_share(request, share_id):
     else:
         messages.error(request, 'You are not authorized to delete this Share.')
         return redirect('home')
+
+
