@@ -2,8 +2,10 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 # from .models import Post
-from .models import Share, Comment
-from .forms import CommentForm, ShareForm
+from .models import Share, Comment, Message, User
+from .forms import CommentForm, ShareForm, ContactForm
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -17,7 +19,22 @@ def about(request):
     return render(request, 'core/about.html')
 
 def contact(request):
-    return render(request, 'core/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Assuming you have a predefined user for the team
+            team_user = User.objects.get(username='Admin')
+            message = Message(
+                sender=request.user,
+                receiver=team_user,
+                content=form.cleaned_data['message']
+            )
+            message.save()
+            messages.success(request, 'Message has been received and we will be in contact soon.')
+            return redirect('home')
+    else:
+        form = ContactForm()
+    return render(request, 'core/contact.html', {'form': form})
 
 def services(request):
     return render(request, 'core/services.html')

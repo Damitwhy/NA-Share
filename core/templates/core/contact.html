@@ -3,27 +3,26 @@
 {% block content %}
 <div class="row">
     <div class="col-md-12">
-        <h1>Contact Us.</h1>
-        <p>For any inquiries or feedback, please feel free to contact us using the form below. We value your input and will do our best to respond to your message as soon as possible.</p>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>                    
+
+        <h1>Contact Us</h1>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Send</button>
+        </form>
     </div>
+
     <div class="col-md-12">
         <h2>Other ways to contact us.</h2>
-        <p>For other ways to make inquiries or for support, please feel free to reach out to us through the following channels:</p>
+        <p>For other ways to make inquiries or for support, please feel free to reach out to us through the following
+            channels:</p>
         <ul>
             <li>Email: info@na-share.com</li>
             <li>Phone: +1 123-456-7890</li>
