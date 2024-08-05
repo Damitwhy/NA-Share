@@ -10,7 +10,6 @@ from django.contrib import messages
 # Create your views here.
 
 
-
 def home(request):
     shares = Share.objects.all()
     return render(request, 'core/home.html', {'shares': shares})
@@ -90,8 +89,11 @@ def edit_share(request, share_id):
     return render(request, 'core/edit_share.html', {'form': form})
 
 @login_required
-def delete_share(request, share_id):
+def delete_share(request, share_id):    
     share = get_object_or_404(Share, id=share_id)
-    share.delete()
-    return redirect('home')
+    if request.method == 'POST':
+        share.delete()
+        messages.success(request, 'Your Share was successfully deleted from NA-Share.')
+        return redirect('home')
+    return render(request, 'core/delete_share.html', {'share': share})
 

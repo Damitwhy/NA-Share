@@ -11,6 +11,7 @@ urlpatterns = [
     path('stories/<int:share_id>/', views.stories_detail, name='stories_detail'),
     path('share/<int:share_id>/edit/', views.edit_share, name='edit_share'),
     path('share/<int:share_id>/delete/', views.delete_share, name='delete_share'),
-   
+    # path('delete_share/<int:share_id>/', views.confirm_delete_share, name='delete_share'),
+    #path('delete_comment/<int:comment_id>/', views.delete_comment, name='delete_comment'),
     # Add more URL patterns here
 ]
