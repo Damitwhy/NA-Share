@@ -6,7 +6,7 @@
         <h2>Stories</h2>
         <!-- start for loop -->
         {% for share in shares %}
-        {% if share.get_status_display == 'Approved' %}
+        <!--  if share.get_status_display == 'Approved'  -->
 
         <div class="story-container">
             <h2 class="story-title">{{ share.title }}</h2>
@@ -23,7 +23,7 @@
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
             {% endif %}
         </div>
-        {% endif %}
+        <!-- if share status endif -->
         {% endfor %}
         <!-- end for loop -->
     </div>
