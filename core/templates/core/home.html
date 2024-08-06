@@ -28,24 +28,25 @@
     </div>
 
     <div class="col-md-4 stories-sidebar order-first order-md-last">
-        {% if user.is_authenticated %}
-        <h2>Welcome Back {{ user.username }}</h2>
-        <div class="user-shares">
-            <h2>Your Shares</h2>
+        <div class="wecome-user">
+            {% if user.is_authenticated %}
+            <h2>Welcome Back {{ user.username }}</h2>
+            <div class="user-shares">
+                <h2>Your Shares</h2>
 
-            {% for share in user_shares %}
-            <div class="user-share">
-                <li>"{{ share.title }}"</li>
-                <a href="{% url 'stories_detail' share.id %}">View Detail</a>
+                {% for share in user_shares %}
+                <div class="user-share">
+                    <li>"{{ share.title }}"</li>
+                    <a href="{% url 'stories_detail' share.id %}">View Detail</a>
+                </div>
+                {% endfor %}
+
             </div>
-            {% endfor %}
-
+            {% else %}
+            <h2>Anonymous...</h2>
+            {% endif %}
+            <p>Want to share your story? <a href="{% url 'create_share' %}">Click here</a></p>
         </div>
-        {% else %}
-        <h2>Anonymous</h2>
-        {% endif %}
-        <p>Want to share your share? <a href="{% url 'create_share' %}">Click here</a></p>
-
     </div>
 </div>
 {% endblock %}

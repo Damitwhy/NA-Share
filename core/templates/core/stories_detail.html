@@ -16,7 +16,7 @@
             <p class="share-username">By:{{ share.user }}</p>
             {% if share.user == request.user %}
             <a href="{% url 'edit_share' share.id %}">Edit Share</a>
-            
+
             <a href="{% url 'delete_share' share.id %}">Delete this Share</a>
             {% else %}
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
@@ -27,9 +27,9 @@
     <div class="col-md-4 stories-sidebar order-first">
         <div class="user-info">
             <div class="wecome-user">
-            {% if user.is_authenticated %}
-            <h2>{{ user.username }}</h2>
-            <h3>Keep Coming Back!</h3>
+                {% if user.is_authenticated %}
+                <h2>{{ user.username }}</h2>
+                <h3>Keep Coming Back!</h3>
             </div>
             {% else %}
             <h2>Anonymous</h2>
@@ -38,12 +38,24 @@
         <div class="comment-container">
             <h3>Comments:</h3>
             <!-- start for loop -->
-            {% for comment in comments %}
+            {% for comment in share.comments.all %}
             <div class="comment">
-                <p>{{ comment.content }}</p>
-                <p class="share-rating">Rating: {{ comment.rating }}</p>
-                <p class="comment-by">By: {{ comment.user }}</p>
-                <p>Created at: {{ comment.created_at }}</p>
+                <p>{{ comment.user.username }}: {{ comment.content }}</p>
+                <a href="{% url 'reply_comment' share.id comment.id %}">Reply</a>
+                {% if comment.user == request.user %}
+                <a href="{% url 'edit_comment' share.id comment.id %}">Edit</a>
+                <a href="{% url 'delete_comment' share.id comment.id %}">Delete</a>
+                {% endif %}
+                {% for reply in comment.replies.all %}
+                <div class="reply">
+                    <p>{{ reply.user.username }}: {{ reply.content }}</p>
+                    <a href="{% url 'reply_comment' share.id reply.id %}">Reply</a>
+                    {% if reply.user == request.user %}
+                    <a href="{% url 'edit_comment' reply.id %}">Edit</a>
+                    <a href="{% url 'delete_comment' reply.id %}">Delete</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
             </div>
             {% endfor %}
         </div>

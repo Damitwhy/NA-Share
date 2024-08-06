@@ -1,5 +1,7 @@
 {% load static %}
 {% load account %}
+
+
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
 {% url 'services' as services_url %}
@@ -9,6 +11,11 @@
 {% url 'account_logout' as logout_url %}
 {% url 'create_share' as create_share_url %}
 {% url 'delete_share' as delete_share_url %}
+{% url 'edit_share' as edit_share_url %}
+{% url 'comment' as comment_url %}
+{% url 'reply_comment' as reply_comment_url %}
+{% url 'edit_comment' as edit_comment_url %}
+{% url 'delete_comment' as delete_comment_url %}
 
 
 <!DOCTYPE html>

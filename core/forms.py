@@ -6,7 +6,10 @@ from .models import Comment, Share
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['content', 'rating']
+        fields = ['content']
+        widgets = {
+            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!'}),
+        }
         
 class ShareForm(forms.ModelForm):
     class Meta:

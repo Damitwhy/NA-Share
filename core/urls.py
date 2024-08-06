@@ -11,7 +11,11 @@ urlpatterns = [
     path('stories/<int:share_id>/', views.stories_detail, name='stories_detail'),
     path('share/<int:share_id>/edit/', views.edit_share, name='edit_share'),
     path('share/<int:share_id>/delete/', views.delete_share, name='delete_share'),
-    # path('edit_share/<int:share_id>/', views.delete_share, name='delete_share'),
-    #path('delete_comment/<int:comment_id>/', views.delete_comment, name='delete_comment'),
-    # Add more URL patterns here
+    path('share/<int:share_id>/comment/', views.comment, name='add_comment'),
+    path('share/<int:share_id>/comment/<int:parent_id>/', views.comment, name='reply_comment'),
+    path('share/<int:share_id>/comment/<int:comment_id>/edit/', views.edit_comment, name='edit_comment'),
+    path('share/<int:share_id>/comment/<int:comment_id>/delete/', views.delete_comment, name='delete_comment'),
+    # Remove the old patterns that don't include share_id
+    # path('comment/<int:comment_id>/edit/', views.edit_comment, name='edit_comment'),
+    # path('comment/<int:comment_id>/delete/', views.delete_comment, name='delete_comment'),
 ]
