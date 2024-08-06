@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* style sheet */
+/* basic styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    padding: 10px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.navbar {
+    background-color:rgb(204 230 255);
+    border:2px solid #6096B7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.container-home {
+    padding; 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 3px;
+    
+}
+
+a:hover {
+    color: #0056b3;
+    position: relative;
+    top: -3px;
+}
+
+/* Add more styles as needed */
+.story-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.stories-sidebar {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    padding: 5px;
+    margin-bottom: 10px;
+    flex-shrink: 1; 
+}
+
+.note-group-select-from-files {
+    display: none;
+}
+
+.comment-container {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment {
+    margin: 3px;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.comment-form {
+    margin-top: 10px;
+}
+
+.wecome-user {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user-shares {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.user-share {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.share-containter {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.share-containter a {
+    background-color: #96adbc;
+    border: 1px solid #6096B7;
+    border-radius: 2px;
+}
+
+.share-containter a:hover {
+    background-color: #bbbbbb;
+    border: 2px solid #355466;
+    
+}
+
+
+/* Add more styles as needed */
