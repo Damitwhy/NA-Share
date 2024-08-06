@@ -31,6 +31,7 @@
     <div class="col-md-4 stories-sidebar">
         {% if user.is_authenticated %}
         <h2>Welcome Back {{ user.username }}</h2>
+        {% for  %} ############################################ put a for loop here for the own users shares listed as titles
         {% else %}
         <h2>Anonymous</h2>
         {% endif %}

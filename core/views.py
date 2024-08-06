@@ -48,7 +48,8 @@ def services(request):
 def stories_detail(request, share_id):
     share = get_object_or_404(Share, id=share_id)
     comments = Comment.objects.filter(share=share)
-    return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments})
+    user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []
+    return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments, 'user_shares': user_shares})
 
 # Comment view
 
