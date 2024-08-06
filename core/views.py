@@ -8,6 +8,18 @@ from django.contrib import messages
 
 
 # Create your views here.
+@login_required
+def edit_comment(request, share_id, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your comment was successfully updated.')
+            return redirect('stories_detail', share_id=share_id)
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'core/edit_comment.html', {'form': form, 'comment': comment, 'share_id': share_id})
 
 def get_average_rating_for_share(share_id):
     """
@@ -52,26 +64,73 @@ def stories_detail(request, share_id):
     
     return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments })
 
-# Comment view
+# Comment view 
 
-def comment(request, share_id):
+def comment(request, share_id, parent_id=None):
     share = get_object_or_404(Share, id=share_id)
-    if request.user != share.user:        
-        if request.method == 'POST':
-            form = CommentForm(request.POST)
-            if form.is_valid():
-                comment = form.save(commit=False)
-                comment.user = request.user
-                comment.share = share
-                comment.save()
-                return redirect('/', share_id=share.id)
-        else:
-            form = CommentForm()
-        comments = Comment.objects.filter(share=share)
-        return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments})
+    parent_comment = get_object_or_404(Comment, id=parent_id) if parent_id else None
+    context = {
+        'share': share,
+        'parent_comment': parent_comment,
+    }        
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.share = share
+            comment.save()
+            return redirect('stories_detail', share_id=share.id)
     else:
-        messages.error(request, 'You are not authorized to comment on your own Share.')
-        return redirect('home')
+        form = CommentForm()
+    comments = Comment.objects.filter(share=share)
+    return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments, 'parent_comment': parent_comment})
+
+
+def reply_comment(request, share_id, parent_id):
+    comment = get_object_or_404(Comment, id=parent_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            reply = form.save(commit=False)
+            reply.user = request.user
+            reply.share = comment.share
+            reply.parent = comment
+            reply.save()
+            messages.success(request, 'Your reply was successfully added.')
+            return redirect('stories_detail', share_id=share_id)
+    else:
+        messages.error(request, 'There was an error with your comment.')
+        form = CommentForm()
+        
+    return comment(request, share_id, parent_id)
+
+
+@login_required
+def edit_comment(request, share_id, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.user != comment.user:
+        return redirect('stories_detail', share_id=share_id)
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('stories_detail', share_id=share_id)
+    else:
+        form = CommentForm(instance=comment)
+    return render(request, 'core/edit_comment.html', {'form': form, 'comment': comment, 'share_id': share_id})
+
+
+@login_required
+def delete_comment(request, share_id, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.user == comment.user:
+        comment.delete()
+        messages.success(request, 'Your comment was successfully deleted.')
+    else:
+        messages.error(request, 'You are not authorized to delete this comment.')
+    return redirect('stories_detail', share_id=share_id)
+    
 
 # Share create view
 @login_required

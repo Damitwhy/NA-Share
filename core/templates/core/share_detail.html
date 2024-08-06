@@ -1,0 +1,34 @@
+{%% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>{{ share.title }}</h1>
+    <p>{{ share.content }}</p>
+    <p>{{ share.user.username }}</p>
+    <a href="{% url 'edit_share' share.id %}">Edit</a>
+    <a href="{% url 'delete_share' share.id %}">Delete</a>
+    <a href="{% url 'add_comment' share.id %}">Add Comment</a>
+    {% include 'core/comments.html' %}
+{% endblock %}
+
+{% for comment in share.comments.all %}
+    <div class="comment">
+        <p>{{ comment.user.username }}: {{ comment.content }}</p>
+        <a href="{% url 'reply_comment' share.id comment.id %}">Reply</a>
+        {% if comment.user == request.user %}
+            <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+            <a href="{% url 'delete_comment' comment.id %}">Delete</a>
+        {% endif %}
+        {% for reply in comment.replies.all %}
+            <div class="reply">
+                <p>{{ reply.user.username }}: {{ reply.content }}</p>
+                <a href="{% url 'reply_comment' share.id reply.id %}">Reply</a>
+                {% if reply.user == request.user %}
+                    <a href="{% url 'edit_comment' reply.id %}">Edit</a>
+                    <a href="{% url 'delete_comment' reply.id %}">Delete</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+<a href="{% url 'add_comment' share.id %}">Add Comment</a>

@@ -33,6 +33,7 @@ class Share(models.Model):
 class Comment(models.Model):
     share = models.ForeignKey(Share, on_delete=models.CASCADE, related_name='comments')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='commenter')
+    parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='replies')
     content = models.TextField()
     rating = models.IntegerField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)

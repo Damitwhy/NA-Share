@@ -64,9 +64,9 @@ a:hover {
 }
 
 .stories-sidebar {
-    border: 2px solid #6096B7;
+    /* border: 2px solid #6096B7; */
     border-radius: 5px;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     padding: 5px;
     margin-bottom: 10px;
     flex-shrink: 1; 
@@ -78,14 +78,16 @@ a:hover {
 
 .comment-container {
     border: 2px solid #6096B7;
+    background-color: rgba(204,230,255,10);
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
 }
 
 .comment {
-    margin: 3px;
+    margin: 0;
     border: 2px solid #6096B7;
+    background-color: #F8F9FA;
     border-radius: 5px;
     padding: 5px;
 
@@ -99,7 +101,9 @@ a:hover {
     border: 2px solid #6096B7;
     border-radius: 5px;
     margin-bottom: 10px;
+    padding: 5px;
 }
+
 
 .user-shares {
     border: 2px solid #6096B7;
