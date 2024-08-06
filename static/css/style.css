@@ -36,10 +36,13 @@ p {
 a {
     color: #007bff;
     text-decoration: none;
+    border:1px solid gray;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #0056b3;
+    position: relative;
+    top: -3px;
 }
 
 /* Add more styles as needed */
@@ -55,8 +58,8 @@ a:hover {
     border: 2px solid #6096B7;
     border-radius: 5px;
     background-color: #f8f9fa;
-    padding: 1em;
-    border-radius: 0.25em;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 .note-group-select-from-files {
@@ -99,4 +102,23 @@ a:hover {
     border: 2px solid #6096B7;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.share-containter {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.share-containter > a {
+    background-color: #96adbc;
+    border: 1px solid #6096B7;
+    border-radius: 2px;
+}
+
+.share-containter a:hover {
+    background-color: #bbbbbb;
+    border: 2px solid #355466;
+    
 }
