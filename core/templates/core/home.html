@@ -30,12 +30,23 @@
     
     <div class="col-md-4 stories-sidebar">
         {% if user.is_authenticated %}
-        <h2>Welcome Back {{ user.username }}</h2>
-        {% for  %} ############################################ put a for loop here for the own users shares listed as titles
+            <h2>Welcome Back {{ user.username }}</h2>
+            <div class="user-shares">
+                <h2>Your Shares</h2>
+                <ul>
+                    {% for share in user_shares %}
+                    <div class="user-share">
+                        <li>{{ share.title }}</li>
+                        <a href="{% url 'stories_detail' share.id %}">View Detail</a>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
         {% else %}
         <h2>Anonymous</h2>
         {% endif %}
-        <p>Want to share your story? <a href="{% url 'create_share' %}">Click here</a></p>    
+        <p>Want to share your share? <a href="{% url 'create_share' %}">Click here</a></p>
+
     </div>
 </div>
 {% endblock %}

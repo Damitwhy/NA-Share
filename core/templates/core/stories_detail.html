@@ -30,20 +30,9 @@
             <h2>{{ user.username }}</h2>
             <h3>Keep Coming Back!</h3>
             </div>
-            <div class="user-shares">
-            <h2>Your Shares</h2>
-            <ul>
-                {% for share in user_shares %}
-                <div class="user-share">
-                    <li>{{ share.title }}</li>
-                    <a href="{% url 'stories_detail' share.id %}">View Detail</a>
-                </div>
-                {% endfor %}
-            </ul>
-                {% else %}
-                <h2>Anonymous</h2>
-                {% endif %}
-                <p>Want to share your share? <a href="{% url 'create_share' %}">Click here</a></p>
+            {% else %}
+            <h2>Anonymous</h2>
+            {% endif %}
         </div>
         <div class="comment-container">
             <h3>Comments:</h3>
