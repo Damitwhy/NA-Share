@@ -19,7 +19,8 @@ def get_average_rating_for_share(share_id):
 
 def home(request):
     shares = Share.objects.all()
-    return render(request, 'core/home.html', {'shares': shares})
+    user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []
+    return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares})
 
 def about(request):
     return render(request, 'core/about.html')
@@ -48,7 +49,8 @@ def services(request):
 def stories_detail(request, share_id):
     share = get_object_or_404(Share, id=share_id)
     comments = Comment.objects.filter(share=share)
-    return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments})
+    
+    return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments })
 
 # Comment view
 

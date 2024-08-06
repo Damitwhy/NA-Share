@@ -77,3 +77,26 @@ a:hover {
     padding: 5px;
 
 }
+
+.comment-form {
+    margin-top: 10px;
+}
+
+.wecome-user {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user-shares {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.user-share {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
