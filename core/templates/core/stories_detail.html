@@ -16,14 +16,15 @@
             <p class="share-username">By:{{ share.user }}</p>
             {% if share.user == request.user %}
             <a href="{% url 'edit_share' share.id %}">Edit Share</a>
-
+            
+            <a href="{% url 'delete_share' share.id %}">Delete this Share</a>
             {% else %}
             <a href="{% url 'comment' share.id %}">Comment and Rate</a>
             {% endif %}
         </div>
 
     </div>
-    <div class="col-md-4 stories-sidebar order-md-first">
+    <div class="col-md-4 stories-sidebar order-first">
         <div class="user-info">
             <div class="wecome-user">
             {% if user.is_authenticated %}
