@@ -5198,3 +5198,18 @@ Traceback (most recent call last):
                                         ^^^^^^^^
 NameError: name 'share_id' is not defined
 "GET / HTTP/1.1" 500 83408
+Internal Server Error: /contact/
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 48, in contact
+    message = Message(
+              ^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+TypeError: Message() got unexpected keyword arguments: 'email'
+"POST /contact/ HTTP/1.1" 500 145

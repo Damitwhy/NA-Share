@@ -36,6 +36,8 @@ def home(request):
 
 def about(request):
     return render(request, 'core/about.html')
+
+
  
 def contact(request):
     if request.method == 'POST':
@@ -46,6 +48,7 @@ def contact(request):
             message = Message(
                 sender=request.user if request.user.is_authenticated else None,
                 receiver=team_user,
+                email=form.cleaned_data['email'],
                 content=form.cleaned_data['message']
             )
             message.save()
