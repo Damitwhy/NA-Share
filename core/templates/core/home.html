@@ -4,29 +4,26 @@
 <div class="row d-flex flex-row">
     <div class="col-md-8 order-last order-md-first">
         <h2>Stories</h2>
-        <!-- start for loop -->
         {% for share in shares %}
-        <!--  if share.get_status_display == 'Approved'  -->
+        <!--  if share.get_status_display == 'Approved' to restrict access later for admin to approve pending or reject -->
         <div class="story-container">
             <h2 class="story-title">{{ share.title }}</h2>
             <p class="story-content">{{ share.content|safe }}</p>
-            <p class="story-rating">Average Rating: {{ share.average_rating }}</p>
+            <!-- removed average rating as it was not working -->
             <p class="story-createdOn">Created at: {{ share.created_at }}</p>
-
-            <!-- add button to view detail -->
+            <!-- added button to view detail -->
             <a href="{% url 'stories_detail' share.id %}">View Detail</a>
             {% if share.user == request.user %}
-            <a href="{% url 'edit_share' share.id %}">Edit Share</a>
-            <a href="{% url 'delete_share' share.id %}">Delete this Share</a>
+            <a href="{% url 'edit_share' share.id %}">Edit Share</a> |
+            <a href="{% url 'delete_share' share.id %}">Delete Share</a>
             {% else %}
-            <a href="{% url 'comment' share.id %}">Comment and Rate</a>
+            <a href="{% url 'comment' share.id %}">Comment</a>
             {% endif %}
         </div>
         <!-- if share status endif -->
         {% endfor %}
         <!-- end for loop -->
     </div>
-
     <div class="col-md-4 stories-sidebar order-first order-md-last">
         <div class="wecome-user">
             {% if user.is_authenticated %}
@@ -40,7 +37,6 @@
                     <a href="{% url 'stories_detail' share.id %}">View Detail</a>
                 </div>
                 {% endfor %}
-
             </div>
             {% else %}
             <h2>Anonymous...</h2>

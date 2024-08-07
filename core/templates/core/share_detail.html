@@ -16,7 +16,7 @@
         <p>{{ comment.user.username }}: {{ comment.content }}</p>
         <a href="{% url 'reply_comment' share.id comment.id %}">Reply</a>
         {% if comment.user == request.user %}
-            <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+            <a href="{% url 'edit_comment' comment.id %}">Edit</a> | 
             <a href="{% url 'delete_comment' comment.id %}">Delete</a>
         {% endif %}
         {% for reply in comment.replies.all %}
