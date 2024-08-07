@@ -46,6 +46,7 @@ def contact(request):
             messages.success(request, 'Your message was successfully sent.')
             return redirect('/')  # Replace 'success' with the appropriate URL for the success template
     else:
+        messages.error(request, 'There was an error with your message.')
         form = ContactForm()
     return render(request, 'core/contact.html', {'form': form})
 
