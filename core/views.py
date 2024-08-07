@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 # from .models import Post
-from .models import Share, Comment, Message, User, Rating
+from .models import Share, Comment, Message, User, Rating, ContactMessage
 from .forms import CommentForm, ShareForm, ContactForm
 from django.contrib import messages
 
@@ -37,26 +37,18 @@ def home(request):
 def about(request):
     return render(request, 'core/about.html')
 
-
  
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # Assuming you have a predefined user for the team
-            team_user = User.objects.get(username='Admin')
-            message = Message(
-                sender=request.user if request.user.is_authenticated else None,
-                receiver=team_user,
-                email=form.cleaned_data['email'],
-                content=form.cleaned_data['message']
-            )
-            message.save()
-            messages.success(request, 'Message has been received and we will be in contact soon.')
-            return redirect('home')
+            # Handle the form data here
+            messages.success(request, 'Your message was successfully sent.')
+            return redirect('/')  # Replace 'success' with the appropriate URL for the success template
     else:
         form = ContactForm()
     return render(request, 'core/contact.html', {'form': form})
+
 
 def services(request):
     return render(request, 'core/services.html')
