@@ -4,7 +4,7 @@
 {% if user.is_authenticated %}
 <h3>Welcome, {{ user.username }}!</h3>
 
-<h2>Comment and Rate: {{ share.title }}</h2>
+<h2>Comment on: {{ share.title }}</h2>
 <div class="comment-container">
     <p>{{ share.content|safe }}</p>
 </div>

@@ -53,6 +53,7 @@ a:hover {
     position: relative;
     top: -3px;
 }
+
 .s-form-container {
     border: 2px solid #6096B7;
     background-color: #F8F9FA;
@@ -148,5 +149,12 @@ a:hover {
     
 }
 
-
+.fab {
+    
+    border: 1px solid #6096B7;
+    border-radius: 2px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 2em;
+}
 /* Add more styles as needed */
