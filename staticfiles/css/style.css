@@ -53,12 +53,19 @@ a:hover {
     position: relative;
     top: -3px;
 }
-
+.s-form-container {
+    border: 2px solid #6096B7;
+    background-color: #F8F9FA;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 /* Add more styles as needed */
 .story-container {
     width: 100%;
     margin-bottom: 20px;
     border: 2px solid #6096B7;
+    background-color: #F8F9FA;
     border-radius: 5px;
     padding: 10px;
 }
@@ -99,6 +106,7 @@ a:hover {
 
 .wecome-user {
     border: 2px solid #6096B7;
+    background-color: #F8F9FA;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
@@ -107,6 +115,7 @@ a:hover {
 
 .user-shares {
     border: 2px solid #6096B7;
+    background-color: rgba(204,230,255,10);
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
@@ -114,6 +123,7 @@ a:hover {
 
 .user-share {
     border: 2px solid #6096B7;
+    background-color: #F8F9FA;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
