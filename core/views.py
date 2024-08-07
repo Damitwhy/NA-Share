@@ -36,7 +36,7 @@ def home(request):
 
 def about(request):
     return render(request, 'core/about.html')
-
+ 
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -61,8 +61,15 @@ def services(request):
 def stories_detail(request, share_id):
     share = get_object_or_404(Share, id=share_id)
     comments = Comment.objects.filter(share=share)
+    comment_count = Comment.objects.filter(share=share).count()
+    context = {
+        'share': share,
+        'comments': comments,
+        'comment_count': comment_count,
+    }
     
-    return render(request, 'core/stories_detail.html', {'share': share, 'comments': comments })
+    
+    return render(request, 'core/stories_detail.html', context)
 
 # Comment view 
 

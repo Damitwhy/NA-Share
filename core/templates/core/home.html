@@ -11,6 +11,7 @@
             <p class="story-content">{{ share.content|safe }}</p>
             <!-- removed average rating as it was not working -->
             <p class="story-createdOn">Created at: {{ share.created_at }}</p>
+            <p class="comment-count">Number of comments: {{ comment_count }}</p>
             <!-- added button to view detail -->
             <a href="{% url 'stories_detail' share.id %}">View Detail</a> | 
             {% if share.user == request.user %}

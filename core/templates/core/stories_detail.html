@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+ 
 {% block content %}
 <div class="row">
     <div class="col-md-8">
@@ -12,6 +12,7 @@
             <p class="share-createdOn">Created at: {{ share.created_at }}</p>
             <p class="share-updatedOn">Updated at: {{ share.updated_at }}</p>
             <p class="share-status">Status: {{ share.get_status_display }}</p>
+            <p class="share-status">Number of comments: {{ comment_count }}</p>
             <p class="share-username">By:{{ share.user }}</p>
             {% if share.user == request.user %}
             <a href="{% url 'edit_share' share.id %}">Edit Share</a> | 
