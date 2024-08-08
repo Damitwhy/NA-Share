@@ -2,9 +2,24 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
+    """
+    User model representing a user in the system.
+    Attributes:
+        is_admin (bool): Indicates whether the user is an admin or not. Default is False.
+    """    
     is_admin = models.BooleanField(default=False)
 
-class Profile(models.Model):
+class Profile(models.Model):   
+    """
+    Model representing a user profile.
+
+    Attributes:
+        user (User): The user associated with the profile.
+        name (str): The name of the profile.
+        bio (str): The biography of the profile (optional).
+        created_at (datetime): The date and time when the profile was created.
+        updated_at (datetime): The date and time when the profile was last updated.
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     bio = models.TextField(blank=True)
@@ -96,12 +111,29 @@ class Message(models.Model):
     is_read = models.BooleanField(default=False)
 
 class Rating(models.Model):
+    """
+    Model representing a rating for a share.
+
+    Attributes:
+        share (Share): The share that this rating belongs to.
+        user (User): The user who made the rating.
+        rating_value (int): The value of the rating.
+        created_at (datetime): The date and time when the rating was created.
+    """
     share = models.ForeignKey(Share, on_delete=models.CASCADE, related_name='ratings')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     rating_value = models.PositiveSmallIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
 class ServiceLink(models.Model):
+    """
+    Model representing a service link.
+    Attributes:
+        url (str): The URL of the service.
+        description (str): The description of the service.
+        created_at (datetime): The date and time when the service link was created.
+        updated_at (datetime): The date and time when the service link was last updated.
+    """    
     url = models.URLField(max_length=200)
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
@@ -109,8 +141,22 @@ class ServiceLink(models.Model):
 
     def __str__(self):
         return self.url
-
+ 
 class ContactMessage(models.Model):
+    """
+    Model representing a contact message.
+
+    Attributes:
+        name (str): The name of the sender.
+        email (str): The email address of the sender.
+        message (str): The content of the message.
+        created_at (datetime): The date and time when the message was created.
+
+    Methods:
+        __str__(): Returns the email address of the sender.
+
+    """
+    
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()

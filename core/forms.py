@@ -1,8 +1,8 @@
 from django import forms
 from django_summernote.widgets import SummernoteWidget
 from django.forms import ModelForm
-from .models import Comment, Share
-
+from .models import Comment, Share, ContactMessage
+ 
 
 class CommentForm(forms.ModelForm):
     class Meta:
@@ -25,12 +25,23 @@ class ShareForm(forms.ModelForm):
         }
         
 
-class ContactForm(forms.Form): 
-    name = forms.CharField(max_length=100)   
-    email = forms.EmailField(required=True)
-    message = forms.CharField(widget=forms.Textarea)
-    
-    
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = ['name', 'email', 'message']
+        
+        labels = {
+            'name': '',
+            'email': '',
+            'message': '',
+        }
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'Your Name'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'email@example.com'}),
+            'message': forms.Textarea(attrs={'placeholder': 'Write your message here!', 'rows': 5, 'cols': 15, 'class': 'form-control'}),
+        }
+
+
 class SearchForm(forms.Form):
     query = forms.CharField()
     
