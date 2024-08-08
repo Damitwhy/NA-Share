@@ -1,34 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-12">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 mt-3 mb-3 offset-md-2">
+            <h1>Contact Us</h1>
+            <p>Have a question or need help? Please feel free to reach out to us using the form below.</p>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Send</button>
+            </form>
+        </div>
 
-        <h1>Contact Us</h1>
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Send</button>
-        </form>
+        <div class="col-sm-12 mt-3 mb-3 offset-md-2">
+            <h2>Other ways to contact us.</h2>
+            <p>For other ways to make inquiries or for support, please feel free to reach out to us through the following
+                channels:</p>
+            <ul>
+                <li>Email: info@na-share.com</li>
+                <li>Phone: +1 123-456-7890</li>
+                <li>Address: 123 Main Street, City, Country</li>
+            </ul>
+        </div>
+
     </div>
-
-    <div class="col-md-12">
-        <h2>Other ways to contact us.</h2>
-        <p>For other ways to make inquiries or for support, please feel free to reach out to us through the following
-            channels:</p>
-        <ul>
-            <li>Email: info@na-share.com</li>
-            <li>Phone: +1 123-456-7890</li>
-            <li>Address: 123 Main Street, City, Country</li>
-        </ul>
-    </div>
-
 </div>
 {% endblock %}

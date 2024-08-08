@@ -29,7 +29,7 @@ def contact(request):
             messages.success(request, 'Your message was successfully sent.')
             return redirect('/')  # Replace 'success' with the appropriate URL for the success template
     else:
-        messages.error(request, 'There was an error with your message.')
+        
         form = ContactForm()
     return render(request, 'core/contact.html', {'form': form})
 
@@ -149,7 +149,7 @@ def edit_share(request, share_id):
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Your Share was successfully updated.')
-                return redirect('/', share_id=share.id)
+                return redirect('stories_detail', share_id=share.id)
         else:
             form = ShareForm(instance=share)
         return render(request, 'core/edit_share.html', {'form': form})
