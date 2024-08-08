@@ -8,7 +8,10 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ['content']
         widgets = {
-            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!'}),
+            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!', 'rows': 5, 'cols': 40}),
+        }
+        labels = {
+            'content': '',
         }
         
 class ShareForm(forms.ModelForm):
