@@ -41,9 +41,8 @@ def services(request):
 def home(request):
     shares = Share.objects.all()
     user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []
-    for share in shares:
-        comment_count = Comment.objects.filter(share=share).count()
-    return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares, 'comment_count': comment_count})
+    
+    return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares})
 
 
 def stories_detail(request, share_id):
