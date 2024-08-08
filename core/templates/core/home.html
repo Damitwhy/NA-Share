@@ -3,8 +3,13 @@
 {% load extras %}
 {% block content %}
 <div class="row d-flex flex-row">
-    <div class="col-md-8 order-last order-md-first">
-        <h2>Stories</h2>
+    <div class="col-sm-12 order-md-first">
+        <h1 class="page-title">Welcome to NA-Share</h1>
+    </div>      
+    <div class="col-md-8 order-4 order-sm-3">
+        <div class="story-container">
+            <h2>Stories</h2>
+        </div>
         {% for share in shares %}
         <!--  if share.get_status_display == 'Approved' to restrict access later for admin to approve pending or reject -->
         <div class="story-container">
@@ -26,7 +31,7 @@
         {% endfor %}
         <!-- end for loop -->
     </div>
-    <div class="col-md-4 stories-sidebar order-first order-md-last">
+    <div class="col-md-4 stories-sidebar order-2 order-md-3">
         <div class="wecome-user">
             {% if user.is_authenticated %}
             <h2>Welcome Back {{ user.username }}</h2>
