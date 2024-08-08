@@ -13,15 +13,16 @@
     <div class="comment-container">
         <p><strong>{{ parent_comment.user }} said:</strong> {{ parent_comment.content }}</p>
     </div>
-    </div>
+    
     {% endif %}
-    <div class="comment-container">
+    <div class="comment-container d-flex justify-content-center gy-6 mx-auto">
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Submit</button>
         </form>
     </div>
+    
 {% else %}
     <h3>Welcome, Anonymous!</h3>
     <p>Please <a href="{% url 'account_login' %}">login</a> to comment and rate.</p>
