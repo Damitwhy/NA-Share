@@ -3,13 +3,18 @@ from django_summernote.widgets import SummernoteWidget
 from django.forms import ModelForm
 from .models import Comment, Share
 
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['content']
         widgets = {
-            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!'}),
+            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!', 'rows': 5, 'cols':50, 'class': 'form-control' }),
         }
+        labels = {
+            'content': '',
+        }
+        
         
 class ShareForm(forms.ModelForm):
     class Meta:
@@ -18,6 +23,7 @@ class ShareForm(forms.ModelForm):
         widgets = {
             'content': SummernoteWidget(),
         }
+        
 
 class ContactForm(forms.Form): 
     name = forms.CharField(max_length=100)   

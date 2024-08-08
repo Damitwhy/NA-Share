@@ -44,6 +44,10 @@ class Share(models.Model):
     def __str__(self):
         return f"Title: {self.title} | Written by: {self.user}"
     
+    @property
+    def comment_count(self):
+        return self.comments.count()
+    
 
 class Comment(models.Model):
     """
