@@ -5416,3 +5416,81 @@ Traceback (most recent call last):
     ^^^^^^^^^
 AttributeError: 'ContactForm' object has no attribute 'save'
 "POST /contact/ HTTP/1.1" 500 83775
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 44, in home
+    comment_count = Comment.objects.filter(share=share).count()
+                                                 ^^^^^
+NameError: name 'share' is not defined. Did you mean: 'Share'?
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 44, in home
+    comment_count = Comment.objects.filter(share=share).count()
+                                                 ^^^^^
+NameError: name 'share' is not defined. Did you mean: 'Share'?
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 44, in home
+    comment_count = Comment.objects.filter(share=share).count()
+                                                 ^^^^^
+NameError: name 'share' is not defined. Did you mean: 'Share'?
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 44, in home
+    comment_count = Comment.objects.filter(share=share).count()
+                                                 ^^^^^
+NameError: name 'share' is not defined. Did you mean: 'Share'?
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 43, in home
+    share = get_object_or_404(Share, id=share_id)
+                                        ^^^^^^^^
+NameError: name 'share_id' is not defined
+"GET / HTTP/1.1" 500 145
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pyenv_mirror/user/current/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/NA-Share/core/views.py", line 43, in home
+    share = get_object_or_404(Share, id=share_id)
+                                        ^^^^^^^^
+NameError: name 'share_id' is not defined
+"GET / HTTP/1.1" 500 145
