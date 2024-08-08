@@ -86,7 +86,8 @@ def comment(request, share_id, parent_id=None):
             return redirect('stories_detail', share_id=share.id)
     else:
         form = CommentForm(initial_content=initial_content, is_reply=is_reply)
-        comments = Comment.objects.filter(share=share)
+        # Order comments by creation date in descending order
+        comments = Comment.objects.filter(share=share).order_by('-created_at')
 
     return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments, 'parent_comment': parent_comment})
 

@@ -40,7 +40,7 @@
             <!-- start for loop -->
             {% for comment in share.comments.all %}
             <div class="comment">
-                <p>{{ comment.user.username }}: {{ comment.content }}</p>
+                <p>{{ comment.user.username }}: {{ comment.content }} <br> <small>Posted on: {{ comment.created_at|date:"F j, Y, g:i a" }}</small></p>
                 <a href="{% url 'reply_comment' share.id comment.id %}">Reply</a>
                 {% if comment.user == request.user %}
                 <a href="{% url 'edit_comment' share.id comment.id %}">Edit</a>

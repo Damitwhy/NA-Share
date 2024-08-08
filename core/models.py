@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.utils import timezone
 
 class User(AbstractUser):
     """
@@ -86,7 +87,7 @@ class Comment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
     class Meta:
-        ordering = ["created_at"]
+        ordering = ["-created_at"]# Default ordering by creation date in ascending order
 
     def __str__(self):
         return f"Comment {self.content} by {self.user}"
