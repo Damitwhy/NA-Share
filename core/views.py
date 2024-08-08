@@ -19,13 +19,23 @@ def get_average_rating_for_share(share_id):
 
 def about(request):
     return render(request, 'core/about.html')
-
+ 
  
 def contact(request):
+    """
+    View function for the contact page.
+    Args:
+        request (HttpRequest): The HTTP request object.
+    Returns:
+        HttpResponse: The HTTP response object.
+    Raises:
+        None
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
             # Handle the form data here
+            form.save()
             messages.success(request, 'Your message was successfully sent.')
             return redirect('/')  # Replace 'success' with the appropriate URL for the success template
     else:
@@ -40,8 +50,7 @@ def services(request):
 
 def home(request):
     shares = Share.objects.all()
-    user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []
-    
+    user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []    
     return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares})
 
 
@@ -53,9 +62,7 @@ def stories_detail(request, share_id):
         'share': share,
         'comments': comments,
         'comment_count': comment_count,
-    }
-    
-    
+    }    
     return render(request, 'core/stories_detail.html', context)
 
 # Comment view 
@@ -77,7 +84,7 @@ def comment(request, share_id, parent_id=None):
             return redirect('stories_detail', share_id=share.id)
     else:
         form = CommentForm()
-    comments = Comment.objects.filter(share=share)
+        comments = Comment.objects.filter(share=share)
     return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments, 'parent_comment': parent_comment})
 
 
@@ -108,8 +115,7 @@ def reply_comment(request, share_id, parent_id):
             messages.success(request, 'Your reply was successfully added.')
             return redirect('stories_detail', share_id=share_id)
     else:
-        form = CommentForm()
-        
+        form = CommentForm()        
     return render(request, 'core/comment.html', {'form': form, 'share': parent_comment.share, 'parent_comment': parent_comment})
 
 
