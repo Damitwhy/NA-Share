@@ -46,21 +46,20 @@
                 <a href="{% url 'edit_comment' share.id comment.id %}">Edit</a>
                 <a href="{% url 'delete_comment' share.id comment.id %}">Delete</a>
                 {% endif %}
+                <!-- Render replies within the comment div -->
                 {% for reply in comment.replies.all %}
                 <div class="reply">
                     <p>{{ reply.user.username }}: {{ reply.content }}</p>
                     <a href="{% url 'reply_comment' share.id reply.id %}">Reply</a>
                     {% if reply.user == request.user %}
-                    <a href="{% url 'edit_comment' reply.id %}">Edit</a>
-                    <a href="{% url 'delete_comment' reply.id %}">Delete</a>
+                    <a href="{% url 'edit_comment' share.id reply.id %}">Edit</a>
+                    <a href="{% url 'delete_comment' share.id reply.id %}">Delete</a>
                     {% endif %}
                 </div>
                 {% endfor %}
             </div>
             {% endfor %}
         </div>
-
     </div>
-
 </div>
 {% endblock %}

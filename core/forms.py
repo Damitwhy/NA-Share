@@ -9,11 +9,18 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ['content']
         widgets = {
-            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!', 'rows': 5, 'cols':50, 'class': 'form-control' }),
+            'content': forms.Textarea(attrs={'placeholder': 'Write your comment here!', 'rows': 5, 'cols': 50, 'class': 'form-control'}),
         }
         labels = {
             'content': '',
         }
+
+    def __init__(self, *args, **kwargs):
+        initial_content = kwargs.pop('initial_content', '')
+        is_reply = kwargs.pop('is_reply', False)
+        super().__init__(*args, **kwargs)
+        if is_reply:
+            self.fields['content'].initial = initial_content
         
         
 class ShareForm(forms.ModelForm):

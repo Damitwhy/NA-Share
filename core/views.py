@@ -65,26 +65,29 @@ def stories_detail(request, share_id):
     }    
     return render(request, 'core/stories_detail.html', context)
 
+
 # Comment view 
 
 def comment(request, share_id, parent_id=None):
     share = get_object_or_404(Share, id=share_id)
     parent_comment = get_object_or_404(Comment, id=parent_id) if parent_id else None
-    context = {
-        'share': share,
-        'parent_comment': parent_comment,
-    }        
+    initial_content = f"@{parent_comment.user.username} " if parent_comment else ''
+    is_reply = parent_comment is not None
+
     if request.method == 'POST':
-        form = CommentForm(request.POST)
+        form = CommentForm(request.POST, initial_content=initial_content, is_reply=is_reply)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.user = request.user
             comment.share = share
+            if parent_comment:
+                comment.parent = parent_comment
             comment.save()
             return redirect('stories_detail', share_id=share.id)
     else:
-        form = CommentForm()
+        form = CommentForm(initial_content=initial_content, is_reply=is_reply)
         comments = Comment.objects.filter(share=share)
+
     return render(request, 'core/comment.html', {'form': form, 'share': share, 'comments': comments, 'parent_comment': parent_comment})
 
 
