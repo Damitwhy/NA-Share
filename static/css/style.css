@@ -15,21 +15,26 @@ main {
 }
 
 .navbar {
-    background-color:rgb(204 230 255);
-    border:2px solid #6096B7;
+    background-color: rgb(204 230 255);
+    border: 2px solid #6096B7;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
 }
 
 .container-home {
-    padding; 20px;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
     margin-top: 0;
@@ -45,7 +50,7 @@ a {
     color: #007bff;
     text-decoration: none;
     margin: 3px;
-    
+
 }
 
 a:hover {
@@ -61,7 +66,7 @@ a:hover {
     padding: 10px;
     margin-bottom: 20px;
 }
-/* Add more styles as needed */
+
 .story-container {
     width: 100%;
     margin-bottom: 20px;
@@ -72,12 +77,12 @@ a:hover {
 }
 
 .stories-sidebar {
-    /* border: 2px solid #6096B7; */
+
     border-radius: 5px;
-    /* background-color: #f8f9fa; */
+
     padding: 5px;
     margin-bottom: 10px;
-    flex-shrink: 1; 
+    flex-shrink: 1;
 }
 
 .note-group-select-from-files {
@@ -86,7 +91,7 @@ a:hover {
 
 .comment-container {
     border: 2px solid #6096B7;
-    background-color: rgba(204,230,255,10);
+    background-color: rgba(204, 230, 255, 10);
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -116,7 +121,7 @@ a:hover {
 
 .user-shares {
     border: 2px solid #6096B7;
-    background-color: rgba(204,230,255,10);
+    background-color: rgba(204, 230, 255, 10);
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
@@ -146,15 +151,14 @@ a:hover {
 .share-containter a:hover {
     background-color: #bbbbbb;
     border: 2px solid #355466;
-    
+
 }
 
 .fab {
-    
+
     border: 1px solid #6096B7;
     border-radius: 2px;
     padding: 5px;
     margin: 5px;
     font-size: 2em;
 }
-/* Add more styles as needed */
