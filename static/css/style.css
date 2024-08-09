@@ -3,9 +3,12 @@
 /* style sheet */
 /* basic styles */
 .error-page{
-    margin-top: 110px; margin-bottom: 200px;
-    
+    margin-top: 110px; 
+    margin-bottom: 200px;
+
 }
+
+
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
