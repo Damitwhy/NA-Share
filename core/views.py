@@ -18,6 +18,15 @@ def get_average_rating_for_share(share_id):
 
 
 def about(request):
+    """
+    Renders the 'about.html' template.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - The rendered 'about.html' template.
+    """
     return render(request, 'core/about.html')
  
  
@@ -45,16 +54,44 @@ def contact(request):
 
 
 def services(request):
+    """
+    Render the 'services.html' template.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - The rendered 'services.html' template.
+    """
     return render(request, 'core/services.html')
 
 
 def home(request):
+    """
+    Renders the home page.
+
+    Parameters:
+    - request: The HTTP request object.
+
+    Returns:
+    - A rendered HTML response containing the home page.
+    """
     shares = Share.objects.all()
     user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []    
     return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares})
 
 
 def stories_detail(request, share_id):
+    """
+    View function for displaying the details of a story.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        share_id (int): The ID of the share.
+
+    Returns:
+        HttpResponse: The HTTP response object containing the rendered HTML template.
+    """
     share = get_object_or_404(Share, id=share_id)
     comments = Comment.objects.filter(share=share)
     comment_count = Comment.objects.filter(share=share).count()
@@ -69,6 +106,23 @@ def stories_detail(request, share_id):
 # Comment view 
 
 def comment(request, share_id, parent_id=None):
+    """
+    Handles the creation of comments for a specific share.
+
+    Parameters:
+    - request: The HTTP request object.
+    - share_id: The ID of the share for which the comment is being created.
+    - parent_id: (optional) The ID of the parent comment, if this comment is a reply.
+
+    Returns:
+    - If the request method is POST and the form is valid, redirects to the 'stories_detail' view for the share.
+    - Otherwise, renders the 'core/comment.html' template with the comment form, share, comments, and parent comment.
+
+    Note:
+    - This function assumes the existence of the Share and Comment models.
+    - The comment form is initialized with the initial content and is_reply parameters.
+    - Comments are ordered by creation date in descending order.
+    """
     share = get_object_or_404(Share, id=share_id)
     parent_comment = get_object_or_404(Comment, id=parent_id) if parent_id else None
     initial_content = f"@{parent_comment.user.username} " if parent_comment else ''
@@ -94,6 +148,21 @@ def comment(request, share_id, parent_id=None):
 
 @login_required
 def edit_comment(request, share_id, comment_id):
+    """
+    Edit a comment.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        share_id (int): The ID of the share.
+        comment_id (int): The ID of the comment.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    Raises:
+        Http404: If the comment with the given ID does not exist.
+    """
+    ...
     comment = get_object_or_404(Comment, id=comment_id)
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
@@ -107,6 +176,22 @@ def edit_comment(request, share_id, comment_id):
 
 
 def reply_comment(request, share_id, parent_id):
+    """
+    Reply to a comment.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        share_id (int): The ID of the share.
+        parent_id (int): The ID of the parent comment.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    Raises:
+        Http404: If the parent comment does not exist.
+
+    """
+    ...
     parent_comment = get_object_or_404(Comment, id=parent_id)
     if request.method == 'POST':
         form = CommentForm(request.POST)
@@ -125,6 +210,21 @@ def reply_comment(request, share_id, parent_id):
 
 @login_required
 def delete_comment(request, share_id, comment_id):
+    """
+    Delete a comment.
+
+    Args:
+        request (HttpRequest): The request object.
+        share_id (int): The ID of the share.
+        comment_id (int): The ID of the comment to be deleted.
+
+    Returns:
+        HttpResponseRedirect: A redirect to the 'stories_detail' view.
+
+    Raises:
+        Http404: If the comment with the given ID does not exist.
+
+    """
     comment = get_object_or_404(Comment, id=comment_id)
     if request.user == comment.user:
         comment.delete()
@@ -137,6 +237,19 @@ def delete_comment(request, share_id, comment_id):
 # Share create view
 @login_required
 def create_share(request):
+    """
+    Create a new share.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    Raises:
+        None
+
+    """
     if request.method == 'POST':
         form = ShareForm(request.POST)
         if form.is_valid():
@@ -152,6 +265,20 @@ def create_share(request):
 # Share edit view
 @login_required
 def edit_share(request, share_id):
+    """
+    Edit a share.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        share_id (int): The ID of the share to be edited.
+
+    Returns:
+        HttpResponse: The HTTP response object.
+
+    Raises:
+        Http404: If the share with the given ID does not exist.
+
+    """
     share = get_object_or_404(Share, id=share_id)
     if request.user == share.user:
         if request.method == 'POST':
@@ -169,7 +296,25 @@ def edit_share(request, share_id):
     
 # Share delete view
 @login_required
-def delete_share(request, share_id):    
+def delete_share(request, share_id):   
+    """
+    Delete a share.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        share_id (int): The ID of the share to be deleted.
+
+    Returns:
+        HttpResponseRedirect: Redirects to the home page after successful deletion.
+
+    Raises:
+        Http404: If the share with the given ID does not exist.
+
+    Notes:
+        - Only the user who created the share can delete it.
+        - If the request method is not POST, the delete_share.html template is rendered.
+        - If the user is not authorized to delete the share, an error message is displayed and the user is redirected to the home page.
+    """
     share = get_object_or_404(Share, id=share_id)
     if request.user == share.user:
         if request.method == 'POST':
