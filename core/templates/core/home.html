@@ -2,10 +2,28 @@
 {% load static %}
 {% load extras %}
 {% block content %}
+<!-- hero image -->
+<section id="hero" class="hero text-white ">
+    <div class="container-fluid max-w-screen-2xl mx-auto flex px-5 py-24 pt-64 md:flex-row flex-col items-center">
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 flex flex-col md:items-start md:text-left mb-16 items-center p-4">
+            <h1 class="sm:text-4xl text-3xl mb-4 font-medium text-white break-word">
+            Welcome to NA-Share
+            </h1>
+            <p class="mb-8 leading-relaxed"></p>
+            A dedicated space for Narcotics Anonymous members to share and support
+            each other
+            </p>
+            <div class="flex justify-center">
+            <a class="inline-flex text-orange-100 bg-orange-500 hover:bg-orange-700 border-0 py-2 px-6 focus:outline-none rounded text-lg"
+                href="/about">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end hero image -->
+
 <div class="row d-flex flex-row">
-    <div class="col-sm-12 order-md-first">
-        <h1 class="page-title">Welcome to NA-Share</h1>
-    </div>      
+
     <div class="col-md-8 order-4 order-sm-3">
         <div class="story-container">
             <h2 id="colorful-heading">Stories</h2>
@@ -19,7 +37,7 @@
             <p class="story-createdOn">Created at: {{ share.created_at }}</p>
             <p class="comment-count">Has {{ share.comment_count }} comments</p>
             <!-- added button to view detail -->
-            <a href="{% url 'stories_detail' share.id %}">View Detail</a> | 
+            <a href="{% url 'stories_detail' share.id %}">View Detail</a> |
             {% if share.user == request.user %}
             <a href="{% url 'edit_share' share.id %}">Edit Share</a> |
             <a href="{% url 'delete_share' share.id %}">Delete Share</a>
@@ -49,8 +67,9 @@
             <h2 id="modal-heading">Anonymous...</h2>
             <div id="myModal" class="modal">
                 <div class="modal-content">
-                    <p>We see you're either not logged in or are unregistered. 
-                    <br>Please feel free to benefit from the NA-Share by signing up, log in and begin your journey sharing.<br>
+                    <p>We see you're either not logged in or are unregistered.
+                        <br>Please feel free to benefit from the NA-Share by signing up, log in and begin your journey
+                        sharing.<br>
                         Sharing is caring...</p>
                 </div>
             </div>
