@@ -31,7 +31,7 @@ main {
 
 #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/workspace/NA-Share/static/images/outdoor-hands.jpg"); 
+    url("/static/images/outdoor-hands.jpg");
     background-size: cover;
     background-position: center center;
     height: 100%;
@@ -157,8 +157,7 @@ a:hover {
 }
 
 .title-hero {
-    color: white
-      
+    color: white      
     margin-top: 20%;    
 }
 
