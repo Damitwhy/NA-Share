@@ -48,7 +48,7 @@ h6 {
     margin-bottom: 0.5em;
     color: #333;
     /* Default text color */
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 
 h1:hover,
@@ -189,17 +189,14 @@ a:hover {
     display: none;
     /* Hidden by default */
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(50%, 50%);
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
     left: 0;
     top: 0;
-    width: 50%;
+    width: 100%;
     /* Full width */
-    height: 50%;
+    height: 100%;
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */

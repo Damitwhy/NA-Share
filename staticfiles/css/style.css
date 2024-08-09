@@ -2,8 +2,8 @@
 
 /* style sheet */
 /* basic styles */
-.error-page{
-    margin-top: 110px; 
+.error-page {
+    margin-top: 110px;
     margin-bottom: 200px;
 
 }
@@ -35,10 +35,6 @@ main {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-h1 {
-    color: black;
-            transition: color 0.2s;
-}
 
 h1,
 h2,
@@ -50,6 +46,19 @@ h6 {
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 0.5em;
+    color: #333;
+    /* Default text color */
+    transition: color 0.3s;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    color: #666;
+    /* Slightly lighter text color on hover */
 }
 
 p {
@@ -172,4 +181,56 @@ a:hover {
     padding: 5px;
     margin: 5px;
     font-size: 2em;
+}
+
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(50%, 50%);
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 50%;
+    /* Full width */
+    height: 50%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Default width */
+    max-width: 600px;
+    /* Maximum width */
+}
+
+@media (max-width: 600px) {
+    p {
+        word-wrap: break-word;
+    }
+
+    .modal-content {
+        width: 90%;
+        /* Adjust width for mobile views */
+        margin: 10% auto;
+        /* Adjust margin for mobile views */
+    }
 }

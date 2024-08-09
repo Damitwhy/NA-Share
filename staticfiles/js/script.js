@@ -18,26 +18,22 @@ $(document).ready(function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const heading = document.getElementById('colorful-heading');
-    const colorPairs = [
-        { text: 'red', background: 'yellow' },
-        { text: 'yellow', background: 'blue' },
-        { text: 'blue', background: 'red' }
-    ];
-    let colorIndex = 0;
-    let colorInterval;
+    const heading = document.getElementById('modal-heading');
+    const modal = document.getElementById('myModal');
 
     heading.addEventListener('mouseover', function() {
-        colorInterval = setInterval(function() {
-            heading.style.color = colorPairs[colorIndex].text;
-            heading.style.backgroundColor = colorPairs[colorIndex].background;
-            colorIndex = (colorIndex + 1) % colorPairs.length;
-        }, 100); // Change color every 500ms
+        modal.style.display = 'block'; // Show the modal
     });
 
     heading.addEventListener('mouseout', function() {
-        clearInterval(colorInterval);
-        heading.style.color = 'black';
-        heading.style.backgroundColor = '#F8F9FA';
+        modal.style.display = 'none'; // Hide the modal
+    });
+
+    modal.addEventListener('mouseover', function() {
+        modal.style.display = 'block'; // Keep the modal visible when hovering over it
+    });
+
+    modal.addEventListener('mouseout', function() {
+        modal.style.display = 'none'; // Hide the modal when leaving it
     });
 });
