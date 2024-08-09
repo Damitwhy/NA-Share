@@ -29,10 +29,17 @@
             <div class="wecome-user">
                 {% if user.is_authenticated %}
                 <h2>{{ user.username }}</h2>
-                <h3 id="colorful-heading">Keep Coming Back!</h3>
+                <h3>Keep Coming Back!</h3>
             </div>
             {% else %}
-            <h2 id="colorful-heading">Anonymous</h2>
+            <h2 id="modal-heading">Anonymous...</h2>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <p>We see you're either not logged in or are unregistered. 
+                    <br>You know the best way to benefit from the NA-Share is to sign up, log in and begin your journey sharing.<br>
+                    Sharing is caring...</p>
+                </div>
+            </div>
             {% endif %}
         </div>
         <div class="comment-container">
