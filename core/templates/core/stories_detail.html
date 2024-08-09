@@ -29,14 +29,14 @@
             <div class="wecome-user">
                 {% if user.is_authenticated %}
                 <h2>{{ user.username }}</h2>
-                <h3>Keep Coming Back!</h3>
+                <h3 id="colorful-heading">Keep Coming Back!</h3>
             </div>
             {% else %}
-            <h2>Anonymous</h2>
+            <h2 id="colorful-heading">Anonymous</h2>
             {% endif %}
         </div>
         <div class="comment-container">
-            <h3>Comments:</h3>
+            <h3 id="colorful-heading">Comments:</h3>
             <!-- start for loop -->
             {% for comment in share.comments.all %}
             <div class="comment">

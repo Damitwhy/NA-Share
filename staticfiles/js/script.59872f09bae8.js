@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
             heading.style.color = colorPairs[colorIndex].text;
             heading.style.backgroundColor = colorPairs[colorIndex].background;
             colorIndex = (colorIndex + 1) % colorPairs.length;
-        }, 100); // Change color every 500ms
+        }, 500); // Change color every 500ms
     });
 
     heading.addEventListener('mouseout', function() {
         clearInterval(colorInterval);
         heading.style.color = 'black';
-        heading.style.backgroundColor = '#F8F9FA';
+        heading.style.backgroundColor = 'white';
     });
 });
