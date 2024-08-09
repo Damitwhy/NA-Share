@@ -31,7 +31,7 @@ main {
 
 #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg"); 
+    url("/workspace/NA-Share/static/images/outdoor-hands.jpg"); 
     background-size: cover;
     background-position: center center;
     height: 100%;
@@ -157,12 +157,9 @@ a:hover {
 }
 
 .title-hero {
-    color: white;
-    font-size: 3em;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 20%;
-    
+    color: white
+      
+    margin-top: 20%;    
 }
 
 
