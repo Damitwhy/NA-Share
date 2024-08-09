@@ -84,10 +84,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
-    # Django Allauth middleware    
+    # Custom middleware   
     'allauth.account.middleware.AccountMiddleware',
-    
+    'core.middleware.AdminAccessMiddleware',    
 ]
 
 ROOT_URLCONF = 'na_share.urls'
