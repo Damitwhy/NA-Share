@@ -145,8 +145,10 @@ a:hover {
 }
 
 .about-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: inline;
     padding: 20px;
+    border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -162,6 +164,7 @@ a:hover {
 }
 
 .story-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 100%;
     margin: 10px 0 20px 0;
     border: 2px solid #6096B7;
@@ -171,6 +174,7 @@ a:hover {
 }
 
 .stories-sidebar {
+    
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -202,6 +206,7 @@ a:hover {
 }
 
 .wecome-user {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 2px solid #6096B7;
     background-color: #F8F9FA;
     border-radius: 5px;
@@ -230,6 +235,7 @@ a:hover {
 }
 
 .share-containter {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 2px solid #6096B7;
     border-radius: 5px;
     padding: 5px;
