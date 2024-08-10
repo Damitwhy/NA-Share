@@ -1,0 +1,917 @@
+[
+{
+    "model": "core.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$bzgd8C9Z9ArrXfBBvzuiq0$59qeAi8EbkDJXNrMwEivxMvmXxEOlw6yGUBlW5OkHH4=",
+        "last_login": "2024-08-03T23:47:11Z",
+        "is_superuser": false,
+        "username": "Purerarez",
+        "first_name": "",
+        "last_name": "",
+        "email": "ken@purerarez.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-03T23:47:11Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$tHnFve9Yy7UIWnGz0pnLnX$hS26fJTzEqfo3DKUy5B5ksoP4XOEsEQNOj+9N74iP9M=",
+        "last_login": "2024-08-10T10:33:25.370Z",
+        "is_superuser": true,
+        "username": "Admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy01@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-03T23:48:31Z",
+        "is_admin": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$XFOjcNdJ18NBDA3fdEdilH$8872hsFVRBjmSl7LLHEGdcVHNu84z1fONpZ5MyyapI8=",
+        "last_login": "2024-08-10T15:17:11.818Z",
+        "is_superuser": true,
+        "username": "Ken",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy01@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-04T05:40:11Z",
+        "is_admin": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$rKSWYRoblfw4GQmGuN2gvL$oNr7LW0MAOPRp6ckX4viT4upfQsJmNXHMvG1Oh0Edtk=",
+        "last_login": "2024-08-04T22:17:04.556Z",
+        "is_superuser": false,
+        "username": "Fred",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy3@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-04T22:17:04.074Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$QbKLWrFfrGVitx9Gp7supP$bq6OpwYCrwbT1m38fBX44/vH4WhkuaE4nuLuEjhtFHk=",
+        "last_login": "2024-08-10T01:36:48.915Z",
+        "is_superuser": false,
+        "username": "Frank",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy2@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-05T01:30:29.748Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$9LHSiI3ZdB7JEcWVpAmljZ$dsZvP/hSy2VuZGvFqRaMJaiIWnjokdbVL2pIrN09tm0=",
+        "last_login": "2024-08-05T14:07:48.726Z",
+        "is_superuser": false,
+        "username": "asdf",
+        "first_name": "",
+        "last_name": "",
+        "email": "asdf@asdf.asdf",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-05T14:07:48.232Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 8,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$i23umKpgVem7EoK9X6eFZj$9vSmeioChTvlgNYYu8St+OBu0QDpds+T/BoyA7LiI+U=",
+        "last_login": "2024-08-05T14:08:08.053Z",
+        "is_superuser": false,
+        "username": "Neeru",
+        "first_name": "",
+        "last_name": "",
+        "email": "abc@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-05T14:08:07.566Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 9,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$5xCnbB5W6vooskCC8CuT70$4SWUaQyioyGMnejL1BcQI94hmV4y6ekAAGdipEPKG4o=",
+        "last_login": "2024-08-05T14:08:45.679Z",
+        "is_superuser": false,
+        "username": "juan@fourrooms.co.uk",
+        "first_name": "",
+        "last_name": "",
+        "email": "juan@fourrooms.co.uk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-05T14:08:45.205Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$qc7sawqwMYktF4CnPAgad8$cc0Oam/38gOrqJhefzJQLZfU1Kz48XPbENx5LAZ7fcM=",
+        "last_login": "2024-08-06T15:25:03.206Z",
+        "is_superuser": false,
+        "username": "asdfasdf",
+        "first_name": "",
+        "last_name": "",
+        "email": "asdf@123.asdf",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-06T15:25:02.503Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 11,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$yF6OENXpWNBEwoqN5XsVuX$LfclEdSR5VJA/No21Cg6qZ4ZNDwJLAxYnl9PZ7u+fMc=",
+        "last_login": "2024-08-07T17:45:28.090Z",
+        "is_superuser": false,
+        "username": "orechelsea04",
+        "first_name": "",
+        "last_name": "",
+        "email": "orechelsea04@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-07T17:45:27.386Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 12,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$TbRiMiEitJJW12ep64Q5RU$nnj78afOciEhuycF6tFrqh8D5mrhH5/c6C2jguzmNfo=",
+        "last_login": "2024-08-08T11:55:19.645Z",
+        "is_superuser": false,
+        "username": "reacher",
+        "first_name": "",
+        "last_name": "",
+        "email": "reacher@110.org",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-08T11:47:29.455Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 13,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$zWrBmHNBWDpM4BvqhCwgVN$zthPhcmdQUrxyU2XbbeEk5zFrm1r6yzfT1tRe+rr+5c=",
+        "last_login": "2024-08-08T12:50:49.774Z",
+        "is_superuser": false,
+        "username": "Bruce",
+        "first_name": "",
+        "last_name": "",
+        "email": "damitwhy4@gamil.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-08T12:50:49.239Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 14,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$7sKzsWc36vCsYFjt6gQZYS$JmS+cWeUS0SxRrDg4kJeacDkf0MfbaLZZ7y69jWiVXU=",
+        "last_login": "2024-08-09T15:56:00.219Z",
+        "is_superuser": false,
+        "username": "Ashwini",
+        "first_name": "",
+        "last_name": "",
+        "email": "ashwini@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-09T15:45:17.043Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.user",
+    "pk": 15,
+    "fields": {
+        "password": "pbkdf2_sha256$720000$IXPls38IxVRqiXGiJDWk9K$lMP4enLilbb5UsdSPGmVJTKoc8y8fNUXlEGBXt5BU1U=",
+        "last_login": "2024-08-10T10:39:28.239Z",
+        "is_superuser": false,
+        "username": "Bob",
+        "first_name": "",
+        "last_name": "",
+        "email": "bob@bob.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-10T10:39:27.712Z",
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "core.visitorcount",
+    "pk": 1,
+    "fields": {
+        "count": 238
+    }
+},
+{
+    "model": "core.share",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "title": "My first share",
+        "content": "<p>Hi I'm Fred, And I'm an addict.</p><p>At the end of 2020 and I'd been 3months without taking any thing, about to be convicted of shotting light and dark and my baby boy was just born.&nbsp;</p><p>I kept stringing the courts along pleading not guilty for a year whilst waiting for my baby son (my first son) to be born, so he could see me, feel me hold him and maybe get to hear me sing to him.</p><p>I was an addict, still am though I've not indulged in 4 years as of two months ago. from the moment my partner had told me she was pregnant I started to make the change but literally days before my home was raided and I was charged with supply of class A...</p><p>If you want to know more of my struggle book mark this share by rating and commenting. I will continue to add to it and reveal the path that lead me here.</p><p>Update:</p><p>So it was Nov 2020, 17th I began my 3 year journey through the HMPS, I was released 31/01/2024.</p><p>The only time I saw my Son in that time was every month for the first few years, over a video conferencing system, my Son was very ill with a genetic disorder which involved gruelling treatment, Bone marrow transfusions and a barrage of daily medication, Immunosuppresants was the reason he couldn't be brought up to see me.</p><p>The last year I was transferred to an open prison and so the system was different, Sacha's guardians were responsible for making the applications for video visits and though I'd argued with prison screws over this when I'd managed to get visits made they'd never tell me when they were as they'd expected me to have contact with the guardians, which I had not. I'd burnt my bridges with them by arguing for them to bring him to me on a real visit.</p><p>I left prison I took the opportunity to contact probation with a request for access, contacted the borough too but each time I was directed to take it to court, being unemployed and having just gas and electric utilities take up a huge amount of the universal credit I was getting I couldn't afford the court application.&nbsp;</p><p>For the first time in over a year my brother called me at 6am Tuesday morning on 5/6/2024, He reached out, He'd told me my Son had died early hours of that morning at Great Ormond Street Hospital having an infection via his Hickman line.&nbsp;</p><p>My life style before Sacha's birth had lead to the consequences that kept me from him, until it was too late to&nbsp; hold him again.</p><p>All I have of him now is the memories of holding, changing him, feeding him, kissing, hugging and loving him (Loving him always...) only for the first three months of his life...</p><p>The last few NA meetings I've heard some really silly, petty and rubbish reasons that people have for why they've relapsed... I've not been able to share my loss with the group I regularly go to, that's why I'm sharing here. I wont use over my loss but it hasn't stopped me feeling the desire to....</p><p><br></p>",
+        "created_at": "2024-08-04T02:52:50.538Z",
+        "updated_at": "2024-08-08T11:12:58.524Z",
+        "status": "approved",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 2,
+    "fields": {
+        "user": 3,
+        "title": "Best Day Of My Life",
+        "content": "<p>I lost every thing, my home, my partner, I was even on my way to prison.</p><p>I realised I couldn't get much lower in my life, \"<i>Jails, Institutions and Death</i>\". That's when I first heard of NA or the first time I thought to myself 'why not? what have you got left to lose.', Looking back now I think besides being there for the birth of my children and the day I was born, I think going to my first NA meeting is what turned it around for me so it became like a new Best Day of My Life...</p>",
+        "created_at": "2024-08-04T06:26:45.472Z",
+        "updated_at": "2024-08-04T18:11:40.458Z",
+        "status": "approved",
+        "average_rating": 5
+    }
+},
+{
+    "model": "core.share",
+    "pk": 3,
+    "fields": {
+        "user": 1,
+        "title": "It's So Good",
+        "content": "<p>Today I woke up, I talked to my Higher Power, Never responds but I know that at some point during the day I will have a coincidental happening that will remind me that, <b>that same power is all round me</b>, guiding me whilst I float though the ether without the need to worry.\r\n</p><p><img src=\"https://ukna.org/sites/default/files/card/2021-11/professionals-2b.svg\" style=\"width: 25%;\"><img src=\"https://ukna.org/sites/default/files/card/2022-01/newcomer_0.svg\" style=\"width: 25%;\">\r\n</p><p>Yes its just so good, being clean, no chasing, relaxed and loving what life offers me now...</p>",
+        "created_at": "2024-08-04T08:46:10.183Z",
+        "updated_at": "2024-08-04T23:21:37.992Z",
+        "status": "approved",
+        "average_rating": 6
+    }
+},
+{
+    "model": "core.share",
+    "pk": 4,
+    "fields": {
+        "user": 2,
+        "title": "Stopped To Think",
+        "content": "<p>Having found a spot to sit and taking a sip of cool ice tea from the cup of the flask I&nbsp;<span style=\"line-height: var(--cib-type-body1-stronger-line-height); font-variation-settings: var(--cib-type-body1-stronger-font-variation-settings);\">brought, I looked out at the lake in the local community park area.</span></p><p>Sometimes I have to catch my breath, when I remember where I was this time last year and how much my life has changed since.</p><p>Yeah taking time out to work through some of the regret is a big thing for me. The loss will always be hard, but I'm not hiding from it in the first drug of choice any more.</p><p>Yes as I sit here and look out, for some reason I have two tunes playing in my head one of them being \"promise me\" by Beverley Craven and the other \"on the dock of the bay\", strange how it's there in the back ground, I must find the lyrics and work out what message is there waiting to be heard. LOL I sound just as crazy now as when I was on it, only difference is I question it.</p><p><br></p>",
+        "created_at": "2024-08-04T16:03:29.423Z",
+        "updated_at": "2024-08-08T14:11:03.968Z",
+        "status": "approved",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 6,
+    "fields": {
+        "user": 5,
+        "title": "Not too Late",
+        "content": "<p>I kept hearing its <b>Not too late</b> for me, I kept thinking it was... I kept trying to prove myself right, it turned ugly, really bad.... I couldn't see a future free of my addiction and I wanted out in a flame of glory.</p><p>It turns out, it wouldn't of been any kind of glory at all...</p><p>Prison saved me... It was shit... I hated it... It seemed after a while the only people who were hurt by me being away was my family.</p><p>By the time I woke up a few months into my sentence, after being held away from all and every temptation, is when I realised who'd really been hurt by my actions.</p><p>I started to address some of the issues that lead me down that road, I went to the inclusion group meetings sometimes just to get out of my cell for 30mins but as time went by I'd learnt how good it was to talk about all the shit I held in before.</p><p>Its been a long time since I smoked out, its been a long journey but I just live each day as it comes.</p><p>It's Not too late for me and if you're here reading this then its not too late for you either, as long as you draw breath you still have a chance.</p><p><br></p>",
+        "created_at": "2024-08-05T01:56:51.652Z",
+        "updated_at": "2024-08-07T20:41:50.408Z",
+        "status": "pending",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 10,
+    "fields": {
+        "user": 8,
+        "title": "Share",
+        "content": "<p>Some Shares</p>",
+        "created_at": "2024-08-05T14:10:20.909Z",
+        "updated_at": "2024-08-07T02:02:27.298Z",
+        "status": "approved",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 12,
+    "fields": {
+        "user": 7,
+        "title": "testing to see if I can edit",
+        "content": "<p>Can I edit this post?</p>",
+        "created_at": "2024-08-05T14:14:42.127Z",
+        "updated_at": "2024-08-07T02:02:42.210Z",
+        "status": "rejected",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 17,
+    "fields": {
+        "user": 10,
+        "title": "something fun",
+        "content": "<p>hello, this is a fun story</p>",
+        "created_at": "2024-08-06T15:25:22.724Z",
+        "updated_at": "2024-08-07T02:02:10.358Z",
+        "status": "approved",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 18,
+    "fields": {
+        "user": 2,
+        "title": "Next Meeting",
+        "content": "<h1 style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px; line-height: 1.4;\" class=\"\"><b><span style=\"font-family: &quot;Arial Black&quot;; background-color: rgb(0, 0, 255);\"><font color=\"#ffffff\" style=\"\">Sunday</font></span></b></h1><div class=\"field field--name-field-meeting-times field--type-time-range field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><a href=\"https://meetings.ukna.org/meeting/search?postcode%5Bvalue%5D=10&amp;postcode%5Bsource_configuration%5D%5Borigin_address%5D=Swindon&amp;day=All&amp;time=All&amp;county=All&amp;name=\" target=\"_blank\">meetings.ukna.org/meeting/search</a></div><img src=\"https://plus.unsplash.com/premium_photo-1675870395052-67206ea2597e?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z29vZCUyMHRoaW5nc3xlbnwwfHwwfHx8MA%3D%3D\" alt=\"a beautiful picture\" width=\"150\" height=\"200\" style=\"width: 25%; float: right;\" class=\"note-float-right\"><div class=\"field field--name-field-meeting-times field--type-time-range field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><br><span style=\"font-size: 17.136px;\">18:00 ~ 19:00</span><br></div><div class=\"field field--name-field-meeting-type field--type-list-string field--label-inline\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><div class=\"field__label font-weight-bold\" style=\"display: inline-block; padding-right: 5px; font-weight: 700 !important;\">Type&nbsp;</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">Physical</div></div><div class=\"field field--name-field-meeting-venue-name field--type-string field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\">St Philip the Deacon Church Hall</div><div class=\"field field--name-field-meeting-street field--type-string field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\">67 Beechcroft Road</div><div class=\"field field--name-field-meeting-town field--type-string field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\">Swindon</div><div class=\"field field--name-field-meeting-county field--type-list-string field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\">Wiltshire</div><div class=\"field field--name-field-meeting-postcode field--type-string field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\">SN2 7RE</div><div class=\"field field--name-field-meeting-asc field--type-entity-reference field--label-inline\" style=\"margin: 0px; font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><div class=\"field__label font-weight-bold\" style=\"margin: 0px; padding-right: 5px; display: inline-block; font-weight: 700 !important;\">ASC&nbsp;</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">Chiltern &amp; Thames Valley Area</div></div><div class=\"field field--name-field-meeting-venue-info field--type-string-long field--label-hidden field__item\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\">rear entrance</div><div class=\"field field--name-field-meeting-wheelchair field--type-list-string field--label-inline\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><div class=\"field__label font-weight-bold\" style=\"display: inline-block; padding-right: 5px; font-weight: 700 !important;\"><i>Wheelchair Accessible?</i>&nbsp;</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">Yes</div></div><div class=\"field field--name-field-meeting-open field--type-list-string field--label-inline\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><div class=\"field__label font-weight-bold\" style=\"display: inline-block; padding-right: 5px; font-weight: 700 !important;\">Open?&nbsp;</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">\"Open to all\"</div></div><div class=\"field field--name-field-meeting-naws-format field--type-list-string field--label-inline\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><div class=\"field__label font-weight-bold\" style=\"display: inline-block; padding-right: 5px; font-weight: 700 !important;\">Meeting Format&nbsp;</div><div class=\"field__items\"><div class=\"field__item\" style=\"display: inline-block;\">Candlelight,</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">Children Welcome,</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">Topic</div></div></div><div class=\"field field--name-field-meeting-uk-format field--type-list-string field--label-inline\" style=\"font-family: &quot;helvetica neue&quot;, Helvetica, Arial, sans-serif; font-size: 17.136px;\"><div class=\"field__label font-weight-bold\" style=\"display: inline-block; padding-right: 5px; font-weight: 700 !important;\">Additional Meeting Format&nbsp;</div><div class=\"field__items\"><div class=\"field__item\" style=\"display: inline-block;\">No pets,</div>&nbsp;<div class=\"field__item\" style=\"display: inline-block;\">Parking Available</div></div></div>",
+        "created_at": "2024-08-06T16:40:04.800Z",
+        "updated_at": "2024-08-08T14:35:10.218Z",
+        "status": "rejected",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 20,
+    "fields": {
+        "user": 12,
+        "title": "My redemption",
+        "content": "<h4 class=\"\"><i>I'm from West Baltimore. My life was a mess and then my sister took me back after I got clean.&nbsp;</i></h4><p><i><br>Sincerely,<br><br>Bubbles</i></p>",
+        "created_at": "2024-08-08T11:49:53.588Z",
+        "updated_at": "2024-08-08T11:54:40.343Z",
+        "status": "pending",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 21,
+    "fields": {
+        "user": 13,
+        "title": "blah",
+        "content": "<p>yes my friend</p>",
+        "created_at": "2024-08-08T12:51:30.357Z",
+        "updated_at": "2024-08-08T12:51:30.357Z",
+        "status": "pending",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.share",
+    "pk": 22,
+    "fields": {
+        "user": 14,
+        "title": "Hello World",
+        "content": "<p>\"When I began my journey into programming, I knew the first step was to conquer the classic 'Hello World' project. This simple exercise represents more than just a phrase—it's the gateway to understanding the language of computers and the endless possibilities that come with it. With each line of code, I’m not just learning to program; I’m laying the foundation for a future full of innovation and discovery.\"<br></p>",
+        "created_at": "2024-08-09T15:52:00.588Z",
+        "updated_at": "2024-08-09T15:53:39.218Z",
+        "status": "pending",
+        "average_rating": 0
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 3,
+    "fields": {
+        "share": 1,
+        "user": 2,
+        "parent": null,
+        "content": "great share, sorry to hear of your loss.",
+        "rating": 5,
+        "created_at": "2024-08-04T03:58:16.752Z",
+        "updated_at": "2024-08-08T11:10:45.181Z",
+        "approved": true
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 7,
+    "fields": {
+        "share": 3,
+        "user": 2,
+        "parent": null,
+        "content": "Awesome, Keep listening for the Natural Mystic.",
+        "rating": 10,
+        "created_at": "2024-08-04T20:16:21.455Z",
+        "updated_at": "2024-08-04T23:17:42.042Z",
+        "approved": true
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 10,
+    "fields": {
+        "share": 4,
+        "user": 3,
+        "parent": null,
+        "content": "I've had days like this, enjoy them! \r\n\r\noh I have ho hey playing over in my head...",
+        "rating": 9,
+        "created_at": "2024-08-05T00:26:23.249Z",
+        "updated_at": "2024-08-05T00:26:23.249Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 11,
+    "fields": {
+        "share": 4,
+        "user": 3,
+        "parent": null,
+        "content": "I'm here again and I'll keep coming back!",
+        "rating": 12,
+        "created_at": "2024-08-05T00:31:03.529Z",
+        "updated_at": "2024-08-05T00:31:03.529Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 15,
+    "fields": {
+        "share": 2,
+        "user": 7,
+        "parent": null,
+        "content": "yoyoyo nice storyy",
+        "rating": 10,
+        "created_at": "2024-08-05T14:08:15.021Z",
+        "updated_at": "2024-08-05T14:08:15.021Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 16,
+    "fields": {
+        "share": 6,
+        "user": 7,
+        "parent": null,
+        "content": "big rating",
+        "rating": 1000000,
+        "created_at": "2024-08-05T14:09:53.173Z",
+        "updated_at": "2024-08-05T14:09:53.173Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 17,
+    "fields": {
+        "share": 6,
+        "user": 9,
+        "parent": null,
+        "content": "HOla amigo como estas no estoy deacuerdo con tigo, jajajajja",
+        "rating": 1,
+        "created_at": "2024-08-05T14:09:59.715Z",
+        "updated_at": "2024-08-05T14:09:59.715Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 18,
+    "fields": {
+        "share": 6,
+        "user": 7,
+        "parent": null,
+        "content": "asdf",
+        "rating": 9,
+        "created_at": "2024-08-05T14:10:28.698Z",
+        "updated_at": "2024-08-05T14:10:28.698Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 30,
+    "fields": {
+        "share": 17,
+        "user": 2,
+        "parent": null,
+        "content": "You're right this is funny",
+        "rating": 5,
+        "created_at": "2024-08-06T15:46:26.177Z",
+        "updated_at": "2024-08-06T15:46:26.177Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 31,
+    "fields": {
+        "share": 17,
+        "user": 2,
+        "parent": null,
+        "content": "i hope so it took ages to read...",
+        "rating": 4,
+        "created_at": "2024-08-06T19:51:10.466Z",
+        "updated_at": "2024-08-06T19:51:10.466Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 32,
+    "fields": {
+        "share": 17,
+        "user": 2,
+        "parent": null,
+        "content": "yep it is toogood",
+        "rating": 8,
+        "created_at": "2024-08-06T21:32:12.227Z",
+        "updated_at": "2024-08-06T21:32:12.227Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 36,
+    "fields": {
+        "share": 4,
+        "user": 2,
+        "parent": null,
+        "content": "same here",
+        "rating": 1,
+        "created_at": "2024-08-06T21:44:09.270Z",
+        "updated_at": "2024-08-06T21:44:09.270Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 39,
+    "fields": {
+        "share": 18,
+        "user": 5,
+        "parent": null,
+        "content": "Yeah it's one I want to go to, Any one can give me a lift? If not I'm on my bicycle!!",
+        "rating": 7,
+        "created_at": "2024-08-06T22:43:55.025Z",
+        "updated_at": "2024-08-07T20:43:01.073Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 40,
+    "fields": {
+        "share": 17,
+        "user": 5,
+        "parent": null,
+        "content": "Yeah I like it too!!!",
+        "rating": 3,
+        "created_at": "2024-08-06T23:07:45.546Z",
+        "updated_at": "2024-08-06T23:07:45.546Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 41,
+    "fields": {
+        "share": 18,
+        "user": 5,
+        "parent": null,
+        "content": "cool i cant wait to see more from you",
+        "rating": null,
+        "created_at": "2024-08-06T23:32:46.672Z",
+        "updated_at": "2024-08-06T23:32:46.672Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 42,
+    "fields": {
+        "share": 10,
+        "user": 2,
+        "parent": null,
+        "content": "Not as much as you could of shared, but, you made the first step and they say a journey of a thousand miles starts with just one step.",
+        "rating": null,
+        "created_at": "2024-08-06T23:42:59.318Z",
+        "updated_at": "2024-08-07T00:15:22.179Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 43,
+    "fields": {
+        "share": 6,
+        "user": 11,
+        "parent": null,
+        "content": "I agree!!! Its not too late for you. Keep trying.",
+        "rating": null,
+        "created_at": "2024-08-07T17:46:55.388Z",
+        "updated_at": "2024-08-07T17:46:55.388Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 44,
+    "fields": {
+        "share": 6,
+        "user": 5,
+        "parent": null,
+        "content": "@orechelsea04, Thank You... I'll Keep every ones thoughts in my mind as I move on...",
+        "rating": null,
+        "created_at": "2024-08-07T20:37:51.315Z",
+        "updated_at": "2024-08-07T20:37:51.315Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 45,
+    "fields": {
+        "share": 12,
+        "user": 5,
+        "parent": null,
+        "content": "Yes you can edit your posts, you can also comment on comments now though we still need to nest commented comments",
+        "rating": null,
+        "created_at": "2024-08-08T01:54:43.955Z",
+        "updated_at": "2024-08-08T01:54:43.955Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 46,
+    "fields": {
+        "share": 12,
+        "user": 5,
+        "parent": null,
+        "content": "Oh i should of mentioned... this works still... But nested comments needs working on...",
+        "rating": null,
+        "created_at": "2024-08-08T01:56:30.598Z",
+        "updated_at": "2024-08-08T01:57:05.072Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 47,
+    "fields": {
+        "share": 12,
+        "user": 2,
+        "parent": null,
+        "content": "Loved this share",
+        "rating": null,
+        "created_at": "2024-08-08T02:02:15.879Z",
+        "updated_at": "2024-08-08T02:02:15.879Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 48,
+    "fields": {
+        "share": 12,
+        "user": 2,
+        "parent": null,
+        "content": "Love this",
+        "rating": null,
+        "created_at": "2024-08-08T02:02:50.825Z",
+        "updated_at": "2024-08-08T02:02:50.825Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 49,
+    "fields": {
+        "share": 18,
+        "user": 2,
+        "parent": null,
+        "content": "I'll give you a lift Frank...PM me",
+        "rating": null,
+        "created_at": "2024-08-08T03:16:32.506Z",
+        "updated_at": "2024-08-08T03:16:32.506Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 50,
+    "fields": {
+        "share": 20,
+        "user": 2,
+        "parent": null,
+        "content": "I'm really happy for you, I've found strength through the family members closest to me, my children.\r\nIt seems to me that trust is so enormous in this situation, it takes forever to get back and just too easy to lose in a moment of weakness...\r\nKeep coming back, you are worth it!",
+        "rating": null,
+        "created_at": "2024-08-08T13:53:25.592Z",
+        "updated_at": "2024-08-08T13:53:25.592Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 51,
+    "fields": {
+        "share": 21,
+        "user": 2,
+        "parent": null,
+        "content": "This is how the site will look after I'm assessed for this project\r\n\r\nhttps://ytcbk-twnex.pyxl.ai/",
+        "rating": null,
+        "created_at": "2024-08-08T16:53:56.077Z",
+        "updated_at": "2024-08-08T16:55:07.757Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 52,
+    "fields": {
+        "share": 17,
+        "user": 2,
+        "parent": 40,
+        "content": "@Frank, hey buddy how's it going? this old timer code style seems perfect for your 49 year old self lol",
+        "rating": null,
+        "created_at": "2024-08-08T17:34:42.144Z",
+        "updated_at": "2024-08-08T17:51:42.455Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 53,
+    "fields": {
+        "share": 18,
+        "user": 5,
+        "parent": 49,
+        "content": "@Admin awesome, thanks admin!!!",
+        "rating": null,
+        "created_at": "2024-08-08T17:53:01.432Z",
+        "updated_at": "2024-08-08T17:53:01.432Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 54,
+    "fields": {
+        "share": 17,
+        "user": 5,
+        "parent": 30,
+        "content": "@Admin its you again admin blud",
+        "rating": null,
+        "created_at": "2024-08-08T17:54:35.433Z",
+        "updated_at": "2024-08-08T17:54:35.433Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 55,
+    "fields": {
+        "share": 17,
+        "user": 5,
+        "parent": null,
+        "content": "Wow a few double entries out there \"\"\"",
+        "rating": null,
+        "created_at": "2024-08-08T17:55:25.672Z",
+        "updated_at": "2024-08-08T17:55:25.672Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 56,
+    "fields": {
+        "share": 21,
+        "user": 3,
+        "parent": 51,
+        "content": "@Admin I'll copy and paste the link you sent, Hmm this site isn't great if the links dont auto populate blud",
+        "rating": null,
+        "created_at": "2024-08-08T18:05:59.388Z",
+        "updated_at": "2024-08-08T18:05:59.388Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 57,
+    "fields": {
+        "share": 21,
+        "user": 3,
+        "parent": 56,
+        "content": "@Ken this is gonna get messy i should of left good enough alone... something for the bug fix part of the project",
+        "rating": null,
+        "created_at": "2024-08-08T18:09:57.887Z",
+        "updated_at": "2024-08-08T18:09:57.887Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 58,
+    "fields": {
+        "share": 22,
+        "user": 2,
+        "parent": null,
+        "content": "I love that you, played with the site and made your first share with us... Keep Coming Back!",
+        "rating": null,
+        "created_at": "2024-08-09T16:38:48.918Z",
+        "updated_at": "2024-08-09T16:38:48.918Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 59,
+    "fields": {
+        "share": 21,
+        "user": 15,
+        "parent": null,
+        "content": "Do your links auto-populate yet?\r\n\r\nOr are slugs numerical? Which I guess is fine too.",
+        "rating": null,
+        "created_at": "2024-08-10T10:40:40.381Z",
+        "updated_at": "2024-08-10T10:42:03.960Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.comment",
+    "pk": 60,
+    "fields": {
+        "share": 22,
+        "user": 2,
+        "parent": 58,
+        "content": "@Admin I love that you love this...",
+        "rating": null,
+        "created_at": "2024-08-10T15:31:07.391Z",
+        "updated_at": "2024-08-10T15:31:07.391Z",
+        "approved": false
+    }
+},
+{
+    "model": "core.contactmessage",
+    "pk": 5,
+    "fields": {
+        "name": "Ken Cox",
+        "email": "ken@purerarez.com",
+        "message": "Good it all works",
+        "created_at": "2024-08-08T16:52:07.499Z"
+    }
+}
+]
