@@ -27,6 +27,9 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
+class VisitorCount(models.Model):
+    count = models.IntegerField(default=0)
+    
 
 class Share(models.Model):
     """

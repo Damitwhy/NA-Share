@@ -53,6 +53,7 @@
         <div class="wecome-user">
             {% if user.is_authenticated %}
             <h2>Welcome Back {{ user.username }}</h2>
+            <p>You are our {{ count }} visitor.</p>
             <div class="user-shares">
                 <h2>Your Shares</h2>
 
@@ -65,6 +66,7 @@
             </div>
             {% else %}
             <h2 id="modal-heading">Anonymous...</h2>
+            <p>You are our {{ count }} visitor.</p>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <p>We see you're either not logged in or are unregistered.

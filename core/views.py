@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.decorators import login_required
 # from .models import Post
-from .models import Share, Comment, Message, User, Rating, ContactMessage
+from .models import Share, Comment, Message, User, Rating, ContactMessage, VisitorCount
 from .forms import CommentForm, ShareForm, ContactForm
 from django.contrib import messages
 
@@ -76,9 +76,13 @@ def home(request):
     Returns:
     - A rendered HTML response containing the home page.
     """
+    
+    visitor_count, created = VisitorCount.objects.get_or_create(id=1)    
+    visitor_count.count += 1    
+    visitor_count.save()    
     shares = Share.objects.all()
     user_shares = Share.objects.filter(user=request.user) if request.user.is_authenticated else []    
-    return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares})
+    return render(request, 'core/home.html', {'shares': shares, 'user_shares': user_shares, 'visitor_count': visitor_count.count})
 
 
 def stories_detail(request, share_id):
