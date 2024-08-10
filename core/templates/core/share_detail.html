@@ -1,6 +1,6 @@
 {%% extends 'base.html' %}
-
-
+{% load static %}
+{% load extras %}
 {% block content %}
     <h1>{{ share.title }}</h1>
     <p>{{ share.content }}</p>
@@ -10,7 +10,6 @@
     <a href="{% url 'add_comment' share.id %}">Add Comment</a>
     {% include 'core/comments.html' %}
 {% endblock %}
-
 {% for comment in share.comments.all %}
     <div class="comment">
         <p>{{ comment.user.username }}: {{ comment.content }}</p>
