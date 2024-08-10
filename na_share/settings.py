@@ -85,6 +85,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # Custom middleware   
+    'core.middleware.VisitorCountMiddleware',
     'allauth.account.middleware.AccountMiddleware',
     'core.middleware.AdminAccessMiddleware',    
 ]
