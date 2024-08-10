@@ -1,7 +1,20 @@
 from django.contrib import admin
-from .models import User, Message, Share, Comment, ContactMessage
+from .models import User, Message, Share, Comment, ContactMessage, VisitorCount
 from django_summernote.admin import SummernoteModelAdmin
 from django.contrib import messages
+
+# visitor count admin
+class VisitorCountAdmin(admin.ModelAdmin):
+    list_display = ('id', 'count')
+    readonly_fields = ('id', 'count')
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+admin.site.register(VisitorCount, VisitorCountAdmin)
 
 # Define an admin action to show messages
 def show_messages(modeladmin, request, queryset):
