@@ -14,16 +14,14 @@
             each other
             </p>
             <div class="flex justify-center">
-            <a class="inline-flex text-orange-100 bg-orange-500 hover:bg-orange-700 border-0 py-2 px-6 focus:outline-none rounded text-lg"
+            <a class="btn btn-primary"
                 href="/about">Learn More</a>
             </div>
         </div>
     </div>
 </section>
 <!-- end hero image -->
-
 <div class="row d-flex flex-row">
-
     <div class="col-md-8 order-4 order-sm-3">
         <div class="story-container">
             <h2 id="colorful-heading">Stories</h2>
@@ -56,7 +54,6 @@
             <p>You are our {{ count }} visitor.</p>
             <div class="user-shares">
                 <h2>Your Shares</h2>
-
                 {% for share in user_shares %}
                 <div class="user-share">
                     <li>"{{ share.title }}"</li>
@@ -70,9 +67,10 @@
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <p>We see you're either not logged in or are unregistered.
-                        <br>Please feel free to benefit from the NA-Share by signing up, log in and begin your journey
+                        <br>Please feel free to benefit from NA-Share by signing up, log in and begin your journey
                         sharing.<br>
-                        Sharing is caring...</p>
+                        Remember, Sharing is Caring... What ever you do just Keep Coming Back!
+                    </p>
                 </div>
             </div>
             {% endif %}

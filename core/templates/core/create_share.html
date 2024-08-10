@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-
+{% load static %}
+{% load extras %}
 {% block content %}
 {% if user.is_authenticated %}
 <div class="row">
@@ -12,11 +13,10 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-
     </div>
-    {% else %}
-    <h3>Welcome, Anonymous!</h3>
-    <p>Please <a href="{% url 'account_login' %}">login</a> to share your story.</p>
-    <p>Or <a href="{% url 'account_signup' %}">Sign Up</a>To begin Your Journey</p>
-    {% endif %}
-    {% endblock %}
+{% else %}
+<h3>Welcome, Anonymous!</h3>
+<p>Please <a href="{% url 'account_login' %}">login</a> to share your story.</p>
+<p>Or <a href="{% url 'account_signup' %}">Sign Up</a>To begin Your Journey</p>
+{% endif %}
+{% endblock %}

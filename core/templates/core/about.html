@@ -4,7 +4,6 @@
 {% load static %}
 <div class="container-fluid auto-mx ">
     <div class="row">
-
         <div class="about-box col-sm-12 col-md-6 gy6 order-md-first order-2 d-flex align-items-center justify-content-center auto-mx">
             <h1 class="text-center">About Us.</h1>
             <p>Narcotics Anonymous (NA) is a global community of individuals who have found a new way of life, free
@@ -26,13 +25,9 @@
                 break the stigma surrounding addiction. Together, we can inspire others to seek help, find hope, and
                 embark on their own journey of recovery.</p>
         </div>
-        <div id="about-us-img" class="col-sm-12 col-md-6 order-md-2 order-first d-flex align-items-center justify-content-center auto-mx">
-
-        </div>
-
+        <div id="about-us-img" class="col-sm-12 col-md-6 order-md-2 order-first d-flex align-items-center justify-content-center auto-mx"> </div>
     </div>
     <div class="row">
-
         <div class="about-box col-sm-12 col-md-6 gy-6 order-md-2 order-2 d-flex align-items-center justify-content-center auto-mx">
             <h1 class="text-center">What is sharing?</h1>
             <p>Sharing at a Narcotics Anonymous (NA) meeting is a core part of the recovery process. It allows
@@ -45,50 +40,38 @@
                 to recovery. Listening to others’ stories provides valuable lessons and insights that can aid in
                 personal growth and recovery. Additionally, it helps build a strong support network, which is
                 crucial
-                for long-term recovery.</p>
-
-
+                for long-term recovery.
+            </p>
         </div>
-        <div id="about-img" class=" col-sm-12 col-md-6 gy-6 order-md-first order-first d-flex align-items-center justify-content-center auto-mx">
-
-        </div>
-
-
+        <div id="about-img" class=" col-sm-12 col-md-6 gy-6 order-md-first order-first d-flex align-items-center justify-content-center auto-mx"> </div>
     </div>
-    <div class="row">
-
-        
-            <div class="about-box col-sm-12 col-md-6 order-md-first order-2 d-flex align-items-center justify-content-center auto-mx">
-                <h2 class="text-center">So What Now?</h2>
-                <p>Knowing that meetings allow us the opportunity to share and knowing all the benefits that come of
-                    sharing, this site offers the same opportunity to share and learn from the posts other members
-                    have
-                    made. Sharing is a powerful tool that can help individuals heal from the wounds of addiction and
-                    find
-                    peace.
-                    It
-                    is an act of courage and vulnerability that can inspire others to seek help and embark on their own
-                    journey of recovery. By sharing our stories, we not only help ourselves but also contribute to the
-                    healing of others. It is a profound act of service that strengthens the bonds of fellowship and
-                    unity
-                    within the NA community.</p>
-                </p>
-                <p>This is an opportunity for You to join us and
-                    {% if user.is_authenticated %}
-                    <a href="{% url 'create_share' %}">Create a Share</a>
-                    {% else %}
-                    <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Sign
-                        Up</a> to
-                    create a share
-                    {% endif %}
-                </p>
-            </div>
-            <div id="about-what-img" class=" col-sm-12 col-md-6 order-md-2 order-first d-flex align-items-center justify-content-center">
-                
-            </div>
-        
-
+    <div class="row">        
+        <div class="about-box col-sm-12 col-md-6 order-md-first order-2 d-flex align-items-center justify-content-center auto-mx">
+            <h2 class="text-center">So What Now?</h2>
+            <p>Knowing that meetings allow us the opportunity to share and knowing all the benefits that come of
+                sharing, this site offers the same opportunity to share and learn from the posts other members
+                have
+                made. Sharing is a powerful tool that can help individuals heal from the wounds of addiction and
+                find
+                peace.
+                It
+                is an act of courage and vulnerability that can inspire others to seek help and embark on their own
+                journey of recovery. By sharing our stories, we not only help ourselves but also contribute to the
+                healing of others. It is a profound act of service that strengthens the bonds of fellowship and
+                unity
+                within the NA community.</p>
+            </p>
+            <p>This is an opportunity for You to join us and
+                {% if user.is_authenticated %}
+                <a href="{% url 'create_share' %}">Create a Share</a>
+                {% else %}
+                <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Sign
+                    Up</a> to
+                create a share
+                {% endif %}
+            </p>
+        </div>
+        <div id="about-what-img" class=" col-sm-12 col-md-6 order-md-2 order-first d-flex align-items-center justify-content-center"> </div>
     </div>
 </div>
-
 {% endblock %}
