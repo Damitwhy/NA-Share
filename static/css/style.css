@@ -186,6 +186,7 @@ a:hover {
 }
 
 .comment-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 2px solid #6096B7;
     background-color: rgba(204, 230, 255, 10);
     border-radius: 5px;
