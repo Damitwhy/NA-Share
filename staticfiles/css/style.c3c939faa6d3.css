@@ -29,7 +29,7 @@ main {
 
 #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url("/static/images/outdoor-hands.jpg");
+        url("/static/images/outdoor-hands.57bc08f2bb51.jpg");
     background-size: cover;
     background-position: center center;
     height: 100%;
@@ -109,7 +109,7 @@ a:hover {
 
 #about-us-img {
     display: block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nashare.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nashare.0d7fbbc106e9.jpg");
     background-size: cover;
     background-position: center center;
     height: auto;
@@ -119,7 +119,7 @@ a:hover {
 
 #about-img {
     display: block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nagroup.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nagroup.360183df8003.jpg");
     background-size: cover;
     background-position: center center;
     height: auto;
@@ -129,7 +129,7 @@ a:hover {
 
 #about-what-img {
     display: block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/what-now.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/what-now.6281b9b70a7d.webp");
     background-size: cover;
     background-position: center center;
     height: auto;
@@ -272,7 +272,7 @@ a:hover {
     color: white;
     text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
     display: block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/devesh-tripathi.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/devesh-tripathi.be2a2ebe398b.jpg");
     background-size: cover;
     background-position: center center;
     height: auto;
