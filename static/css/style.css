@@ -39,6 +39,18 @@ main {
     border-radius: 5px;
 }
 
+#about-img, #about-what-img, #about-us-img {
+    min-height: 600px; /* Adjust the height as needed */
+    width:100%
+    
+}
+
+.img {
+
+    height: 100%;
+    width: 100%;
+}
+
 .container-home {
     padding: 20px;
     display: flex;
@@ -97,7 +109,56 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.title-hero{
+#about-us-img {
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nashare.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    
+}
+    
+#about-img {
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nagroup.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    
+    
+}
+
+#about-what-img {
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/what-now.webp");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    
+    
+}
+
+#about-what-img, #about-img, #about-us-img {
+    min-height: 300px; /* Adjust the height as needed */
+    max-inline-size: 50%;
+}
+
+.about-box {
+    display: inline;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.title-hero {
     color: white;
     font-size: 20px;
     font-weight: 700;
@@ -207,6 +268,31 @@ a:hover {
     font-size: 2em;
 }
 
+#contactUs {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/devesh-tripathi.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+}
+
+#contactUs h1, #contactUs h2, #contactUs h3, #contactUs h4, #contactUs h5, #contactUs h6 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+
+}
+
+#contact-us-text-box {    
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
 .modal {
     display: none;
     /* Hidden by default */
@@ -245,6 +331,24 @@ a:hover {
 }
 
 @media (max-width: 600px) {
+    p {
+        word-wrap: break-word;
+    }
+
+    .modal-content {
+        width: 90%;
+        /* Adjust width for mobile views */
+        margin: 10% auto;
+        /* Adjust margin for mobile views */
+    }
+}
+
+@media (max-width: 768px) {
+    #about-us-img, #about-img, #about-what-img {
+        min-height: 15px;
+        max-height: 30px;
+        visibility: hidden;
+    }
     p {
         word-wrap: break-word;
     }
