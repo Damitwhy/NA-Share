@@ -24,6 +24,7 @@ main {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
+    font-size: 1.5em;
 }
 
 #hero {
@@ -179,6 +180,11 @@ a:hover {
     padding: 5px;
     margin-bottom: 10px;
     flex-shrink: 1;
+}
+
+.logo-png {
+    width: 50px;
+    height: auto;
 }
 
 .note-group-select-from-files {
