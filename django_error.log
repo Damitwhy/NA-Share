@@ -47,3 +47,5 @@ Traceback (most recent call last):
     sock.connect(sa)
 ConnectionRefusedError: [Errno 111] Connection refused
 "POST /accounts/password/reset/ HTTP/1.1" 500 150047
+"GET / HTTP/1.1" 500 59
+"GET /favicon.ico HTTP/1.1" 500 59

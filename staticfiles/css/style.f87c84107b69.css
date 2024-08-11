@@ -174,8 +174,7 @@ a:hover {
     padding: 10px;
 }
 
-.stories-sidebar {
-    
+.stories-sidebar {        
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -217,7 +216,7 @@ a:hover {
     border: 2px solid #6096B7;
     background-color: #F8F9FA;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 5px;
 }
 
@@ -328,6 +327,23 @@ a:hover {
     height: auto;
     border: 2px solid #6096B7;
     border-radius: 5px;
+}
+
+#signUpUser {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nashare.0d7fbbc106e9.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+}
+
+#signUpUser h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 #contactUs h1,
