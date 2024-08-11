@@ -46,12 +46,31 @@
         <!-- if share status endif -->
         {% endfor %}
         <!-- end for loop -->
+
+        <!-- Pagination controls -->
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
     <div class="col-md-4 stories-sidebar order-2 order-md-3">
         <div class="wecome-user">
             {% if user.is_authenticated %}
             <h2>Welcome Back {{ user.username }}</h2>
-            <p>You are our {{ count }} visitor.</p>
+            <p>You are visitor {{ visitor_count }}, Enjoy.</p>
             <div class="user-shares">
                 <h2>Your Shares</h2>
                 {% for share in user_shares %}

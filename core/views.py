@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
+from django.views.generic import ListView
 from django.contrib.auth.decorators import login_required
 # from .models import Post
 from .models import Share, Comment, Message, User, Rating, ContactMessage, VisitorCount
@@ -9,6 +10,32 @@ from django.contrib import messages
 
 # Create your views here.
 
+class ShareListView(ListView):
+    model = Share
+    template_name = 'core/home.html'
+    context_object_name = 'shares'
+    paginate_by = 3  # Number of shares per page
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        # Visitor count logic
+        visitor_count, created = VisitorCount.objects.get_or_create(id=1)
+        visitor_count.count += 1
+        visitor_count.save()
+        
+        # Add visitor count to context
+        context['visitor_count'] = visitor_count.count
+        
+        # Example: Count the number of shares
+        context['count'] = Share.objects.count()
+        
+        # User-specific shares
+        context['user_shares'] = Share.objects.filter(user=self.request.user) if self.request.user.is_authenticated else []
+        
+        return context
+    
+    
 def get_average_rating_for_share(share_id):
     """
     Returns the average rating for a specific share.
