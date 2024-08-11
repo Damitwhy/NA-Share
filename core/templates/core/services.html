@@ -1,36 +1,79 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load extras %}
-{% block content %} 
+{% block content %}
 <div class="row">
-    <div class="col-md-12">
-        <h1>Service Links.</h1>
-        <p>For Narcotics Anonymous related services off site</p>
-        <ul>
-            <li><a href="https://www.na.org/" target="_blank">NA World Services</a></li>
-            <li><a href="https://www.na.org/?ID=PR-index" target="_blank">Public Relations</a></li>
-            <li><a href="https://www.na.org/?ID=lit-index" target="_blank">Literature</a></li>
-            <li><a href="https://www.na.org/?ID=ips-index" target="_blank">Informational Pamphlets</a></li>
-            <li><a href="https://www.na.org/?ID=ips-index" target="_blank">NAWS News</a></li>
-        </ul>
+    <div class="col-sm-12 col-md-6">
+        <div class="story-container">
+            <h2>Service Links.</h2>
+            <p>For Narcotics Anonymous related services off site</p>
+            <ul>
+                <li><a href="https://www.na.org/" target="_blank">NA World Services</a></li>
+                <li><a href="https://www.na.org/?ID=PR-index" target="_blank">Public Relations</a></li>
+                <li><a href="https://www.na.org/?ID=lit-index" target="_blank">Literature</a></li>
+                <li><a href="https://www.na.org/?ID=ips-index" target="_blank">Informational Pamphlets</a></li>
+                <li><a href="https://www.na.org/?ID=ips-index" target="_blank">NAWS News</a></li>
+                <li><a href="https://rehabclinicsgroup.com/na-meetings/wiltshire/" target="_blank">NA Meetings</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="col-md-12">
-        <h2>NA Videos</h2>
-        <p>Here are some videos from the NA World Services YouTube channel</p>
-        <div class="video-container row d-flex flex-wrap gx-3 gy-3">
-            <div class="video-item col-sm-12 col-md-4">
-                <iframe width="100%" height="ms-auto" src="https://www.youtube.com/embed/FHv2Vc8CQkg?si=6JTltiiiojFDOv1I" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-item col-sm-12 col-md-4">
-                <iframe width="100%" height="ms-auto" src="https://www.youtube.com/embed/93pfA-HlC8M?si=WC8d-OxRKzKVdhCm" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-item col-sm-12 col-md-4">
-                <iframe width="100%" height="ms-auto" src="https://www.youtube.com/embed/i4lacsGD6mo?si=WRkgW_aILhCwiYYQ" frameborder="0" allowfullscreen></iframe>
+    <div class="col-sm-12 col-md-6">
+        <div class="story-container">
+            <h2>NA Literature</h2>
+            <p>Here are some of the books that are available from NA World Services</p>
+            <div id="books" class="row">
+                <div class="col-4">
+                    <img src="{% static 'images/Narcotics-anonymous-basic-text.jpg' %}" alt="Basic Text"
+                        class="img-fluid">
+                </div>
+                <div class="col-8">
+                    <h3>Basic Text</h3>
+                    <p>Our basic recovery text, Narcotics Anonymous</p>
+                </div>
+                <div id="books" class="row">
+                    <div class="col-4">
+                        <img src="{% static 'images/12steps_traditions.jpg' %}" alt="It Works" class="img-fluid">
+                    </div>
+                    <div class="col-8">
+                        <h3>It Works</h3>
+                        <p>How and Why: The Twelve Steps and Twelve Traditions of Narcotics Anonymous</p>
+                    </div>
+                </div>
+                <div id="books" class="row">
+                    <div class="col-4">
+                        <img src="{% static 'images/just_for_today.jpg' %}" alt="Just For Today" class="img-fluid">
+                    </div>
+                    <div class="col-8">
+                        <h3>Just For Today</h3>
+                        <p>Daily Meditations for Recovering Addicts</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
+</div>
+</div>
+<div class="row story-container">
+    <div class="col-md-12 p-2">
+        <h2>NA Videos</h2>
+        <p>Here are some videos from the NA World Services YouTube channel</p>
+        <div class="video-container row d-flex flex-wrap gx-3 gy-3 justify-content-even">
+            <div class="video-item col-sm-12 col-md-4 justify-center">
+                <iframe width="90%" height="ms-auto" src="https://www.youtube.com/embed/FHv2Vc8CQkg?si=6JTltiiiojFDOv1I"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-item col-sm-12 col-md-4 justify-center">
+                <iframe width="90%" height="ms-auto" src="https://www.youtube.com/embed/93pfA-HlC8M?si=WC8d-OxRKzKVdhCm"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-item col-sm-12 col-md-4 justify-center">
+                <iframe width="90%" height="ms-auto" src="https://www.youtube.com/embed/i4lacsGD6mo?si=WRkgW_aILhCwiYYQ"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
     </div>
-    </div>
+</div>
+</div>
 </div>
 {% endblock %}

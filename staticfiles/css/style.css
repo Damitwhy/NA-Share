@@ -364,10 +364,38 @@ a:hover {
     margin-bottom: 10px;
 }
 
+#books img {
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 60px;
+    width : auto;
+}
+
 .messages {
     text-align: center;
     list-style-type: none;
     padding: 0;
+    opacity: 1;
+    transition: opacity 0.6s ease-in;
+    /* Other timing functions */
+    /* ease */
+    /* ease-in */
+    /* ease-out */
+    /* ease-in-out */
+    /* linear */
+    /* step-start */
+    /* step-end */
+    /* steps() */
+    /* cubic-bezier() */
+    animation: fadeOut 6s forwards;
+}
+/* Keyframes to fade out the alert */
+@keyframes fadeOut {
+    0% { opacity: 1; } /* Start fully visible */
+    50% { opacity: 1; }
+    90% { opacity: 0.2; } /* Gradually fade out */
+    100% { display: none; opacity: 0; } /* Hide it after fade */
 }
 
 .messages li {
@@ -415,7 +443,7 @@ a:hover {
     overflow: auto;    
     background-color: rgb(0, 0, 0);    
     background-color: rgba(0, 0, 0, 0.4);    
-    padding-top: 60px;
+    padding: 30px;
     border-radius: 5px;
 }
 

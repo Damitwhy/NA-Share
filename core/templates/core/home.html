@@ -29,7 +29,7 @@
         {% for share in shares %}
         <!--  if share.get_status_display == 'Approved' to restrict access later for admin to approve pending or reject -->
         <div class="story-container">
-            <h2 class="story-title">{{ share.title|capitalize_first }}</h2>
+            <h3 class="story-title">{{ share.title|capitalize_first }}</h3>
             <p class="story-content">{{ share.content|truncate_words:30|safe }}</p>
             <!-- removed average rating as it was not working -->
             <p class="story-createdOn">Created at: {{ share.created_at }}</p>
@@ -71,7 +71,7 @@
             <h2>Welcome Back {{ user.username }}</h2>
             <p>Visitors have accessed this page {{ visitor_count }} times, Enjoy.</p>
             <div class="user-shares">
-                <h2>Your Shares</h2>
+                <h3>Your Shares</h3>
                 {% for share in user_shares %}
                 <div class="user-share">
                     <li>"{{ share.title }}"</li>
