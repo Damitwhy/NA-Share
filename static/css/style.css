@@ -174,8 +174,7 @@ a:hover {
     padding: 10px;
 }
 
-.stories-sidebar {
-    
+.stories-sidebar {        
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -217,7 +216,7 @@ a:hover {
     border: 2px solid #6096B7;
     background-color: #F8F9FA;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 5px;
 }
 
