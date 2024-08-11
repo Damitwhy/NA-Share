@@ -4,9 +4,9 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 {% block content %}
 
-<div class="container">
+<div id="LoginUser" class="container">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div id="Contact-us-text-box" class="col-sm-12 mt-3 mb-3">
             <h1>{% trans "Sign In" %}</h1>
 
             <p>{% blocktrans %}Welcome back to NA-Share.<br>
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 mt-3 mb-3 offset-md-2">
+        <div class="col-sm-12 mt-3 mb-3">
             <form class="login" method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
                 {{ form.as_p }}

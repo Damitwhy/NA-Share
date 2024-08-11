@@ -268,6 +268,56 @@ a:hover {
     font-size: 2em;
 }
 
+#logOutUser {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/man-back.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    min-height: 40vh;
+}
+
+#logOutUser h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+#LoginUser {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/living-clean_orig.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+}
+
+#LoginUser h1, 
+#LoginUser h2,
+#LoginUser h3,
+#LoginUser h4,
+#LoginUser h5,
+#LoginUser h6 {
+
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+#id_password_helptext {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+.helptext {
+    visibility: hidden;
+}
+
 #contactUs {
     color: white;
     text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);

@@ -47,8 +47,8 @@
         {% endfor %}
         <!-- end for loop -->
         <!-- Pagination controls -->
-        <div class="pagination">
-            <span class="step-links">
+        <div class="pagination pb-3">
+            <span class="step-links"></span>
                 {% if page_obj.has_previous %}
                     <a href="?page=1">&laquo; first</a>
                     <a href="?page={{ page_obj.previous_page_number }}">previous</a>
@@ -69,7 +69,7 @@
         <div class="wecome-user">
             {% if user.is_authenticated %}
             <h2>Welcome Back {{ user.username }}</h2>
-            <p>You are visitor {{ visitor_count }}, Enjoy.</p>
+            <p>Visitors have accessed this page {{ visitor_count }} times, Enjoy.</p>
             <div class="user-shares">
                 <h2>Your Shares</h2>
                 {% for share in user_shares %}
@@ -81,7 +81,7 @@
             </div>
             {% else %}
             <h2 id="modal-heading">Anonymous...</h2>
-            <p>You are visitor {{ visitor_count }}, Enjoy.</p>
+            <p>Visitors have accessed this page {{ visitor_count }} times, Enjoy.</p>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <p>We see you're either not logged in or are unregistered.

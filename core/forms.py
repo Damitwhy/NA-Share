@@ -53,3 +53,7 @@ class SearchForm(forms.Form):
     query = forms.CharField()
     
     
+class SignInForm(forms.Form):
+    username = forms.CharField(label='Username')
+    password = forms.CharField(label='Password', widget=forms.PasswordInput)
+    remember_me = forms.BooleanField(label='Remember Me', required=False)
