@@ -3,10 +3,11 @@ Join me as I start this build...
 # Narcotics Anonymous Social Site
 
 ## Overview
-This project aims to create a social platform for members of Narcotics Anonymous (NA) to share their experiences, rate resources, and connect with each other in a supportive environment.
+Project to create a Django social platform for members of Narcotics Anonymous (NA), users can post their stories as shares to share their experiences, comment on other user stories/shares in a supportive environment, message other users or comment on comments. with full C.R.U.D functionality to Create, Read, Update and Delete shares and comments, admin to approve posts.
 
 ## Features
-- **User Profiles**: Create and manage personal profiles.
+- **User**: Create personal account.
+- **User Authentication** 
 - **Sharing Stories**: Share personal recovery stories and experiences.
 - **Rating System**: Rate and review resources such as meetings, literature, and recovery tools.
 - **Messaging**: Connect with other members through private messaging.
