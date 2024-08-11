@@ -32,7 +32,7 @@ We welcome contributions! Please read our Contributing Guidelines for more detai
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ## Contact
-For any questions or suggestions, please open an issue or contact us at Damitwhy03@gmail.com
+For any questions or suggestions, please open an issue or contact us at kenneth.cox@students.codeinstitute.net
 
 ---
 
