@@ -18,22 +18,24 @@ $(document).ready(function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('#modal1');
     const heading = document.getElementById('modal-heading');
-    const modal = document.getElementById('myModal');
+    const modal = document.getElementById('myModal');      
+    if (elems) {
+        heading.addEventListener('mouseover', function() {
+            modal.style.display = 'block'; // Show the modal
+        });
 
-    heading.addEventListener('mouseover', function() {
-        modal.style.display = 'block'; // Show the modal
-    });
+        heading.addEventListener('mouseout', function() {
+            modal.style.display = 'none'; // Hide the modal
+        });
 
-    heading.addEventListener('mouseout', function() {
-        modal.style.display = 'none'; // Hide the modal
-    });
+        modal.addEventListener('mouseover', function() {
+            modal.style.display = 'block'; // Keep the modal visible when hovering over it
+        });
 
-    modal.addEventListener('mouseover', function() {
-        modal.style.display = 'block'; // Keep the modal visible when hovering over it
-    });
-
-    modal.addEventListener('mouseout', function() {
-        modal.style.display = 'none'; // Hide the modal when leaving it
-    });
+        modal.addEventListener('mouseout', function() {
+            modal.style.display = 'none'; // Hide the modal when leaving it
+        });
+    }
 });
