@@ -13,15 +13,18 @@ class ShareListView(ListView):
     """
     A class-based view for displaying a list of shares.
     Attributes:
-        model (Model): The model to use for retrieving shares.
-        template_name (str): The name of the template to render.
-        context_object_name (str): The name of the variable to use in the template for the list of shares.
+        model (Model): The model class to use for retrieving shares.
+        template_name (str): The name of the template to use for rendering the view.
+        context_object_name (str): The name of the variable to use for the list of shares in the template context.
         paginate_by (int): The number of shares to display per page.
     Methods:
-        get_context_data(**kwargs): Returns the context data for rendering the template.
+        get_context_data(**kwargs): Returns the context data for rendering the view.
     Usage:
         view = ShareListView()
-        context = view.get_context_data()
+        context = view.get_context_data()   
+    Returns the context data for rendering the view.
+    Returns:
+        dict: The context data containing the list of shares, visitor count, share count, and user-specific shares.
     """
     model = Share
     template_name = 'core/home.html'
@@ -32,11 +35,14 @@ class ShareListView(ListView):
         context = super().get_context_data(**kwargs)
         
         # Visitor count logic
-        visitor_count, created = VisitorCount.objects.get_or_create(id=1)
-        visitor_count.count += 1
-        visitor_count.save()
+        if not self.request.session.get('visitor_counted', False):
+            visitor_count, created = VisitorCount.objects.get_or_create(id=1)
+            visitor_count.count += 1
+            visitor_count.save()
+            self.request.session['visitor_counted'] = True
         
         # Add visitor count to context
+        visitor_count = VisitorCount.objects.get(id=1)
         context['visitor_count'] = visitor_count.count
         
         # Example: Count the number of shares
@@ -186,7 +192,7 @@ def edit_comment(request, share_id, comment_id):
     Raises:
         Http404: If the comment with the given ID does not exist.
     """
-    ...
+
     comment = get_object_or_404(Comment, id=comment_id)
     if request.method == 'POST':
         form = CommentForm(request.POST, instance=comment)
@@ -215,7 +221,7 @@ def reply_comment(request, share_id, parent_id):
         Http404: If the parent comment does not exist.
 
     """
-    ...
+    
     parent_comment = get_object_or_404(Comment, id=parent_id)
     if request.method == 'POST':
         form = CommentForm(request.POST)
