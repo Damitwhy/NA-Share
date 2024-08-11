@@ -1,8 +1,9 @@
 from django.urls import path
 from . import views
+from .views import ShareListView
 
-urlpatterns = [
-    path('', views.home, name='home'),
+urlpatterns = [    
+    path('', ShareListView.as_view(), name='home'),
     path('share/<int:share_id>/comment/', views.comment, name='comment'),
     path('share/new/', views.create_share, name='create_share'),
     path('about/', views.about, name='about'),
@@ -14,7 +15,5 @@ urlpatterns = [
     path('share/<int:share_id>/comment/', views.comment, name='add_comment'),
     path('share/<int:share_id>/comment/<int:parent_id>/', views.comment, name='reply_comment'),
     path('share/<int:share_id>/comment/<int:comment_id>/edit/', views.edit_comment, name='edit_comment'),
-    path('share/<int:share_id>/comment/<int:comment_id>/delete/', views.delete_comment, name='delete_comment'),
-    # Remove the old patterns that don't include share_id
-    
+    path('share/<int:share_id>/comment/<int:comment_id>/delete/', views.delete_comment, name='delete_comment'),      
 ]
