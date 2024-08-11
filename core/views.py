@@ -9,10 +9,20 @@ from django.contrib import messages
 from django.db.models import Avg
 
 
-
-# Create your views here.
-
 class ShareListView(ListView):
+    """
+    A class-based view for displaying a list of shares.
+    Attributes:
+        model (Model): The model to use for retrieving shares.
+        template_name (str): The name of the template to render.
+        context_object_name (str): The name of the variable to use in the template for the list of shares.
+        paginate_by (int): The number of shares to display per page.
+    Methods:
+        get_context_data(**kwargs): Returns the context data for rendering the template.
+    Usage:
+        view = ShareListView()
+        context = view.get_context_data()
+    """
     model = Share
     template_name = 'core/home.html'
     context_object_name = 'shares'
