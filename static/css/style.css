@@ -330,6 +330,23 @@ a:hover {
     border-radius: 5px;
 }
 
+#signUpUser {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/nashare.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: auto;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+}
+
+#signUpUser h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
 #contactUs h1,
 #contactUs h2,
 #contactUs h3,

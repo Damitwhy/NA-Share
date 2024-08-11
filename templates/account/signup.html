@@ -3,8 +3,8 @@
 {% load account socialaccount %}
 {% block head_title %}{% trans "Signup" %}{% endblock head_title %}
 {% block content %}
-
-<div class="container">
+ 
+<div id="signUpUser" class="container">
     <div class="row">
         <div class="col-sm-12 mt-3 mb-3 offset-md-2">
             <h1>{% trans "Sign Up" %}</h1>
@@ -22,7 +22,7 @@
               {% if redirect_field_value %}
               <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
               {% endif %}
-              <button class="btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
+              <button class="btn btn-primary" type="submit">{% trans "Sign Up" %}</button>
             </form>
         </div>
     </div>
