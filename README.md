@@ -1,7 +1,7 @@
 # NA-SHARE  
 A Narcotics Anonymous Sharing Community.  
 
-![Am I Responsive Image.](/project_readmes/images/ui.dev3.png)  
+![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)  
 
 ## Overview  
 Project to create a Django social platform for members of Narcotics Anonymous (NA).  
@@ -29,7 +29,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - **Register/Sign Up**  
     - Use of Django-Allauth template for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilizes Django-Allauth authentication method to check user email is unique and User model to add new user to database.  
       ![Sign up imager](/project_readmes/images/register.png)  
-- **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  
+- **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  Story board is set in a BootStrap column down the left hand side of the Home Page.  given the space Stories or Shares are displayed with a restriction on word count number and page is paginated to display only three shares, a full detailed Share view can be obtained by clicking on the 'view detail' link for each Share. each share also shows how many comments have been made on that share.  
+  ![Not Logged in](/project_readmes/images/story-board.png) 
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
   Once logged in a share link is made available or made accessible, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilizes Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognized this could be a security issue so all shares should be approved first, see Approve feature ![**Approve-feature**](**Approve-Feature)  
@@ -48,7 +49,9 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@<user>' pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
 - **Approve Feature**: 
+- **About Page**: 
 - **Contact Us**: Any visitor has ability to contact.
+- **Accessed Counter**: 
 - **Anonymity**: Ensure user anonymity and privacy.
 
 ## Technologies Used
