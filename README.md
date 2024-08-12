@@ -55,8 +55,11 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   ![about Page](/project_readmes/images/about-page.png)
 - **Contact Us**: Any visitor has ability to contact.
   - Contact page consists of a form with Name, Email and Message text input areas, each value is required before message will be uploaded to the Database, functionality uploads message with created at date and boolean read value set as null so when Admin receives it they can see it need attention.  Page is thoughtfully set out in a div with background image with hands reaching up, text "please feel free to reach out to us"  
-    ![about Page](/project_readmes/images/contact-us.png)
-- **Accessed Counter**: 
+  ![Contact Page](/project_readmes/images/contact-us.png)
+- **Accessed Counter**: How many Homepage hits?
+  - So out of interest a page hit counter has been set up which increments a database entry by 1 each time the home page is landed. it was buggy to begin with adding two entries each hit but is now working, database entry can not be changed by admin or superuser so the value is there to stay.  
+  ![Counter](/project_readmes/images/counter.png)
+- **Model reminder**: 
 - **Anonymity**: Ensure user anonymity and privacy.
 ## Technologies Used
 
