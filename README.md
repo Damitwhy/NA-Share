@@ -70,15 +70,13 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   ![Modal](/project_readmes/images/modal.png)  
 - **Notifications**: have you signed in? have you signed out? system error? 
   - Use of Django-messages takes care of informing users when they have made an action such as sign out, logged-in, message sent, you are now registered... 
-  - Website error pages 400, 403, 404 and 500 have been created styled and include NA-share header and footer so navigation is not lost.  
-- **Anonymity**: Ensure user anonymity and privacy.
-  - Only Un-verified Email addresses and Username's are stored along with encrypted Passwords any admin would be Data-protection trained and be aware of their responsibilities.  
-  Anyone can fake an email, create one especially for use with sites like ours.  
-  Users may use any name other than their own and keep their anonymity.  
-  NA-Share abide by the Data-Protection Act and don't hold sensitive information, Email addresses are the only conceivable sensitive information, this is protected by our servers at Heroku.  
-  Users are not forbidden to share their own information and this is not the responsibility of NA-Share.  
-  For a fully working Product, Legal advice and user regulations would be implemented to insure anonymity of all our users.  
-  A policy of use would be issued and available on our about page and a link will be provided in the footer with all other legal information.  
+  - Website error pages 400, 403, 404 and 500 have been created styled and include NA-share header and footer so navigation is not lost.
+- **Font Awesome Social Media**: 
+    - Is ever more important to link to social media, it seems its the best place to advertise and having a presence means you could get lot of foot fall come your way.
+- **Anonymity**: Ensure user anonymity and privacy.  
+  - NA-Share conforms to the data-protection act.  
+  - Users may report Shares via our contacts page.  
+  - there are no account settings as of yet but when there are we will consider Privacy settings.  
 ## Technologies Used  
 
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
