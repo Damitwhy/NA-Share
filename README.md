@@ -21,10 +21,10 @@ The NA-Share project hopes to utilise the same benefits found in the process of 
   - **User Authentication**  
      - Use of Django-Allauth templating for authentication, utilising the AUTH_USER_MODEL = 'core.User', Checking user is authenticated or in data base then creating user session.  
   - **Sign In**  
-     - Use of Django-Allauth templating for Sign in linked to its own page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign in utilises authetication method.  
+     - Use of Django-Allauth templating for Sign in linked to its own page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign in utilises authentication method.  
      ![Sign in image](/project_readmes/images/sign-in.png)  
   - **Sign Out**  
-    - Use of Django-Allauth templating for Sign out linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign out utilises authetication method.
+    - Use of Django-Allauth templating for Sign out linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign out utilises authentication method.
       ![Sign out image](/project_readmes/images/sign-out.png)  
   - **Register/Sign Up**  
     - Use of Django-Allauth templating for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilises authetication method to check user email is unique and User model to add new user to database.  
@@ -32,20 +32,20 @@ The NA-Share project hopes to utilise the same benefits found in the process of 
 - **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
-  Once logged in a share link is made availible or made accessable, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilises Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include src images, links to other resources, freedom of expression.  it is recognised this could be a security issue so all shares should be approved first, see Approve feature ![**Approve-feature**](**Approve-Feature)  
+  Once logged in a share link is made availible or made accessable, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilises Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognised this could be a security issue so all shares should be approved first, see Approve feature ![**Approve-feature**](**Approve-Feature)  
     ![Story Share](/project_readmes/images/share-story.png)  
 
 - **Comment on Stories**: Commenting on Shares is as easy as pressing on available links associated with that Share, these can be found on Home and Stories_detail pages.  
   - When not logged in Comment link will take users to a not logged in page requiring users to be authenticated first.  
     ![Not Logged in](/project_readmes/images/response-unauth-comment.png)  
-  - When user is logged in / Authenicated, on pressing the Comment link they will be presented with the Comment page where they see a welcome message specific to user logged in, heading 'Comment on:' with the title of share to be commented on, the Share and a simple text input area with submit button.  
+  - When user is logged in / Authenticated, on pressing the Comment link they will be presented with the Comment page where they see a welcome message specific to user logged in, heading 'Comment on:' with the title of share to be commented on, the Share and a simple text input area with submit button.  
     ![comment-input](/project_readmes/images/comment-input.png)  
 - **Comment on Comments**: Service users comment on comments.  
   - When user is not logged in a link to reply on comment is presented but takes user to page that reminds them they are not logged in.  
     ![reply-button](/project_readmes/images/reply-button.png)  
-  - When user is logged in they have the reply link, if they are logged in and they have made that comment they also get link options to edit or delete that comment.  
+  - When user is logged in they have the reply link, if they are logged in and own that comment they also get link options to edit or delete that comment.  
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
-  - Comment on comment form. When pressing on the reply to comment button users are taken to a comment on comment form with, welcome message and share that parent comment was made on, then parent comment that user wishes to comment on, simple text are with '@<user>' pre-populated so its allows user and parent comment user to be referenced.
+  - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@<user>' pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
 - **Approve Feature**:
 - **Contact Us**: Any visitor has ability to contact.
