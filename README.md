@@ -54,6 +54,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Provides a little more information on the purpose and reasoning behind the NA-Share project, detailing some of the processes of the Narcotics Anonymous program and what parts of that process NA-Share benefits from.  
   ![about Page](/project_readmes/images/about-page.png)
 - **Contact Us**: Any visitor has ability to contact.
+  - Contact page consists of a form with Name, Email and Message text input areas, each value is required before message will be uploaded to the Database, functionality uploads message with created at date and boolean read value set as null so when Admin receives it they can see it need attention.  Page is thoughtfully set out in a div with background image with hands reaching up, text "please feel free to reach out to us"  
+    ![about Page](/project_readmes/images/contact-us.png)
 - **Accessed Counter**: 
 - **Anonymity**: Ensure user anonymity and privacy.
 ## Technologies Used
