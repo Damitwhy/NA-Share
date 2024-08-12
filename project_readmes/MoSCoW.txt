@@ -1,0 +1,67 @@
+Sure, here's a MoSCoW priority list for your Kanban board based on the provided user stories and your current project requirements:
+
+**Must Have**
+
+These are the essential features that must be implemented for your project assessment:
+
+User Registration and Authentication
+
+User Registration
+User Login
+Password Reset
+Shares (Stories)
+
+Create Share
+Edit Share
+Delete Share
+View Share
+Approve Share (Admin)
+Comments
+
+Add Comment
+Edit Comment
+Delete Comment
+Comment on a Comment
+Admin Features
+
+View All Shares
+Approve/Reject Shares
+Manage Users
+
+**Should Have**
+
+These are important features that should be implemented if time allows:
+
+User Profile
+
+View Profile
+Edit Profile
+Rating Stories
+
+Rate Share
+View Share Rating
+
+**Could Have**
+ 
+These are desirable features that could be implemented if there is extra time:
+
+Messaging
+
+Send Message
+Receive Message
+Delete Message
+External Links and Services
+
+View Services Page
+Add Service Link (Admin)
+Edit Service Link (Admin)
+Delete Service Link (Admin)
+Won't Have (for now)
+These are features that will not be implemented in the current project but may be added later:
+
+Search Shares
+Like/Dislike Share
+Security and Privacy
+Report Share
+Privacy Settings
+This prioritization should help you focus on the most critical features for your project assessment while planning for future enhancements.
