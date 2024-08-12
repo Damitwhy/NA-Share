@@ -29,7 +29,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - **Register/Sign Up**  
     - Use of Django-Allauth template for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilizes Django-Allauth authentication method to check user email is unique and User model to add new user to database.  
       ![Sign up imager](/project_readmes/images/register.png)  
-- **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  Story board is set in a BootStrap column down the left hand side of the Home Page.  given the space Stories or Shares are displayed with a restriction on word count number and page is paginated to display only three shares, a full detailed Share view can be obtained by clicking on the 'view detail' link for each Share. each share also shows how many comments have been made on that share.  
+- **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  Story board is set in a BootStrap column down the left hand side of the Home Page.  Given the space, Stories/Shares are displayed with a restriction on word count number and page is paginated to display only three shares, a full detailed Share view can be obtained by clicking on the 'view detail' link for each Share. each share also shows how many comments have been made on that share and a created at date and time.  Option for HUMANIZE function for date and time could be added later but atm it looks good and is readable.
   ![Not Logged in](/project_readmes/images/story-board.png) 
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
@@ -46,14 +46,16 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     ![reply-button](/project_readmes/images/reply-button.png)  
   - When user is logged in they have the reply link, if they are logged in and own that comment they also get link options to edit or delete that comment.  
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
-  - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@<user>' pre-populated so it allows user and parent comment user to be referenced.
+  - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
-- **Approve Feature**: 
-- **About Page**: 
+- **Approve Feature**: Admin have rights!
+  - Admin will need to approve shares before they're displayed, the functionality is present but for the purpose of project assessment this feature has been disabled, looking at the detail view of each share will show the share's 'Status' with values of either Approved, Pending or Rejected.  
+- **About Page**: More Information.  
+  - Provides a little more information on the purpose and reasoning behind the NA-Share project, detailing some of the processes of the Narcotics Anonymous program and what parts of that process NA-Share benefits from.  
+  ![about Page](/project_readmes/images/comment-on-comment.png)
 - **Contact Us**: Any visitor has ability to contact.
 - **Accessed Counter**: 
 - **Anonymity**: Ensure user anonymity and privacy.
-
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
