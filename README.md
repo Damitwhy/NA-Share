@@ -1,12 +1,12 @@
-# NA-SHARE  
+ :# NA-SHARE  
 A Narcotics Anonymous Sharing Community.  
 
-![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)  
+![Am I Responsive Image.](/project_readmes/images/ui.dev3.png)  
 
 ## Overview  
 Project to create a Django social platform for members of Narcotics Anonymous (NA).  
 Service users can post their stories as 'shares' so as to share their experiences and comment on other user 'shares' in a supportive environment, message other users or comment on comments.  with full C.R.U.D functionality to Create, Read, Update and Delete shares and comments, admin will approve posts.  
-The NA-Share project hopes to utilise the same benefits found in the process of sharing found at Narcotics Anonymous meetings, to create a cathartic experience for users, allowing them to express and share their emotions freely, leading to a sense of relief and connection.  
+The NA-Share project hopes to utilize the same benefits found in the process of sharing found at Narcotics Anonymous meetings, to create a cathartic experience for users, allowing them to express and share their emotions freely, leading to a sense of relief and connection.  
 
 ## Features  
 
@@ -15,24 +15,24 @@ The NA-Share project hopes to utilise the same benefits found in the process of 
     ![Nav Bar](/project_readmes/images/responsive-nav-small.png)  
     ![Nav Bar](/project_readmes/images/responsive-nav-large.png)  
 - **Welcome Banner**  
-  - Featured on Home page, is fuly responsive, banner includes hero image (as div background) and welcome message with description and link to About page for more information.  
+  - Featured on Home page, is fully responsive, banner includes hero image (as div background) and welcome message with description and link to About page for more information.  
     ![Nav Bar](/project_readmes/images/banner.png)  
-- **User**: Personal account.  User account options are yet to be implimented, we invision later adding features such as account editing, account Bio information, Likes, full comment and share history, ability to add users to favourites and an internal messaging service.  
+- **User**: Personal account.  User account options are yet to be implemented, we envision later adding features such as account editing, account Bio information, Likes, full comment and share history, ability to add users to favourites and an internal messaging service.  
   - **User Authentication**  
-     - Use of Django-Allauth templating for authentication, utilising the AUTH_USER_MODEL = 'core.User', Checking user is authenticated or in data base then creating user session.  
+     - Use of Django-Allauth template for authentication, utilizing the AUTH_USER_MODEL = 'core.User', Checking user is authenticated or in database then creating user session.  
   - **Sign In**  
-     - Use of Django-Allauth templating for Sign in linked to its own page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign in utilises authentication method.  
+     - Use of Django-Allauth template for Sign in linked to its own page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign in utilizes Django-Allauth authentication method.  
      ![Sign in image](/project_readmes/images/sign-in.png)  
   - **Sign Out**  
-    - Use of Django-Allauth templating for Sign out linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign out utilises authentication method.
+    - Use of Django-Allauth template for Sign out linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign out utilizes Django-Allauth authentication method.
       ![Sign out image](/project_readmes/images/sign-out.png)  
   - **Register/Sign Up**  
-    - Use of Django-Allauth templating for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilises authetication method to check user email is unique and User model to add new user to database.  
+    - Use of Django-Allauth template for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilizes Django-Allauth authentication method to check user email is unique and User model to add new user to database.  
       ![Sign up imager](/project_readmes/images/register.png)  
 - **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
-  Once logged in a share link is made availible or made accessable, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilises Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognised this could be a security issue so all shares should be approved first, see Approve feature ![**Approve-feature**](**Approve-Feature)  
+  Once logged in a share link is made available or made accessible, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilizes Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognized this could be a security issue so all shares should be approved first, see Approve feature ![**Approve-feature**](**Approve-Feature)  
     ![Story Share](/project_readmes/images/share-story.png)  
 
 - **Comment on Stories**: Commenting on Shares is as easy as pressing on available links associated with that Share, these can be found on Home and Stories_detail pages.  
