@@ -1,19 +1,32 @@
 Join me as I start this build...
 
-# Narcotics Anonymous Social Site
+# NA-SHARE 
+A Narcotics Anonymous Sharing Community.
+
+![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)
 
 ## Overview
-Project to create a Django social platform for members of Narcotics Anonymous (NA), users can post their stories as shares to share their experiences, comment on other user stories/shares in a supportive environment, message other users or comment on comments. with full C.R.U.D functionality to Create, Read, Update and Delete shares and comments, admin to approve posts.
+Project to create a Django social platform for members of Narcotics Anonymous (NA).  
+Service users can post their stories as 'shares' so as to share their experiences and comment on other user 'shares' in a supportive environment, message other users or comment on comments.  with full C.R.U.D functionality to Create, Read, Update and Delete shares and comments, admin will approve posts.  
+The NA-Share project hopes to utilise the same benefits found in the process of sharing found at Narcotics Anonymous meetings, to create a cathartic experience for users, allowing them to express and share their emotions freely, leading to a sense of relief and connection.
+
+
+
 
 ## Features
-- **User**: Create personal account.
-- **User Authentication** 
-- **Sharing Stories**: Share personal recovery stories and experiences.
-- **Rating System**: Rate and review resources such as meetings, literature, and recovery tools.
-- **Messaging**: Connect with other members through private messaging.
-- **Anonymity**: Ensure user anonymity and privacy.
+
+- **User** : Create personal account.
+- **User Authentication** : Installation and use of Django-Allauth.
+- **Sign In** :
+- **Sign Out** :
+- **Sharing Stories** : Share personal recovery stories and experiences.
+- **Comment on Stories** : Service users comment on shares.
+- **Comment on Comments** : Service users comment on comments.
+- **Contact Us** : Any visitor has ability to contact.
+- **Anonymity** : Ensure user anonymity and privacy.
 
 ## Technologies Used
+
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
 - **Backend**: Django, Python
 - **Database**: PostgreSQL
@@ -21,10 +34,15 @@ Project to create a Django social platform for members of Narcotics Anonymous (N
 - **Hosting**: Heroku
 
 ## Usage
+
 - Register an account or log in if you already have one.
-- Create your profile and start sharing your recovery journey.
-- Rate and review resources to help others in the community.
+- Sharing your recovery journey.
+- Comment on other's Shares to help others in the community.
 - Connect with other members through private messages.
+
+
+
+
 
 ## Contributing
 We welcome contributions! Please read our Contributing Guidelines for more details.
