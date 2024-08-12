@@ -47,12 +47,12 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - When user is logged in they have the reply link, if they are logged in and own that comment they also get link options to edit or delete that comment.  
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
   - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.
-    ![Comment on Comment](/project_readmes/images/about-page.png)  
+    ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
 - **Approve Feature**: Admin have rights!
   - Admin will need to approve shares before they're displayed, the functionality is present but for the purpose of project assessment this feature has been disabled, looking at the detail view of each share will show the share's 'Status' with values of either Approved, Pending or Rejected.  
 - **About Page**: More Information.  
   - Provides a little more information on the purpose and reasoning behind the NA-Share project, detailing some of the processes of the Narcotics Anonymous program and what parts of that process NA-Share benefits from.  
-  ![about Page](/project_readmes/images/comment-on-comment.png)
+  ![about Page](/project_readmes/images/about-page.png)
 - **Contact Us**: Any visitor has ability to contact.
 - **Accessed Counter**: 
 - **Anonymity**: Ensure user anonymity and privacy.
