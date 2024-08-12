@@ -1,4 +1,4 @@
- :# NA-SHARE  
+# NA-SHARE  
 A Narcotics Anonymous Sharing Community.  
 
 ![Am I Responsive Image.](/project_readmes/images/ui.dev3.png)  
@@ -47,7 +47,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
   - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@<user>' pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
-- **Approve Feature**:
+- **Approve Feature**: 
 - **Contact Us**: Any visitor has ability to contact.
 - **Anonymity**: Ensure user anonymity and privacy.
 
