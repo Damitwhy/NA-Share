@@ -19,16 +19,16 @@ The NA-Share project hopes to utilise the same benefits found in the process of 
     ![Nav Bar](/project_readmes/images/banner.png)  
 - **User**: Personal account.  User account options are yet to be implimented, we invision later adding features such as account editing, account Bio information, Likes, full comment and share history, ability to add users to favourites and an internal messaging service.  
   - **User Authentication**  
-   - Use of Django-Allauth templating for authentication, utilising the AUTH_USER_MODEL = 'core.User', Checking user is authenticated or in data base then creating user session.  
+     - Use of Django-Allauth templating for authentication, utilising the AUTH_USER_MODEL = 'core.User', Checking user is authenticated or in data base then creating user session.  
   - **Sign In**  
-   - Use of Django-Allauth templating for Sign in linked to its own page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign in utilises authetication method.  
+     - Use of Django-Allauth templating for Sign in linked to its own page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign in utilises authetication method.  
      ![Sign in image](/project_readmes/images/sign-in.png)  
   - **Sign Out**  
-   - Use of Django-Allauth templating for Sign out linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign out utilises authetication method.
-     ![Sign out image](/project_readmes/images/sign-out.png)  
+    - Use of Django-Allauth templating for Sign out linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Sign out utilises authetication method.
+      ![Sign out image](/project_readmes/images/sign-out.png)  
   - **Register/Sign Up**  
-   - Use of Django-Allauth templating for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilises authetication method to check user email is unique and User model to add new user to database.  
-   ![Sign up imager](/project_readmes/images/register.png)  
+    - Use of Django-Allauth templating for Registration linked to its own confirmation page including Nav-bar and footer, having edited the default template for use in the NA-Share project, being fully responsive.  Register or Sign up utilises authetication method to check user email is unique and User model to add new user to database.  
+      ![Sign up imager](/project_readmes/images/register.png)  
 - **Sharing Stories**: Share personal recovery stories and experiences as a Share, much in the same way a user does in an Narcotics Anonymous meeting.  
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
