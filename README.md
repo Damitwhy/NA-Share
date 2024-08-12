@@ -4,9 +4,15 @@ A Narcotics Anonymous Sharing Community.
 ![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)  
 
 ## Overview  
-Project to create a Django social platform for members of Narcotics Anonymous (NA).  
+Project to create a Django social platform for members of Narcotics Anonymous (NA) and all those effected by addiction.  
 Service users can post their stories as 'shares' so as to share their experiences and comment on other user 'shares' in a supportive environment, message other users or comment on comments.  with full C.R.U.D functionality to Create, Read, Update and Delete shares and comments, admin will approve posts.  
 The NA-Share project hopes to utilize the same benefits found in the process of sharing found at Narcotics Anonymous meetings, to create a cathartic experience for users, allowing them to express and share their emotions freely, leading to a sense of relief and connection.  
+
+## User Experience Design
+- ****
+
+##  Agile  
+- ****
 
 ## Features  
 
@@ -79,7 +85,11 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Backend**: Django, Python
 - **Database**: PostgreSQL
 - **Authentication**: To Be Decided JWT (JSON Web Tokens)
-- **Hosting**: Heroku
+- **Hosting**: Heroku  
+
+## Testing  
+- ****
+## Deployment
 
 ## Usage
 
@@ -89,7 +99,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - Connect with other members through private messages.
 
 
-
+## Credits
 
 
 ## Contributing
