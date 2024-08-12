@@ -58,10 +58,22 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   ![Contact Page](/project_readmes/images/contact-us.png)
 - **Accessed Counter**: How many Homepage hits?
   - So out of interest a page hit counter has been set up which increments a database entry by 1 each time the home page is landed. it was buggy to begin with adding two entries each hit but is now working, database entry can not be changed by admin or superuser so the value is there to stay.  
-  ![Counter](/project_readmes/images/counter.png)
-- **Model reminder**: 
+  ![Counter](/project_readmes/images/counter.png)  
+- **Modal reminder**: Are you logged-in?
+  - Set as a reminder to inform Anonymous users to be logged-in and in turn be registered users, modal will display when ever Anonymous heading is hovered over in Home and Stories_detail pages.  
+  ![Modal](/project_readmes/images/modal.png)  
+- **Notifications**: have you signed in? have you signed out? system error? 
+  - Use of Django-messages takes care of informing users when they have made an action such as sign out, logged-in, message sent, you are now registered... 
+  - Website error pages 400, 403, 404 and 500 have been created styled and include NA-share header and footer so navigation is not lost.  
 - **Anonymity**: Ensure user anonymity and privacy.
-## Technologies Used
+  - Only Un-verified Email addresses and Username's are stored along with encrypted Passwords any admin would be Data-protection trained and be aware of their responsibilities.  
+  Anyone can fake an email, create one especially for use with sites like ours.  
+  Users may use any name other than their own and keep their anonymity.  
+  NA-Share abide by the Data-Protection Act and don't hold sensitive information, Email addresses are the only conceivable sensitive information, this is protected by our servers at Heroku.  
+  Users are not forbidden to share their own information and this is not the responsibility of NA-Share.  
+  For a fully working Product, Legal advice and user regulations would be implemented to insure anonymity of all our users.  
+  A policy of use would be issued and available on our about page and a link will be provided in the footer with all other legal information.  
+## Technologies Used  
 
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
 - **Backend**: Django, Python
