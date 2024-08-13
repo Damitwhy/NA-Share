@@ -8,8 +8,34 @@ Project to create a Django social platform for members of Narcotics Anonymous (N
 Service users can post their stories as 'shares' so as to share their experiences and comment on other user 'shares' in a supportive environment, message other users or comment on comments.  with full C.R.U.D functionality to Create, Read, Update and Delete shares and comments, admin will approve posts.  
 The NA-Share project hopes to utilize the same benefits found in the process of sharing found at Narcotics Anonymous meetings, to create a cathartic experience for users, allowing them to express and share their emotions freely, leading to a sense of relief and connection.  
 
-## User Experience Design
-- ****
+## User Experience Design (UX)
+- **UX Design Process**:  
+  - Based on User-centricity NA-Share address user's needs via User Stories. focusing on the needs of those Users who would like a place to share and balancing what can be achieved to meet those needs within an agile methodology and given a time frame for completion.  
+  
+- **Consistency**  
+  - Our users have shown what they would expect of NA-Share with experience of other social sites and reflected that within their user stories, keeping NA-Share consistent with those technologies is an important factor in our design and functionality.  
+
+- **Hierarchy**
+  - Keeping the site simple helps Users navigate NA-Share intuitively, having most of the action on the Home page allows users to find the shares and sharing experience without complication but still having navigation within easy reach via our Nav-Bar keeping our users informed.  
+
+- **Context**
+  - How our users interact with NA-Share is important, so responsive design is the foundation of NA-Share's structure, making NA-Share accessible to most if not all devices.  
+  
+- **User Control**
+  - Our User stories tell us how much control users need, actions that might be made in error should be limited, good confirmation before action is taken is important.  
+
+- **Accessibility**
+  - Making NA-Share accessible to many requires best practices including alt text for screen reader, aria labeling and high contrasting visual appearance.  
+
+- **Usability**  
+Aim with agile approach is testing of design concept.
+  - Easy to learn!
+  - Memorable
+  - Efficient
+  - Error recovery
+  - Satisfaction  
+- **User Satisfaction**
+  - Our aim is to give our users the feeling they want to keep coming back for.
 
 ##  Agile  
 - ****

@@ -8,7 +8,7 @@ User Registration and Authentication
 
 User Registration
 User Login
-Password Reset
+
 Shares (Stories)
 
 Create Share
@@ -33,7 +33,7 @@ Manage Users
 These are important features that should be implemented if time allows:
 
 User Profile
-
+Password Reset
 View Profile
 Edit Profile
 Rating Stories
