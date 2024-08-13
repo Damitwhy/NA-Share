@@ -42,9 +42,14 @@ main {
         url("/static/images/Mount-Cook.webp");
     background-size: cover;
     background-position: center center;
-    height: 100%;
+    min-height: 300px;
     border: 2px solid #6096B7;
     border-radius: 5px;
+    color: #F8F9FA;
+}
+
+#comment-login h3 {
+    color: #F8F9FA;
 }
 
 #about-img,

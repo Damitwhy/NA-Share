@@ -2,28 +2,32 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-    <h3>Welcome, {{ user.username }}!</h3>
-    <h2>Comment on: {{ share.title }}</h2>
-    <div class="comment-container">
-        <p>{{ share.content|safe }}</p>
-    </div>
-    {% if parent_comment %}
-    <h2>Reply to Comment</h2>
-    <div class="comment-container">
-        <p><strong>{{ parent_comment.user }} said:</strong> {{ parent_comment.content }}</p>
-    </div>    
-    {% endif %}
-    <div class="comment-container d-flex justify-content-center gy-6 mx-auto">
-        <div id="comment-login" class="wecome-user">
-          <form method="post">
-              {% csrf_token %}
-              {{ form.as_p }}
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-    </div>    
+<h3>Welcome, {{ user.username }}!</h3>
+<h2>Comment on: {{ share.title }}</h2>
+<div class="comment-container">
+    <p>{{ share.content|safe }}</p>
+</div>
+{% if parent_comment %}
+<h2>Reply to Comment</h2>
+<div class="comment-container">
+    <p><strong>{{ parent_comment.user }} said:</strong> {{ parent_comment.content }}</p>
+</div>
+{% endif %}
+<div class="comment-container d-flex justify-content-center gy-6 mx-auto">
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
 {% else %}
-    <h3>Welcome, Anonymous!</h3>
-    <p>Please <a href="{% url 'account_login' %}">login</a> to comment and rate.</p>
+<div class="row">
+    <div id="comment-login" class="wecome-user">
+        <h3>Welcome, Anonymous!</h3>
+        <p>Please <a href="{% url 'account_login' %}">login</a> to comment and rate.</p>
+    </div>
+</div>
 {% endif %}
 {% endblock %}
