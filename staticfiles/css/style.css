@@ -156,7 +156,6 @@ a:hover {
 #about-img,
 #about-us-img {
     min-height: 300px;
-    /* Adjust the height as needed */
     max-inline-size: 50%;
 }
 
@@ -170,9 +169,6 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-
-
 
 .story-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -228,10 +224,6 @@ a:hover {
     border-radius: 5px;
     margin-top: 5px;
     padding: 5px;
-}
-
-.title-hero {
-    color: white margin-top: 20%;
 }
 
 .user-shares {
