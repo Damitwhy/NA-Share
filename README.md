@@ -34,7 +34,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Error recovery
   - Satisfaction  
 - **User Satisfaction**
-  - Our aim is to give our users the feeling they want to keep coming back for.  
+  - Our aim is to give our users the feeling they want to keep coming back for.  Delivering the 
 - **User Stories**
   - A number of user stories were collected, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here ![User Stories](/project_readmes/User_stories.txt), Stories here express the CRUD functionality of NA-Share.
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
