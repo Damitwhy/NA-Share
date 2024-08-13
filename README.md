@@ -60,7 +60,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
       - Pages: Home page, about page, services page, contact page.
       - information and Social Media Links  
       - Responsive design, Mobile first principle.
-  - Using Balsamiq Wireframes low definition wire frames are made sketching HA-Share desired look/layout.
+  - Using Balsamiq Wireframes, low definition wire frames are made, sketching out NA-Share's desired look/layout.  
     - Home Page  
       - ![Home Page.](/project_readmes/images/home-wire.png)  
     - About Page  
