@@ -199,7 +199,7 @@ a:hover {
 .comment-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 2px solid #6096B7;
-    background-color: #F8F9FA;
+    background-color: #F0F8FF;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -228,7 +228,7 @@ a:hover {
 
 .user-shares {
     border: 2px solid #6096B7;
-    background-color: #F8F9FA;
+    background-color: #F0F8FF;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
