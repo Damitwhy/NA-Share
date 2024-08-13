@@ -27,8 +27,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Accessibility**
   - Making NA-Share accessible to many requires best practices including alt text for screen reader, aria labeling and high contrasting visual appearance.  
 
-- **Usability**  
-Aim with agile approach is testing of design concept.
+- **Usability**  Aim to with agile approach to test of design concept at inception.
   - Easy to learn!
   - Memorable
   - Efficient
