@@ -162,7 +162,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - 
 
 - **Validator Testing**  
-  - 
+  - HTML tested with https://validator.w3.org/  
+    - ![HTML Validation Success](/project_readmes/HTML-Validation-13-08-24.png)
   - 
 
 ## Deployment
