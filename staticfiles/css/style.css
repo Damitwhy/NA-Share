@@ -24,7 +24,7 @@ main {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
-    
+
 }
 
 #hero {
@@ -94,7 +94,7 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover {
-    color: #666;    
+    color: #666;
 }
 
 p {
@@ -178,6 +178,7 @@ a:hover {
     font-weight: 700;
     text-align: center;
     margin-top: 20%;
+    
 }
 
 .story-container {
@@ -190,7 +191,7 @@ a:hover {
     padding: 10px;
 }
 
-.stories-sidebar {        
+.stories-sidebar {
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -313,7 +314,7 @@ a:hover {
     border-radius: 5px;
 }
 
-#LoginUser h1, 
+#LoginUser h1,
 #LoginUser h2,
 #LoginUser h3,
 #LoginUser h4,
@@ -384,7 +385,7 @@ a:hover {
     border-radius: 5px;
     margin-bottom: 10px;
     height: 60px;
-    width : auto;
+    width: auto;
 }
 
 .messages {
@@ -405,12 +406,29 @@ a:hover {
     /* cubic-bezier() */
     animation: fadeOut 6s forwards;
 }
+
 /* Keyframes to fade out the alert */
 @keyframes fadeOut {
-    0% { opacity: 1; } /* Start fully visible */
-    50% { opacity: 1; }
-    90% { opacity: 0.2; } /* Gradually fade out */
-    100% { display: none; opacity: 0; } /* Hide it after fade */
+    0% {
+        opacity: 1;
+    }
+
+    /* Start fully visible */
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0.2;
+    }
+
+    /* Gradually fade out */
+    100% {
+        display: none;
+        opacity: 0;
+    }
+
+    /* Hide it after fade */
 }
 
 .messages li {
@@ -445,19 +463,19 @@ a:hover {
 }
 
 .modal {
-    display: none;    
+    display: none;
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(50%, 50%);    
-    z-index: 1;    
+    transform: translate(50%, 50%);
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 50%;    
-    height: 50%;    
-    overflow: auto;    
-    background-color: rgb(0, 0, 0);    
-    background-color: rgba(0, 0, 0, 0.4);    
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 30px;
     border-radius: 5px;
 }
@@ -468,8 +486,8 @@ a:hover {
     padding: 20px;
     border: 1px solid #6096B7;
     border-radius: 5px;
-    width: 80%;    
-    max-width: 600px;    
+    width: 80%;
+    max-width: 600px;
 }
 
 @media (max-width: 600px) {
@@ -478,12 +496,13 @@ a:hover {
     }
 
     .modal-content {
-        width: 90%;        
-        margin: 10% auto;        
+        width: 90%;
+        margin: 10% auto;
     }
 }
 
 @media (max-width: 768px) {
+
     #about-us-img,
     #about-img,
     #about-what-img {
