@@ -34,20 +34,25 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Error recovery
   - Satisfaction  
 - **User Satisfaction**
-  - Our aim is to give our users the feeling they want to keep coming back for.  Delivering the 
+  - Our aim is to give our users the feeling they want to keep coming back for.  Delivering the service of sharing in a safe environment.
 - **User Stories**
-  - A number of user stories were collected, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here ![User Stories](/project_readmes/User_stories.txt), Stories here express the CRUD functionality of NA-Share.
+  - User stories were collected, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt), Stories in this README express the full CRUD functionality of NA-Share.  
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
     - As a registered user, I want to log in with my email and password so that I can access my account.
     - As a logged-in user, I want to create and submit a new share so that I can tell my story.
     - As a user, I want to edit my own share so that I can update or correct my story.
     - As a user, I want to delete my own share so that I can remove content I no longer want to be public.
-    - As any visitor, I want to view a list of shares so that I can read other users' stories.
+    - As any visitor, I want to view a list of shares so that I can read other user's stories.
     - As an admin, I want to approve or reject new shares before they are posted so that I can ensure the content is appropriate.
     - As a logged-in user, I want to comment on a share so that I can provide feedback or support.
     - As a user, I want to edit my comment so that I can correct or update my feedback.
     - As a user, I want to delete my comment so that I can remove feedback I no longer want to share.
-
+- **Wire Frame Work**
+  - An essential part of the UX design process is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout.
+    - Nav-bar, un-cluttered with ease of use navigation.
+    - Simple area to display Shares
+    - visible representation that User is logged in and area 
+    - 
 ##  Agile  
 - ****
 
