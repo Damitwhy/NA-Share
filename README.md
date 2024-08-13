@@ -13,16 +13,16 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Based on User-centricity NA-Share addresses user's needs via User Stories. focusing on the needs of those Users who would like a place to share and balancing what can be achieved to meet those needs within an agile methodology and within a time frame for completion.  
   
 - **Consistency**  
-  - Our users have shown what they would expect of NA-Share with experience of other social sites and reflected that within their user stories, keeping NA-Share consistent with those technologies is an important factor in our design and functionality.  
+  - Users have shown what they will expect of NA-Share with experience of other social sites and is reflected within their user stories, keeping NA-Share consistent with those technologies is an important factor in its design and functionality.  
 
 - **Hierarchy**
-  - Keeping the site simple helps Users navigate NA-Share intuitively, having most of the action on the Home page allows users to find the shares and sharing experience without complication but still having navigation within easy reach via our Nav-Bar keeping our users informed.  
+  - Keeping the site simple helps Users navigate NA-Share intuitively, having most of the action on the Home page allows users to find the shares and sharing experience without complication but still having navigation within easy reach via NA=Share's Nav-Bar keeping users informed.  
 
 - **Context**
-  - How our users interact with NA-Share is important, so responsive design is the foundation of NA-Share's structure, making NA-Share accessible to most if not all devices.  
+  - How users interact with NA-Share is important, so responsive design is the foundation of NA-Share's structure, making NA-Share accessible to most if not all devices.  
   
 - **User Control**
-  - Our User stories tell us how much control users need, actions that might be made in error should be limited, good confirmation before action is taken is important.  
+  - User stories tell us how much control users need, actions that might be made in error should be limited, good confirmation before action taken is important.  
 
 - **Accessibility**
   - Making NA-Share accessible to many requires best practices including alt text for screen reader, aria labeling and high contrasting visual appearance.  
@@ -34,7 +34,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Error recovery
   - Satisfaction  
 - **User Satisfaction**
-  - Our aim is to give our users the feeling they want to keep coming back for.  Delivering the service of sharing in a safe environment.
+  - NA-Share's aim is to give Users the feeling they want, so they keep coming back.  Delivering the service of sharing in a safe, welcoming environment.
 - **User Stories**
   - User stories were collected first, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt), Stories in this README express the full CRUD functionality of NA-Share.  
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
@@ -49,28 +49,32 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - As a user, I want to delete my comment so that I can remove feedback I no longer want to share.
 
 - **MoSCoW Priority List**
-  - Filtering through the user's stories required an Ideation list, full copy as pdf file [here](project_readmes/Ideation-table.pdf), once each user story was assessed by value added, against difficulty to create, our user stories were categorized as either Must, Should, Could or Won't.  These Users were added to the project Kanban Board or Backlog and labeled.
+  - Filtering through the user's stories required an Ideation list, full copy as pdf file [here](project_readmes/Ideation-table.pdf), once each user story was assessed by value added, against difficulty to create, User stories were categorized as either Must, Should, Could or Won't.  User stories were added to the project Kanban Board/Backlog as Issues and labeled accordingly.  
+    - ![MoSCoW prioritized User Stories](/project_readmes/images/MoSCoW-kanban.png)  
 
 - **Wire Frame Work**
-  - An essential part of the UX design and Agile process is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout.
+  - An essential part of the UX design and Agile processes is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout and structure.
     - **Layout**
       - Nav-bar, un-cluttered with ease of use navigation.
       - Simple area to display Shares
       - visible representation that User is logged in and area to show and navigate their contributions.
       - Pages: Home page, about page, services page, contact page.
       - information and Social Media Links  
-      - Responsive design, Mobile first principle.
+      - Responsive design, Mobile first principle.  
   - Using Balsamiq Wireframes, low definition wire frames are made, sketching out NA-Share's desired look/layout.  
     - Home Page  
       - ![Home Page.](/project_readmes/images/home-wire.png)  
     - About Page  
+
       - ![About page.](/project_readmes/images/about-wire.png)  
     - Services Page  
       - ![Services page.](/project_readmes/images/services-wire.png)  
     
 
 
-##  Agile  Methodology
+##  Kanban Board and Agile Methodology  
+- **GitHub**
+  - Using GitHub to store NA-Share's repository 
 
 ## Technologies Used  
 
