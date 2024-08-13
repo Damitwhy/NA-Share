@@ -1,6 +1,4 @@
-Creating user stories for a Kanban board is essential for outlining the functionality and user experience of your Narcotics Anonymous Django site. Here are some detailed user stories broken down into various categories:
-
-Sure, here are the updated user stories including the functionality to rate user stories:
+Creating user stories for a Kanban board is essential
 
 ### User Registration and Authentication
 1. **User Registration**
@@ -79,5 +77,3 @@ Sure, here are the updated user stories including the functionality to rate user
     - As a user, I want to report a share that violates the community guidelines so that the admin can take appropriate action.
 29. **Privacy Settings**
     - As a user, I want to manage my privacy settings so that I can control who sees my information and activity.
-
-These updated user stories now include the functionality for users to rate stories, adding a new dimension to the user interaction and feedback on the platform.

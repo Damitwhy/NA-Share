@@ -37,7 +37,7 @@ Aim with agile approach is testing of design concept.
 - **User Satisfaction**
   - Our aim is to give our users the feeling they want to keep coming back for.  
 - **User Stories**
-  - A number of user stories were collected, numbering 28, top ten posted here and the full list can be found in the Ideation.pdf here ![Ideation basis for MoSCoW list](/project_readmes/Ideation.pdf), Stories here express the CRUD functionality of NA-Share
+  - A number of user stories were collected, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here ![User Stories](/project_readmes/User_stories.txt), Stories here express the CRUD functionality of NA-Share.
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
     - As a registered user, I want to log in with my email and password so that I can access my account.
     - As a logged-in user, I want to create and submit a new share so that I can tell my story.
