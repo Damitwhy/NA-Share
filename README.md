@@ -72,18 +72,24 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     
 
 
-##  Kanban Board and Agile Methodology  
+##  Agile Workflow - Kanban Board.  
 - **GitHub**
-  - Using GitHub to store NA-Share's repository 
+  - Using GitHub to store NA-Share's repository allows for the use of the included Project application and Project Kanban board designed with Agile workflow in mind.
+    - User stories are added to the Back-log column as Issues, labeled and described with acceptance criteria for completion.
+      ![KanBan Board](/project_readmes/images/Kanban_board.png)  
+      Once an Issue is worked on its passed to the next column in the line of production until it reaches its completed status, tieing production to feature pull requests helps track progress.  Completing tasks of user story issues allows closure.
+    - 
 
 ## Technologies Used  
 
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
 - **Backend**: Django, Python
-- **Database**: PostgreSQL
+- **Database**: PostgreSQL, SQLite(Testing)
 - **Authentication**: Django-Allauth 
-- **Hosting**: Heroku  
-
+- **Hosting**: Heroku, GitHub  
+- **Development IDE**: VS Code, GitPod, GitHub  
+- **Research Tools**: GitHub-Copilot, Chat-GPT
+- **Production Tools**: Balsamiq, Chrome-Dev-Tools, Chrome-Extensions
 ## Features  
 
 - **Nav Bar**:  
@@ -145,8 +151,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - Is ever more important to link to social media, it seems its the best place to advertise and having a presence means you could get lot of foot fall come your way.
 - **Anonymity**: Ensure user anonymity and privacy.  
   - NA-Share conforms to the data-protection act.  
-  - Users may report Shares via our contacts page.  
-  - there are no account settings as of yet but when there are we will consider Privacy settings.  
+  - Users may report Shares via NA-Share's contacts page.  
+  - There are no account settings as of yet but when there are we will consider robust Privacy settings.  
 
 ### Features Left to Implement  
 - ****
@@ -155,7 +161,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Testing  
 - **Manual Testing**  
-  - 
+  - Java Script testing of script.js via https://www.site24x7.com/tools/javascript-validator.html
   - 
   - 
   - 
@@ -167,8 +173,10 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 - **Validator Testing**  
   - HTML tested with https://validator.w3.org/  
-    - ![HTML Validation Success](/project_readmes/HTML-Validation-13-08-24.png)
-  - 
+    - ![HTML Validation Success](/project_readmes/images/HTML-Validation-13-08-24.png)  
+  - CSS Tested with https://jigsaw.w3.org/css-validator/    
+    - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png)  
+  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension.
 
 ## Deployment
 
