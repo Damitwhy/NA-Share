@@ -10,7 +10,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## User Experience Design (UX)
 - **UX Design Process**:  
-  - Based on User-centricity NA-Share address user's needs via User Stories. focusing on the needs of those Users who would like a place to share and balancing what can be achieved to meet those needs within an agile methodology and given a time frame for completion.  
+  - Based on User-centricity NA-Share addresses user's needs via User Stories. focusing on the needs of those Users who would like a place to share and balancing what can be achieved to meet those needs within an agile methodology and given a time frame for completion.  
   
 - **Consistency**  
   - Our users have shown what they would expect of NA-Share with experience of other social sites and reflected that within their user stories, keeping NA-Share consistent with those technologies is an important factor in our design and functionality.  
@@ -35,7 +35,19 @@ Aim with agile approach is testing of design concept.
   - Error recovery
   - Satisfaction  
 - **User Satisfaction**
-  - Our aim is to give our users the feeling they want to keep coming back for.
+  - Our aim is to give our users the feeling they want to keep coming back for.  
+- **User Stories**
+  - A number of user stories were collected, numbering 28, top ten posted here and the full list can be found in the Ideation.pdf here ![Ideation basis for MoSCoW list](/project_readmes/Ideation.pdf), Stories here express the CRUD functionality of NA-Share
+    - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
+    - As a registered user, I want to log in with my email and password so that I can access my account.
+    - As a logged-in user, I want to create and submit a new share so that I can tell my story.
+    - As a user, I want to edit my own share so that I can update or correct my story.
+    - As a user, I want to delete my own share so that I can remove content I no longer want to be public.
+    - As any visitor, I want to view a list of shares so that I can read other users' stories.
+    - As an admin, I want to approve or reject new shares before they are posted so that I can ensure the content is appropriate.
+    - As a logged-in user, I want to comment on a share so that I can provide feedback or support.
+    - As a user, I want to edit my comment so that I can correct or update my feedback.
+    - As a user, I want to delete my comment so that I can remove feedback I no longer want to share.
 
 ##  Agile  
 - ****
