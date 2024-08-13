@@ -19,7 +19,7 @@ main {
 }
 
 .navbar {
-    background-color: rgb(204 230 255);
+    background-color: #CCE6FF;
     border: 2px solid #6096B7;
     border-radius: 5px;
     padding: 10px;
@@ -199,7 +199,7 @@ a:hover {
 .comment-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border: 2px solid #6096B7;
-    background-color: #F8F9FA;
+    background-color: #F8F9FA;;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -228,7 +228,7 @@ a:hover {
 
 .user-shares {
     border: 2px solid #6096B7;
-    background-color: #F8F9FA;
+    background-color: #F8F9FA;;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
@@ -321,7 +321,7 @@ a:hover {
 
 #contactUs {
     color: white;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     display: block;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/static/images/devesh-tripathi.jpg");
     background-size: cover;
@@ -349,13 +349,9 @@ a:hover {
 }
 
 #contactUs h1,
-#contactUs h2,
-#contactUs h3,
-#contactUs h4,
-#contactUs h5,
-#contactUs h6 {
+#contactUs h2 {
     color: white;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px rgba(0, 55, 255, 0.5);
 }
 
 #contact-us-text-box {

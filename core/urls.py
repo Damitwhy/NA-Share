@@ -3,7 +3,7 @@ from . import views
 from .views import ShareListView
 
 urlpatterns = [    
-    path('', ShareListView.as_view(), name='home'),
+    path('', views.ShareListView.as_view(), name='home'),
     path('share/<int:share_id>/comment/', views.comment, name='comment'),
     path('share/new/', views.create_share, name='create_share'),
     path('about/', views.about, name='about'),
