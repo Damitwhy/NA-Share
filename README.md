@@ -36,7 +36,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **User Satisfaction**
   - Our aim is to give our users the feeling they want to keep coming back for.  Delivering the service of sharing in a safe environment.
 - **User Stories**
-  - User stories were collected, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt), Stories in this README express the full CRUD functionality of NA-Share.  
+  - User stories were collected first, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt), Stories in this README express the full CRUD functionality of NA-Share.  
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
     - As a registered user, I want to log in with my email and password so that I can access my account.
     - As a logged-in user, I want to create and submit a new share so that I can tell my story.
@@ -47,14 +47,22 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - As a logged-in user, I want to comment on a share so that I can provide feedback or support.
     - As a user, I want to edit my comment so that I can correct or update my feedback.
     - As a user, I want to delete my comment so that I can remove feedback I no longer want to share.
+
+- **MoSCoW Priority List**
+  - Filtering through the user's stories required an Ideation list, full copy as pdf file [here](project_readmes/Ideation-table.pdf), once each user story was assessed by value added, against difficulty to create, our user stories were categorized as either Must, Should, Could or Won't.  These Users were added to the project Kanban Board or Backlog and labeled.
+
 - **Wire Frame Work**
-  - An essential part of the UX design process is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout.
-    - Nav-bar, un-cluttered with ease of use navigation.
-    - Simple area to display Shares
-    - visible representation that User is logged in and area 
-    - 
-##  Agile  
-- ****
+  - An essential part of the UX design and Agile process is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout.
+    - **Layout**
+      - Nav-bar, un-cluttered with ease of use navigation.
+      - Simple area to display Shares
+      - visible representation that User is logged in and area to show and navigate their contributions.
+      - Pages: Home page, about page, services page, contact page.
+      - information and Social Media Links  
+      - Responsive design, Mobile first principle.
+  - Use of 
+
+##  Agile  Methodology
 
 ## Technologies Used  
 
@@ -104,7 +112,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
   - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
-- **Approvel Feature**: Admin have rights!
+- **Approval Feature**: Admin have rights!
   - Admin will need to approve shares before they're displayed, the functionality is present but for the purpose of project assessment this feature has been disabled, looking at the detail view of each share will show the share's 'Status' with values of either Approved, Pending or Rejected.  
 - **About Page**: More Information.  
   - Provides a little more information on the purpose and reasoning behind the NA-Share project, detailing some of the processes of the Narcotics Anonymous program and what parts of that process NA-Share benefits from.  
