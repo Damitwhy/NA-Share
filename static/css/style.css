@@ -37,6 +37,16 @@ main {
     border-radius: 5px;
 }
 
+#comment-login {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("/static/images/Mount-Cook.webp");
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+}
+
 #about-img,
 #about-what-img,
 #about-us-img {

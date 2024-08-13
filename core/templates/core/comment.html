@@ -14,11 +14,13 @@
     </div>    
     {% endif %}
     <div class="comment-container d-flex justify-content-center gy-6 mx-auto">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
+        <div id="comment-login" class="wecome-user">
+          <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
             <button type="submit">Submit</button>
-        </form>
+          </form>
+        </div>
     </div>    
 {% else %}
     <h3>Welcome, Anonymous!</h3>
