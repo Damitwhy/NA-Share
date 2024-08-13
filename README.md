@@ -60,7 +60,15 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
       - Pages: Home page, about page, services page, contact page.
       - information and Social Media Links  
       - Responsive design, Mobile first principle.
-  - Use of 
+  - Using Balsamiq Wireframes low definition wire frames are made sketching HA-Share desired look/layout.
+    - Home Page  
+      - ![Home Page.](/project_readmes/images/home-wire.png)  
+    - About Page  
+      - ![About page.](/project_readmes/images/about-wire.png)  
+    - Services Page  
+      - ![Services page.](/project_readmes/images/services-wire.png)  
+    
+
 
 ##  Agile  Methodology
 
@@ -69,7 +77,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
 - **Backend**: Django, Python
 - **Database**: PostgreSQL
-- **Authentication**: To Be Decided JWT (JSON Web Tokens)
+- **Authentication**: Django-Allauth 
 - **Hosting**: Heroku  
 
 ## Features  
