@@ -10,7 +10,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## User Experience Design (UX)
 - **UX Design Process**:  
-  - Based on User-centricity NA-Share addresses user's needs via User Stories. focusing on the needs of those Users who would like a place to share and balancing what can be achieved to meet those needs within an agile methodology and given a time frame for completion.  
+  - Based on User-centricity NA-Share addresses user's needs via User Stories. focusing on the needs of those Users who would like a place to share and balancing what can be achieved to meet those needs within an agile methodology and within a time frame for completion.  
   
 - **Consistency**  
   - Our users have shown what they would expect of NA-Share with experience of other social sites and reflected that within their user stories, keeping NA-Share consistent with those technologies is an important factor in our design and functionality.  
@@ -50,6 +50,14 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ##  Agile  
 - ****
+
+## Technologies Used  
+
+- **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
+- **Backend**: Django, Python
+- **Database**: PostgreSQL
+- **Authentication**: To Be Decided JWT (JSON Web Tokens)
+- **Hosting**: Heroku  
 
 ## Features  
 
@@ -91,7 +99,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
   - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
-- **Approve Feature**: Admin have rights!
+- **Approvel Feature**: Admin have rights!
   - Admin will need to approve shares before they're displayed, the functionality is present but for the purpose of project assessment this feature has been disabled, looking at the detail view of each share will show the share's 'Status' with values of either Approved, Pending or Rejected.  
 - **About Page**: More Information.  
   - Provides a little more information on the purpose and reasoning behind the NA-Share project, detailing some of the processes of the Narcotics Anonymous program and what parts of that process NA-Share benefits from.  
@@ -114,16 +122,28 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - NA-Share conforms to the data-protection act.  
   - Users may report Shares via our contacts page.  
   - there are no account settings as of yet but when there are we will consider Privacy settings.  
-## Technologies Used  
 
-- **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
-- **Backend**: Django, Python
-- **Database**: PostgreSQL
-- **Authentication**: To Be Decided JWT (JSON Web Tokens)
-- **Hosting**: Heroku  
+### Features Left to Implement  
+- ****
+
+
 
 ## Testing  
-- ****
+- **Manual Testing**  
+  - 
+  - 
+  - 
+  - 
+  - 
+- **Automatic Testing**  
+  - 
+  - 
+  - 
+
+- **Validator Testing**  
+  - 
+  - 
+
 ## Deployment
 
 ## Usage
