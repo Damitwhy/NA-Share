@@ -1,5 +1,5 @@
 # NA-SHARE  
-A Narcotics Anonymous Sharing Community.  
+### A Narcotics Anonymous Sharing Community.  
 
 ![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)  
 
@@ -36,7 +36,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **User Satisfaction**
   - NA-Share's aim is to give Users the feeling they want, so they keep coming back.  Delivering the service of sharing in a safe, welcoming environment.
 - **User Stories**
-  - User stories were collected first, numbering 28, top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt), Stories in this README express the full CRUD functionality of NA-Share.  
+  - User stories were collected first, numbering 28 to begin with but due to the flexibility of Agile workflow that number increased.  Top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt).   Stories in this README express the full CRUD functionality of NA-Share.  
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
     - As a registered user, I want to log in with my email and password so that I can access my account.
     - As a logged-in user, I want to create and submit a new share so that I can tell my story.
