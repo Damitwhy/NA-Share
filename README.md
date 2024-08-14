@@ -33,8 +33,10 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Efficient
   - Error recovery
   - Satisfaction  
+
 - **User Satisfaction**
-  - NA-Share's aim is to give Users the feeling they want, so they keep coming back.  Delivering the service of sharing in a safe, welcoming environment.
+  - NA-Share's aim is to give Users the feeling they want, so they keep coming back.  Delivering the service of sharing in a safe, welcoming environment.  
+
 - **User Stories**
   - User stories were collected first, numbering 28 to begin with but due to the flexibility of Agile workflow that number increased.  Top ten posted here and the full list can be found in the User_stories.txt here [User Stories](/project_readmes/User_stories.txt).   Stories in this README express the full CRUD functionality of NA-Share.  
     - As a new user, I want to register an account with my email and password so that I can log in and use the site.  
@@ -53,7 +55,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - ![MoSCoW prioritized User Stories](/project_readmes/images/MoSCoW-kanban.png)  
 
 - **Wire Frame Work**
-  - An essential part of the UX design and Agile processes is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout and structure.
+  - An essential part of the UX design and Agile processes is Wire framing, user stories tell us what is required to start with and give ideas as to what is needed in the layout and structure.  
+
     - **Layout**
       - Nav-bar, un-cluttered with ease of use navigation.
       - Simple area to display Shares
@@ -72,11 +75,11 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Agile - Workflow - Kanban Board.  
 - **GitHub**
-  - Using GitHub to store NA-Share's repository allows for the use of the included Project application and Project Kanban board designed with Agile workflow in mind.
+  - Using GitHub to store NA-Share's repository allows for the use of the included 'Project' application and Project 'Kanban board' designed with Agile workflow in mind.
     - User stories are added to the Back-log column as Issues, labeled and described with acceptance criteria for completion.
       ![KanBan Board](/project_readmes/images/Kanban_board.png)  
-      Once an Issue is worked on its passed to the next column in the line of production until it reaches its completed status, tieing production to feature pull requests helps track progress.  Completing tasks of user story issues allows closure. Link to [Kanban Board](https://github.com/users/Damitwhy/projects/4)  
-    - Agile work flow allows for the staggered production of NA-Share.  By focusing on the Must have issues a Minium Viable Product was reachable, with the MoSCoW priority list taken into consideration, the goal was to focus on completing all CRUD functionality for share's and comment issues, Comments on comments came about as an extra and was decided would in the short term be of more value and less difficulty than some of the other issues, it was easier to include it whilst the work for Commenting on shares was done. User stories were gathered whilst in production. Agile workflow allows for good adaptability.
+      Once an Issue is worked on its passed to the next column in the line of production until it reaches its completed status, tying production to feature pull requests helps track progress.  Completing tasks of user story issues allows closure. Link to [Kanban Board](https://github.com/users/Damitwhy/projects/4)  
+    - Agile work flow allows for the staggered production of NA-Share.  By focusing on the Must have issues a Minium Viable Product was reachable, with the MoSCoW priority list taken into consideration, the goal was to focus on completing all CRUD functionality for share's and comment issues, Comments on comments came about as an extra and was decided would, in the short term be of more value and less difficulty than some of the other issues in the backlog, it was easier to include it whilst the work for Commenting on shares was done. User stories were gathered whilst in production. Agile workflow allows for good adaptability with changing needs.
 
 ## Usage  
 - Register an account or log in if you already have one.
@@ -141,33 +144,47 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Use of Django-messages takes care of informing users when they have made an action such as sign out, logged-in, message sent, you are now registered... 
   - Website error pages 400, 403, 404 and 500 have been created styled and include NA-share header and footer so navigation is not lost.
 - **Font Awesome Social Media**: 
-    - Is ever more important to link to social media, it seems its the best place to advertise and having a presence means you could get lot of foot fall come your way.
+    - Is ever more important to link to social media, it seems its the best place to advertise and having a presence means you could get plenty of foot fall.
 - **Anonymity**: Ensure user anonymity and privacy.  
   - NA-Share conforms to the data-protection act.  
   - Users may report Shares via NA-Share's contacts page.  
   - There are no account settings as of yet but when there are we will consider robust Privacy settings.  
 
 ### Features Left to Implement  
-- **Messaging**
+- **Messaging** work was started on but not completed so the Model exists but is not in use.
   - Create, Delete, View messages to and from Favorite Users.
 - **Services**
   - Application that allows staff, admin, superuser to add service links to Services page.
-- **Account Profile**
+- **Account Profile**  User model contains Bio value which will be implemented in new iteration of future upgrade.
   - Account features, Edit, Delete, Create: Bio, Name, Email, Favorite Users, Profile, stored messages, notifications.
 - **Report Content**
   - Ability to fast track a report abuse of service with dated record reporter and Abuser...
 - **Policy of Use**
   - With legal research and advice.  
-- **Like or Rate**
+- **Like or Rate**  A rating system was created but bugfixes were holding back basic CRUD progress so this remains in the back log for future upgrade.
   - feature to like or rate, shares, comments and users...
 
 
 ## Testing  
 - **Manual Testing**  
   - Java Script testing of script.js via https://www.site24x7.com/tools/javascript-validator.html
-  - 
-  - 
-  - 
+  - Register
+    - Create functionality tested  
+  - Share
+    - All Create, Read, Edit and Delete functionality has been tested manually.  
+  - Comment
+    - All Create, Read, Edit and Delete functionality has been tested manually.  
+  - Comment on Comment
+    - All Create, Read, Edit and Delete functionality has been tested manually.  
+  - URLs
+    - Views  
+      - No complications or hangs on opening pages, fully functionality noted. A little slow, Chrome Dev-tools Lighthouse shows we're not running on the fastest servers.
+  - Broswers
+    - Ran all CRUD type tests above on following browsers:
+      - Google Chrome, Extension was needed on this browser to display site in 'Am I Responsive' sites.
+      - Opera
+      - Mozilla FireFox
+      - Microsoft Edge
   - 
 - **Automatic Testing**  
   - 
@@ -179,7 +196,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - ![HTML Validation Success](/project_readmes/images/HTML-Validation-13-08-24.png)  
   - CSS Tested with https://jigsaw.w3.org/css-validator/    
     - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png)  
-  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension.
+  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for ther current colors. Changed Text-weight con compensate. 
 
 ## Deployment
 ## Technologies Used  

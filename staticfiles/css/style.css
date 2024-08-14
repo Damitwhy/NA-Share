@@ -106,6 +106,7 @@ a {
     color: #007bff;
     text-decoration: none;
     margin: 3px;
+    font-weight: bolder;
 }
 
 a:hover {
