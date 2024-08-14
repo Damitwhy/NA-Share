@@ -2,6 +2,17 @@
 ### A Narcotics Anonymous Sharing Community.  
 
 ![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)  
+Here is a table of contents for your document:
+
+
+## Table of Contents  
+
+1. [Overview](#overview)
+2. [User Experience Design (UX)](#user-experience-design-ux)
+3. [Agile - Workflow - Kanban Board](#agile---workflow---kanban-board)
+4. [Usage](#usage)
+5. [Features](#features)
+
 
 ## Overview  
 Project to create a Django social platform for members of Narcotics Anonymous (NA) and all those effected by addiction.  
@@ -16,7 +27,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Users have shown what they will expect of NA-Share with experience of other social sites and is reflected within their user stories, keeping NA-Share consistent with those technologies is an important factor in its design and functionality.  
 
 - **Hierarchy**
-  - Keeping the site simple helps Users navigate NA-Share intuitively, having most of the action on the Home page allows users to find the shares and sharing experience without complication but still having navigation within easy reach via NA=Share's Nav-Bar keeping users informed.  
+  - Keeping the site simple helps Users navigate NA-Share intuitively, having most of the action on the Home page allows users to find the shares and sharing experience without complication but still having navigation within easy reach via NA-Share's Nav-Bar keeping users informed.  
 
 - **Context**
   - How users interact with NA-Share is important, so responsive design is the foundation of NA-Share's structure, making NA-Share accessible to most if not all devices.  
@@ -111,7 +122,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
    ![Not Logged in](/project_readmes/images/story-board.png) 
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
-  Once logged in a share link is made available or made accessible, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilizes Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognized this could be a security issue so all shares should be approved first, see Approve feature ![**Approve-feature**](**Approve-Feature)  
+  Once logged in a share link is made available or made accessible, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilizes Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognized this could be a security issue so all shares should be approved first, see Approval feature ![**Approval-feature**](#approval-feature)  
     ![Story Share](/project_readmes/images/share-story.png)  
 
 - **Comment on Stories**: Commenting on Shares is as easy as pressing on available links associated with that Share, these can be found on Home and Stories_detail pages.  
@@ -120,9 +131,9 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - When user is logged in / Authenticated, on pressing the Comment link they will be presented with the Comment page where they see a welcome message specific to user logged in, heading 'Comment on:' with the title of share to be commented on, the Share and a simple text input area with submit button.  
     ![comment-input](/project_readmes/images/comment-input.png)  
 - **Comment on Comments**: Service users comment on comments.  
-  - When user is not logged in a link to reply on comment is presented but takes user to page that reminds them they are not logged in.  
+  - When user is not logged-in a link to reply on comment is presented but takes user to page that reminds them they are not logged in.  
     ![reply-button](/project_readmes/images/reply-button.png)  
-  - When user is logged in they have the reply link, if they are logged in and own that comment they also get link options to edit or delete that comment.  
+  - When user is logged-in they the reply link is active, if they are logged in and own that comment they also get link options to edit or delete that comment.  
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
   - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
@@ -150,7 +161,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Users may report Shares via NA-Share's contacts page.  
   - There are no account settings as of yet but when there are we will consider robust Privacy settings and a User policy Agreement.  
 
-### Features Left to Implement  
+## Features Left to Implement  
 - **Messaging** work was started on but not completed so the Model exists but is not in use.
   - Create, Delete, View messages to and from Favorite Users.
 - **Services**
@@ -179,6 +190,9 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - URLs
     - Views  
       - No complications or hangs on opening pages, fully functionality noted. A little slow, Chrome Dev-tools Lighthouse shows we're not running on the fastest servers.
+  - Security
+    - Tested Non-Authenticated User Editing, deletion, Creation for all C.R.U.D calls to action.
+    - Created and Tested Middleware to stop access to /admin page issuing a 403 forbidden Access response.  
   - Broswers
     - Ran all CRUD type tests above on following browsers:
       - Google Chrome, Extension was needed on this browser to display site in 'Am I Responsive' sites.
@@ -200,7 +214,9 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png), Throws up warnings on Bootstrap issues but NA-Share's style.css sheet shows no errors.  
   - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weigth change. 
 
-## Deployment
+## Deployment  
+
+
 ## Technologies Used  
 
 - **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
@@ -209,12 +225,15 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Authentication**: Django-Allauth 
 - **Hosting**: Heroku, GitHub  
 - **Development IDE**: VS Code, GitPod, GitHub  
-- **Research Tools**: GitHub-Copilot, Chat-GPT
-- **Production Tools**: Balsamiq, Chrome-Dev-Tools, Chrome-Extensions
+- **Research Tools**: GitHub-Copilot, Chat-GPT, 
+- **Production Tools**: Balsamiq, Chrome-Dev-Tools, Chrome-Extensions  
 
-
-
-## Credits
+## Credits  
+- **Imaees**
+  - https://ytcbk-twnex.pyxl.ai/  
+    Tool for creating AI generated websites, I choose to research design templates and found this site provides a free tier level set up and all images with design provided were for free use... Love the design but only used some of the design imagery.
+  - Other images sourced via Chat-GPT searches.
+  - To use the NA logo, individuals or groups typically need to obtain permission from NA World Services. This ensures that the logo is used in a manner that respects the organization’s guidelines and maintains the integrity of the brand. Verbally I have agreed its use is restricted to this capstone project and will not be put into production, I can use here. Having sent for written permission to use on future real world deployments of this Application, Awaiting response.
 
 
 ## Contributing
