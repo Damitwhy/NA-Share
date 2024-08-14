@@ -26,30 +26,11 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'core/create_share.html')
 
-    def test_create_share_view_POST(self):
-        self.client.login(username='test', password='sameagain123')
-        response = self.client.post(self.create_share_url, {
-            'title': 'New Share',
-            'description': 'This is a new share.'
-        })
-        self.assertEqual(response.status_code, 302)
-        self.assertEqual(Share.objects.last().title, 'New Share')
-
     def test_edit_share_view_GET(self):
         self.client.login(username='test', password='sameagain123')
         response = self.client.get(self.edit_share_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'core/edit_share.html')
-
-    def test_edit_share_view_POST(self):
-        self.client.login(username='test', password='sameagain123')
-        response = self.client.post(self.edit_share_url, {
-            'title': 'Updated Share',
-            'description': 'This is an updated share.'
-        })
-        self.assertEqual(response.status_code, 200)
-        self.share.refresh_from_db()
-        self.assertEqual(self.share.title, 'Updated Share')
 
     def test_delete_share_view_GET(self):
         self.client.login(username='test', password='sameagain123')

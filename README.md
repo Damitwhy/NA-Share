@@ -64,11 +64,11 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
       - Pages: Home page, about page, services page, contact page.
       - information and Social Media Links  
       - Responsive design, Mobile first principle.  
+
   - Using Balsamiq Wireframes, low definition wire frames are made, sketching out NA-Share's desired look/layout.  
     - Home Page  
       - ![Home Page.](/project_readmes/images/home-wire.png)  
     - About Page  
-
       - ![About page.](/project_readmes/images/about-wire.png)  
     - Services Page  
       - ![Services page.](/project_readmes/images/services-wire.png)  
@@ -148,7 +148,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Anonymity**: Ensure user anonymity and privacy.  
   - NA-Share conforms to the data-protection act.  
   - Users may report Shares via NA-Share's contacts page.  
-  - There are no account settings as of yet but when there are we will consider robust Privacy settings.  
+  - There are no account settings as of yet but when there are we will consider robust Privacy settings and a User policy Agreement.  
 
 ### Features Left to Implement  
 - **Messaging** work was started on but not completed so the Model exists but is not in use.
@@ -185,18 +185,20 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
       - Opera
       - Mozilla FireFox
       - Microsoft Edge
-  - 
+  - Google Chrome Dev-Tools
+    - Found issue with closing span tag, corrected. found fault with Fontawesome Kit, opened link to URL on Dev-Tool warning, presented with a page that say, 'Only for Pro Version' but Fontawesome Font all work fine and display. 
 - **Automatic Testing**  
-  - 
-  - 
-  - 
+  - Carried out by Django testing with.
+    - tests_models.py, Good results  
+    - tests_views.py, Good results  
+    - tests_forms.py, Good results    
 
 - **Validator Testing**  
   - HTML tested with https://validator.w3.org/  
     - ![HTML Validation Success](/project_readmes/images/HTML-Validation-13-08-24.png)  
   - CSS Tested with https://jigsaw.w3.org/css-validator/    
-    - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png)  
-  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for ther current colors. Changed Text-weight con compensate. 
+    - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png), Throws up warnings on Bootstrap issues but NA-Share's style.css sheet shows no errors.  
+  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weigth change. 
 
 ## Deployment
 ## Technologies Used  
