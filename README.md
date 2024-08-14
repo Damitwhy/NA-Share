@@ -82,7 +82,12 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - About Page  
       - ![About page.](/project_readmes/images/about-wire.png)  
     - Services Page  
-      - ![Services page.](/project_readmes/images/services-wire.png)  
+      - ![Services page.](/project_readmes/images/services-wire.png) 
+
+## ERD Diagram  
+  - The Entity-Relationship Diagram (ERD) provides a visual representation of the database structure for the NA-Share project. This is broken down and explained in detail in the ERD Read me file [ERD txt](/project_readmes/ERD.txt), Reference to Message, ServiceLink and Rating Database tables have all been implemented in NA-Share model, have not been activated or put to use in project at present but are in place for future iterations.  
+
+  ![ERD Diagram](/project_readmes/images/core_models_ERD.png)      
 
 ## Agile - Workflow - Kanban Board.  
 - **GitHub**
@@ -122,7 +127,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
    ![Not Logged in](/project_readmes/images/story-board.png) 
   - Sharing a story/share requires users to be registered to NA-Share. so pressing any link to share or comment when not signed in redirects user to a login with optional link to sign up page.  
     ![Not Logged in](/project_readmes/images/not-logged-in.png)  
-  Once logged in a share link is made available or made accessible, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilizes Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognized this could be a security issue so all shares should be approved first, see Approval feature ![**Approval-feature**](#approval-feature)  
+  Once logged in a share link is made available or made accessible, to create a comment users are presented with Share your story page form, allowing title and content inputs and a submission button, the content text area utilizes Django-Summernote so creative users can benefit from the extra abilities summer note has, such as ability to use or pass in html code to include URL's to images, links to other resources, freedom of expression.  it is recognized this could be a security issue so all shares should be approved first, see Approval feature.  
     ![Story Share](/project_readmes/images/share-story.png)  
 
 - **Comment on Stories**: Commenting on Shares is as easy as pressing on available links associated with that Share, these can be found on Home and Stories_detail pages.  
@@ -135,7 +140,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     ![reply-button](/project_readmes/images/reply-button.png)  
   - When user is logged-in they the reply link is active, if they are logged in and own that comment they also get link options to edit or delete that comment.  
     ![Reply Comment options](/project_readmes/images/comment-options.png)  
-  - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.
+  - Comment on comment form. When accessing the 'reply' to comment button users are taken to a comment on comment form with, welcome message and share that the parent comment was made on, then parent comment that user wishes to comment on, a simple text-area with '@*parent-user*' username pre-populated so it allows user and parent comment user to be referenced.  
     ![Comment on Comment](/project_readmes/images/comment-on-comment.png)  
 - **Approval Feature**: Admin have rights!
   - Admin will need to approve shares before they're displayed, the functionality is present but for the purpose of project assessment this feature has been disabled, looking at the detail view of each share will show the share's 'Status' with values of either Approved, Pending or Rejected.  
@@ -153,7 +158,10 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   ![Modal](/project_readmes/images/modal.png)  
 - **Notifications**: have you signed in? have you signed out? system error? 
   - Use of Django-messages takes care of informing users when they have made an action such as sign out, logged-in, message sent, you are now registered... 
-  - Website error pages 400, 403, 404 and 500 have been created styled and include NA-share header and footer so navigation is not lost.
+  - Website error pages 400, 403, 404 and 500 have been created styled and include NA-share header and footer so navigation is not lost.  
+- **Middleware**
+  - MiddleWare installed to restrict access to the Admin URL unless signed in already as Staff, Admin or Superuser.  
+  This is to restrict opportunities and for the security of the NA-Share application. Attempts made by un-authorized users will redirect to NA-Share 403 page.   
 - **Font Awesome Social Media**: 
     - Is ever more important to link to social media, it seems its the best place to advertise and having a presence means you could get plenty of foot fall.
 - **Anonymity**: Ensure user anonymity and privacy.  
@@ -174,7 +182,6 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - With legal research and advice.  
 - **Like or Rate**  A rating system was created but bugfixes were holding back basic CRUD progress so this remains in the back log for future upgrade.
   - feature to like or rate, shares, comments and users...
-
 
 ## Testing  
 - **Manual Testing**  
@@ -212,9 +219,10 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - ![HTML Validation Success](/project_readmes/images/HTML-Validation-13-08-24.png)  
   - CSS Tested with https://jigsaw.w3.org/css-validator/    
     - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png), Throws up warnings on Bootstrap issues but NA-Share's style.css sheet shows no errors.  
-  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weigth change. 
+  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weight change. 
 
 ## Deployment  
+ - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
 
 
 ## Technologies Used  
@@ -234,16 +242,25 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     Tool for creating AI generated websites, I choose to research design templates and found this site provides a free tier level set up and all images with design provided were for free use... Love the design but only used some of the design imagery.
   - Other images sourced via Chat-GPT searches.
   - To use the NA logo, individuals or groups typically need to obtain permission from NA World Services. This ensures that the logo is used in a manner that respects the organization’s guidelines and maintains the integrity of the brand. Verbally I have agreed its use is restricted to this capstone project and will not be put into production, I can use here. Having sent for written permission to use on future real world deployments of this Application, Awaiting response.
+- **Research**
+  - Chat-GPT
+  - GitHub Copilot
+  - Pyxl.ai Website GPT
+  - Code Institute 
+  - Google Workspaces
+  - Stack over flow  
 
+- **Colleagues**  
+ - I'd just like to thank my peers and tutors :kissing_heart: at Code Institute Slack channel, Without whom I'd still be scratching my head wondering how all this works. Thank you for your time and patience, for telling me im wrong and helping me get back up to try again :blush: ...Oh and my assessors! :wink:
 
 ## Contributing
-We welcome contributions! Please read our Contributing Guidelines for more details.
+I welcome contributions! To the NA-Share project.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the LICENSE file for more information. [MIT](/MIT_License.txt)
 
 ## Contact
-For any questions or suggestions, please open an issue or contact us at kenneth.cox@students.codeinstitute.net
+For any questions or suggestions, please open an issue or contact Ken at damitwhy01@gmail.com
 
 ---
 
