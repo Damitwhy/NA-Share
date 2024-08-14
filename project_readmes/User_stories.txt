@@ -194,4 +194,42 @@
         1. The privacy settings page must allow users to set their profile to public or private.
         2. Changes to privacy settings should be saved and reflected immediately upon submission.
 
-These acceptance criteria ensure that each user story has specific, testable conditions that must be met, facilitating better project management and clearer communication among team members.
+Sure! Here are the user stories for "Comment on Comment," "Edit Comment," and "Delete Comment," each with two acceptance criteria:
+
+### User Story 1: Comment on Comment
+**As a** user,  
+**I want to** be able to comment on existing comments,  
+**so that** I can engage in discussions and provide feedback directly related to specific comments.
+
+**Acceptance Criteria:**
+1. Given an existing comment, when a user selects the option to reply, then a new comment input field should appear directly beneath the original comment.
+2. When the user submits the reply, it should be displayed as a nested comment under the original comment, maintaining the hierarchical structure of the discussion.
+
+### User Story 2: Edit Comment
+**As a** user,  
+**I want to** be able to edit my own comments,  
+**so that** I can correct mistakes or update my thoughts.
+
+**Acceptance Criteria:**
+1. Given a comment posted by the user, when the user selects the edit option, then the comment should become editable, allowing the user to make changes.
+2. When the user saves the edited comment, the changes should be reflected immediately, and an "edited" label should appear next to the comment's timestamp.
+
+### User Story 3: Delete Comment
+**As a** user,  
+**I want to** be able to delete my own comments,  
+**so that** I can remove content that is no longer relevant or appropriate.
+
+**Acceptance Criteria:**
+1. Given a comment posted by the user, when the user selects the delete option, then a confirmation dialog should appear asking the user to confirm the deletion.
+2. When the user confirms the deletion, the comment should be removed from the display, and if it has any replies, those replies should either also be deleted or re-parented to maintain the discussion flow (depending on system design).
+
+As a Full Stack Developer,
+I want to Start Building the Basic Structure, and install Django Frame Work,
+so that I can build on that starting with wire frames, Views, Urls, Models.
+
+Acceptance Criteria:
+-[ ] Create Repo, GitHub
+-[ ] Install Django, set up and deploy to Heroku
+-[ ] Create Project
+-[ ] Create App
+-[ ] Install all requirements.

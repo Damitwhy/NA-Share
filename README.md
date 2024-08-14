@@ -69,29 +69,22 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
       - ![About page.](/project_readmes/images/about-wire.png)  
     - Services Page  
       - ![Services page.](/project_readmes/images/services-wire.png)  
-    
 
-
-##  Agile Workflow - Kanban Board.  
+## Agile - Workflow - Kanban Board.  
 - **GitHub**
   - Using GitHub to store NA-Share's repository allows for the use of the included Project application and Project Kanban board designed with Agile workflow in mind.
     - User stories are added to the Back-log column as Issues, labeled and described with acceptance criteria for completion.
       ![KanBan Board](/project_readmes/images/Kanban_board.png)  
-      Once an Issue is worked on its passed to the next column in the line of production until it reaches its completed status, tieing production to feature pull requests helps track progress.  Completing tasks of user story issues allows closure.
-    - 
+      Once an Issue is worked on its passed to the next column in the line of production until it reaches its completed status, tieing production to feature pull requests helps track progress.  Completing tasks of user story issues allows closure. Link to [Kanban Board](https://github.com/users/Damitwhy/projects/4)  
+    - Agile work flow allows for the staggered production of NA-Share.  By focusing on the Must have issues a Minium Viable Product was reachable, with the MoSCoW priority list taken into consideration, the goal was to focus on completing all CRUD functionality for share's and comment issues, Comments on comments came about as an extra and was decided would in the short term be of more value and less difficulty than some of the other issues, it was easier to include it whilst the work for Commenting on shares was done. User stories were gathered whilst in production. Agile workflow allows for good adaptability.
 
-## Technologies Used  
+## Usage  
+- Register an account or log in if you already have one.
+- Sharing your recovery journey.
+- Comment on other's Shares to help others in the community.
+- Contact site Admin via contacts page with any issues.   
 
-- **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
-- **Backend**: Django, Python
-- **Database**: PostgreSQL, SQLite(Testing)
-- **Authentication**: Django-Allauth 
-- **Hosting**: Heroku, GitHub  
-- **Development IDE**: VS Code, GitPod, GitHub  
-- **Research Tools**: GitHub-Copilot, Chat-GPT
-- **Production Tools**: Balsamiq, Chrome-Dev-Tools, Chrome-Extensions
 ## Features  
-
 - **Nav Bar**:  
   - Featured on all pages, the fully responsive navigation bar includes links to the Logo, Home page, About page, Services page and Contact page, checks if user is logged in and adds links to Register, Sign in or Log out, this is identical in each page to allow for easy navigation.  
     ![Nav Bar](/project_readmes/images/responsive-nav-small.png)  
@@ -155,8 +148,18 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - There are no account settings as of yet but when there are we will consider robust Privacy settings.  
 
 ### Features Left to Implement  
-- ****
-
+- **Messaging**
+  - Create, Delete, View messages to and from Favorite Users.
+- **Services**
+  - Application that allows staff, admin, superuser to add service links to Services page.
+- **Account Profile**
+  - Account features, Edit, Delete, Create: Bio, Name, Email, Favorite Users, Profile, stored messages, notifications.
+- **Report Content**
+  - Ability to fast track a report abuse of service with dated record reporter and Abuser...
+- **Policy of Use**
+  - With legal research and advice.  
+- **Like or Rate**
+  - feature to like or rate, shares, comments and users...
 
 
 ## Testing  
@@ -179,13 +182,17 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - Contrast Testing with WCAG Color contrast checker as a Chrome Extension.
 
 ## Deployment
+## Technologies Used  
 
-## Usage
+- **Frontend**: HTML, CSS, BootStrap, JavaScript, Django
+- **Backend**: Django, Python
+- **Database**: PostgreSQL, SQLite(Testing)
+- **Authentication**: Django-Allauth 
+- **Hosting**: Heroku, GitHub  
+- **Development IDE**: VS Code, GitPod, GitHub  
+- **Research Tools**: GitHub-Copilot, Chat-GPT
+- **Production Tools**: Balsamiq, Chrome-Dev-Tools, Chrome-Extensions
 
-- Register an account or log in if you already have one.
-- Sharing your recovery journey.
-- Comment on other's Shares to help others in the community.
-- Connect with other members through private messages.
 
 
 ## Credits
