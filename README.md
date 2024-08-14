@@ -219,7 +219,18 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     - ![HTML Validation Success](/project_readmes/images/HTML-Validation-13-08-24.png)  
   - CSS Tested with https://jigsaw.w3.org/css-validator/    
     - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png), Throws up warnings on Bootstrap issues but NA-Share's style.css sheet shows no errors.  
-  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weight change. 
+  - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weight change.  
+## Bugs & Fixes
+- **Open and Un-closed Tag**  
+  - I Know Right? So this is the bane of every programmer, coder or what ever we call our selves.  So through the project when testing error messages would indicate that I's missed ending tags or some times i'd notice a div wasn't displaying properly so bugs were a constant manageable reality, These errors in code if missed first whilst working on feature were revealed in the testing stages.
+  - CSS can be a nightmare and picking through code line by line is sometimes the only option, at one point Jigsaw-w3 kept telling me that the error was with ID blah and I couldn't for the life of me find it, until I deleted the ID completely only to find I'd cloned the same code at the bottom of the page where the error actually was.
+- **Current Errors/Bugs**
+  - During testing it has been discovered through Dev-tools and confirmed with Jigsaw-w3 that some Style sheets have issues but these styles are held by FontAwesome and Bootstrap so its difficult to understand why all styles still work and do what they're supposed to...
+  - Cookie warning, change to how Chrome will handle Cookies in the future.
+- **Contrast**
+  - I'm very aware that I've warnings over 'a' Links for contrast issues being the size of text being small, so I'd addressed this by making Links Bolder so as not to change the aesthetic. Site looks great, peer review has not shown there to be a problem but in new iterations this issue will be addressed.
+- **Collect Static**
+  - What a lot of palaver. In future projects I think I will let Heroku deal with this as so many times I thought I had a bug, made drastic changes only to find I'd not collected static before pushing to the main. Is it a Bug? No but I treat it as such and something to be aware of.
 
 ## Deployment  
  - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
