@@ -1,5 +1,5 @@
 # NA-SHARE  
-### A Narcotics Anonymous Sharing Community.  
+### A Narcotics Anonymous Inspired - Sharing Community.  
 
 ![Am I Responsive Image.](/project_readmes/images/ui.dev2.png)  
 Here is a table of contents for your document:
