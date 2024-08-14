@@ -237,7 +237,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Production Tools**: Balsamiq, Chrome-Dev-Tools, Chrome-Extensions  
 
 ## Credits  
-- **Imaees**
+- **Images**
   - https://ytcbk-twnex.pyxl.ai/  
     Tool for creating AI generated websites, I choose to research design templates and found this site provides a free tier level set up and all images with design provided were for free use... Love the design but only used some of the design imagery.
   - Other images sourced via Chat-GPT searches.
