@@ -223,6 +223,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Deployment  
  - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
+ - GitHub Repository... link to repo [NA-Share](https://github.com/Damitwhy/NA-Share)  
 
 
 ## Technologies Used  
