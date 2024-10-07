@@ -232,7 +232,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Collect Static**
   - What a lot of palaver. In future projects I think I will let Heroku deal with this as so many times I thought I had a bug, made drastic changes only to find I'd not collected static before pushing to the main. Is it a Bug? No but I treat it as such and something to be aware of.
 
-## Installation Instructions
+## Installation on your IDE locally
 
 1. **Clone this Repository**:
    - Create a new repository by cloning this NA-Share GitHub repository:
@@ -259,7 +259,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
        ```
 
 4. **Install Dependencies**:
-   - Install all dependencies from the requirements.txt:
+   - Install all dependencies from the requirements.txt :
      ```sh
      pip install -r requirements.txt
      ```
@@ -271,7 +271,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
      ```
 
 6. **Set DEBUG to False for Deployment**:
-   - Remember always to set [`DEBUG`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fworkspace%2FNA-Share%2FREADME.md%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A242%2C%22character%22%3A28%7D%7D%5D%2C%22dd83b4f9-d516-48dd-ae0a-6cdf25c586f8%22%5D "Go to definition") to [`False`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fworkspace%2FNA-Share%2FREADME.md%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A242%2C%22character%22%3A39%7D%7D%5D%2C%22dd83b4f9-d516-48dd-ae0a-6cdf25c586f8%22%5D "Go to definition") in `settings.py` before deploying. Sites like Heroku are great for testing your deployments.
+   - Remember always to set [`DEBUG`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fworkspace%2FNA-Share%2FREADME.md%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A242%2C%22character%22%3A28%7D%7D%5D%2C%22dd83b4f9-d516-48dd-ae0a-6cdf25c586f8%22%5D "Go to definition") to [`False`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fworkspace%2FNA-Share%2FREADME.md%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A242%2C%22character%22%3A39%7D%7D%5D%2C%22dd83b4f9-d516-48dd-ae0a-6cdf25c586f8%22%5D "Go to definition") in `settings.py` before deploying. Hint sites like Heroku are great for testing your deployments.
 
 7. **Handle Migrations**:
    - There tends to be a warning that no migrations have been made when you first run the server, but this doesn't stop the Django page from loading up. I've normally waited to migrate until I've started to fill the `models.py` file with the ERD model that I require moving forward.
@@ -287,7 +287,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Database Configuration:
 
-- Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB.
+- Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB NA-Share is already set up to use PostgreSQL database URL.
 - To use PostgreSQL, create a `env.py` file in the root directory of your project and add the following environment variables pointing to your Postgresql URL:
   ```sh 
   import os
@@ -312,6 +312,9 @@ The .gitignore file will already be set up to ignore the env.py file to prevent 
 ### Additional Notes
 - Ensure you have Python and pip installed on your system.
 - Adjust the repository URL in the clone command to match your actual repository URL.
+
+- For detailed information and troubleshooting, refer to the [Django documentation](https://docs.djangoproject.com/). You can also seek help from the [Django community](https://forum.djangoproject.com/).
+
 - If you encounter any issues, refer to the Django documentation or seek help from the community.
 
 These instructions should help you set up the project in your IDE correctly.
@@ -324,14 +327,17 @@ These instructions should help you set up the project in your IDE correctly.
   - Add the Heroku remote to your repository with the command: `heroku git:remote -a <your-app-name>`
   - Ensure your `requirements.txt` and `Procfile` are in the root directory of your project. The `Procfile` should contain: `web: gunicorn na_share.wsgi`
   - Add a `runtime.txt` file to specify the Python version, e.g., `Python 3.12.4`
-  - Set up the database configuration in `settings.py` using `dj_database_url` and add the `DATABASE_URL` config var in Heroku.
-  - Add the following to your `settings.py`:
+  - Set up the database configuration in `settings.py` using `dj_database_url` and add the `DATABASE_URL` and `SECRET_KEY` config var in Heroku.
+  - Having already installed this when setting up NA-Share on you IDE you can verify the following in your `settings.py`:
     ```python
     import dj_database_url
     if os.path.isfile('env.py'):
       import env
     ```
-  - Collect static files with the command: `python3 manage.py collectstatic`
+  - Collect static files with the command: 
+    ```sh
+    python3 manage.py collectstatic
+    ```
   - Commit your changes and push to Heroku with the commands:
     ```sh
     git add .
@@ -340,6 +346,10 @@ These instructions should help you set up the project in your IDE correctly.
     ```
   - Run migrations on Heroku with the command: `heroku run python3 manage.py migrate`
   - Open your app in the browser with the command: `heroku open`
+
+Congratulations you have deployed to Heroku using the commandline interface or terminal window.
+
+
  
  ## NA-Share's current deployment links:
  - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
