@@ -232,19 +232,75 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Collect Static**
   - What a lot of palaver. In future projects I think I will let Heroku deal with this as so many times I thought I had a bug, made drastic changes only to find I'd not collected static before pushing to the main. Is it a Bug? No but I treat it as such and something to be aware of.
 
-## Deployment/Installation
+## Installation Instructions
 
-**Installation instructions.**
-  - Create a new repository by cloning this NA-Share GitHub repository.
-  - Open your new repository in VSCode desktop with the GitHub desktop app.
-  - Create a virtual environment (venv) if it's not already created, then activate the 'venv' folder (python environment) with this command: `.\venv\Scripts\activate`
-  - Install all dependencies from the `requirements.txt` with the command: `pip3 install -r requirements.txt`
-  - Run the server to see the Django opening page with the command: `python3 manage.py runserver`
-  - Remember always to set `DEBUG` to `False` in `settings.py` before deploying. Sites like Heroku are great for testing your deployments.
-  - There tends to be a warning that no migrations have been made when you first run the server, but this doesn't stop the Django page from loading up. I've normally waited to migrate until I've started to fill the `models.py` file with the ERD model that I require moving forward.
-  - When you're ready to migrate, use the command: `python3 manage.py makemigrations` to see which migrations will take place, then use the command: `python3 manage.py migrate` to write to the database you've chosen to host your data. Django's default database is `db.sqlite3`, which is a file in the root directory, but you may be better off with an off-site database like PostgreSQL, MySQL, or one I've not used like MongoDB maybe.
+1. **Clone this Repository**:
+   - Create a new repository by cloning this NA-Share GitHub repository:
+     ```sh
+     git clone https://github.com/Damitwhy/NA-Share.git
+     ```
 
-**Deployment to Heroku instructions.**
+2. **Open in VSCode**:
+   - Open your new repository in VSCode desktop with the GitHub desktop app or manually open the folder in VSCode.
+
+3. **Create and Activate Virtual Environment**:
+   - Create a virtual environment (venv) if it's not already created:
+     ```sh
+     python3 -m venv venv
+     ```
+   - Activate the virtual environment:
+     - **Windows**:
+       ```sh
+       .\venv\Scripts\activate
+       ```
+     - **macOS/Linux**:
+       ```sh
+       source venv/bin/activate
+       ```
+
+4. **Install Dependencies**:
+   - Install all dependencies from the 
+
+requirements.txt
+
+:
+     ```sh
+     pip install -r requirements.txt
+     ```
+
+5. **Run the Server**:
+   - Run the server to see the Django opening page:
+     ```sh
+     python manage.py runserver
+     ```
+
+6. **Set DEBUG to False for Deployment**:
+   - Remember always to set [`DEBUG`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fworkspace%2FNA-Share%2FREADME.md%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A242%2C%22character%22%3A28%7D%7D%5D%2C%22dd83b4f9-d516-48dd-ae0a-6cdf25c586f8%22%5D "Go to definition") to [`False`](command:_github.copilot.openSymbolFromReferences?%5B%22%22%2C%5B%7B%22uri%22%3A%7B%22scheme%22%3A%22file%22%2C%22authority%22%3A%22%22%2C%22path%22%3A%22%2Fworkspace%2FNA-Share%2FREADME.md%22%2C%22query%22%3A%22%22%2C%22fragment%22%3A%22%22%7D%2C%22pos%22%3A%7B%22line%22%3A242%2C%22character%22%3A39%7D%7D%5D%2C%22dd83b4f9-d516-48dd-ae0a-6cdf25c586f8%22%5D "Go to definition") in `settings.py` before deploying. Sites like Heroku are great for testing your deployments.
+
+7. **Handle Migrations**:
+   - There tends to be a warning that no migrations have been made when you first run the server, but this doesn't stop the Django page from loading up. I've normally waited to migrate until I've started to fill the `models.py` file with the ERD model that I require moving forward.
+   - When you're ready to migrate, use the following commands:
+     - To create migrations:
+       ```sh
+       python manage.py makemigrations
+       ```
+     - To apply migrations:
+       ```sh
+       python manage.py migrate
+       ```
+
+8. **Database Configuration**:
+   - Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB.
+
+### Additional Notes
+- Ensure you have Python and pip installed on your system.
+- Adjust the repository URL in the clone command to match your actual repository URL.
+- If you encounter any issues, refer to the Django documentation or seek help from the community.
+
+These instructions should help you set up the project in your IDE correctly.
+
+## Deployment to Heroku instructions
+
   - Install the Heroku CLI from [here](https://devcenter.heroku.com/articles/heroku-cli).
   - Log in to your Heroku account using the command: `heroku login`
   - Create a new Heroku app with the command: `heroku create <your-app-name>`
@@ -266,7 +322,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
     ```
   - Run migrations on Heroku with the command: `heroku run python3 manage.py migrate`
   - Open your app in the browser with the command: `heroku open`
- - 
+ 
+ ## NA-Share's current deployment links:
  - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
  - GitHub Repository... link to repo [NA-Share](https://github.com/Damitwhy/NA-Share)  
 
