@@ -232,7 +232,41 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Collect Static**
   - What a lot of palaver. In future projects I think I will let Heroku deal with this as so many times I thought I had a bug, made drastic changes only to find I'd not collected static before pushing to the main. Is it a Bug? No but I treat it as such and something to be aware of.
 
-## Deployment  
+## Deployment/Installation
+
+**Installation instructions.**
+  - Create a new repository by cloning this NA-Share GitHub repository.
+  - Open your new repository in VSCode desktop with the GitHub desktop app.
+  - Create a virtual environment (venv) if it's not already created, then activate the 'venv' folder (python environment) with this command: `.\venv\Scripts\activate`
+  - Install all dependencies from the `requirements.txt` with the command: `pip3 install -r requirements.txt`
+  - Run the server to see the Django opening page with the command: `python3 manage.py runserver`
+  - Remember always to set `DEBUG` to `False` in `settings.py` before deploying. Sites like Heroku are great for testing your deployments.
+  - There tends to be a warning that no migrations have been made when you first run the server, but this doesn't stop the Django page from loading up. I've normally waited to migrate until I've started to fill the `models.py` file with the ERD model that I require moving forward.
+  - When you're ready to migrate, use the command: `python3 manage.py makemigrations` to see which migrations will take place, then use the command: `python3 manage.py migrate` to write to the database you've chosen to host your data. Django's default database is `db.sqlite3`, which is a file in the root directory, but you may be better off with an off-site database like PostgreSQL, MySQL, or one I've not used like MongoDB maybe.
+
+**Deployment to Heroku instructions.**
+  - Install the Heroku CLI from [here](https://devcenter.heroku.com/articles/heroku-cli).
+  - Log in to your Heroku account using the command: `heroku login`
+  - Create a new Heroku app with the command: `heroku create <your-app-name>`
+  - Add the Heroku remote to your repository with the command: `heroku git:remote -a <your-app-name>`
+  - Ensure your `requirements.txt` and `Procfile` are in the root directory of your project. The `Procfile` should contain: `web: gunicorn <your_project_name>.wsgi`
+  - Add a `runtime.txt` file to specify the Python version, e.g., `python-3.8.10`
+  - Set up the database configuration in `settings.py` using `dj_database_url` and add the `DATABASE_URL` config var in Heroku.
+  - Add the following to your `settings.py`:
+    ```python
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+    ```
+  - Collect static files with the command: `python3 manage.py collectstatic`
+  - Commit your changes and push to Heroku with the commands:
+    ```sh
+    git add .
+    git commit -m "Prepare for Heroku deployment"
+    git push heroku main
+    ```
+  - Run migrations on Heroku with the command: `heroku run python3 manage.py migrate`
+  - Open your app in the browser with the command: `heroku open`
+ - 
  - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
  - GitHub Repository... link to repo [NA-Share](https://github.com/Damitwhy/NA-Share)  
 
