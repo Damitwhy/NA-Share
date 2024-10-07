@@ -259,11 +259,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
        ```
 
 4. **Install Dependencies**:
-   - Install all dependencies from the 
-
-requirements.txt
-
-:
+   - Install all dependencies from the requirements.txt:
      ```sh
      pip install -r requirements.txt
      ```
@@ -279,7 +275,7 @@ requirements.txt
 
 7. **Handle Migrations**:
    - There tends to be a warning that no migrations have been made when you first run the server, but this doesn't stop the Django page from loading up. I've normally waited to migrate until I've started to fill the `models.py` file with the ERD model that I require moving forward.
-   - When you're ready to migrate, use the following commands:
+  - You will be ready to migrate when you've set up your default database. See the [Database Configuration](#database-configuration) section. When that is done, you can move on to migrations using the following commands:
      - To create migrations:
        ```sh
        python manage.py makemigrations
@@ -289,8 +285,29 @@ requirements.txt
        python manage.py migrate
        ```
 
-8. **Database Configuration**:
-   - Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB.
+## Database Configuration:
+
+- Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB.
+- To use PostgreSQL, create a `env.py` file in the root directory of your project and add the following environment variables pointing to your Postgresql URL:
+  ```sh 
+  import os
+  os.environ['SECRET_KEY'] = 'your_secret_key'
+  os.environ['DATABASE_URL'] = 'postgres://yourusername:yourpassword@yourhost:yourport/yourdatabase'
+  ```
+- This `settings.py` file is set up to use the `env.py` file. You can verify following code in the `settings.py` file:
+  ```sh
+  import os
+  import environ
+
+  # Load environment variables from env.py
+  if os.path.exists('env.py'):
+      import env
+
+  SECRET_KEY = os.environ.get("SECRET_KEY")
+  DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+    
+  ```
+The .gitignore file will already be set up to ignore the env.py file to prevent it from being uploaded to the repository.
 
 ### Additional Notes
 - Ensure you have Python and pip installed on your system.
@@ -305,13 +322,14 @@ These instructions should help you set up the project in your IDE correctly.
   - Log in to your Heroku account using the command: `heroku login`
   - Create a new Heroku app with the command: `heroku create <your-app-name>`
   - Add the Heroku remote to your repository with the command: `heroku git:remote -a <your-app-name>`
-  - Ensure your `requirements.txt` and `Procfile` are in the root directory of your project. The `Procfile` should contain: `web: gunicorn <your_project_name>.wsgi`
-  - Add a `runtime.txt` file to specify the Python version, e.g., `python-3.8.10`
+  - Ensure your `requirements.txt` and `Procfile` are in the root directory of your project. The `Procfile` should contain: `web: gunicorn na_share.wsgi`
+  - Add a `runtime.txt` file to specify the Python version, e.g., `Python 3.12.4`
   - Set up the database configuration in `settings.py` using `dj_database_url` and add the `DATABASE_URL` config var in Heroku.
   - Add the following to your `settings.py`:
     ```python
     import dj_database_url
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+    if os.path.isfile('env.py'):
+      import env
     ```
   - Collect static files with the command: `python3 manage.py collectstatic`
   - Commit your changes and push to Heroku with the commands:
