@@ -364,16 +364,21 @@ Congratulations you have deployed to Heroku using the commandline interface or t
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20009.png)
 - Now add your key and value pairs for `DATA_BASE`, `SECRET_KEY` and for `DISABLE_COLLECTSTATIC` set value to `1`.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20003.png)
-- Now goto the `deploy` tab click on github in the `Deployment Method` section, when there, follow instructions to find your NA-Share cloned repository app and connect it to the Heroku app.
+- Now goto the `deploy` tab click on github in the `Deployment Method` section, when there, follow instructions to find your NA-Share cloned repository app on GitHub and connect it to the Heroku app.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20004.png)
 
-- At the bottom of the the Deploy page press on the `Deploy Branch` button in the `Manual Deply` section.
+- At the bottom of the the Deploy page press on the `Deploy Branch` button in the `Manual Deploy` section.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20005.png)
+- It should take a few minutes for NA-Share to be uploaded and deployed to Heroku. You will see the files processed.
+ ![Dashboard](/project_readmes/images/Heroku%20deployment%20010.png)
+- Once complete, a `view` button will appear, click this link to see your deployed site.
+![Dashboard](/project_readmes/images/Heroku%20deployment%20011.png)
+
+Congratulations if all went well then you've now deployed to Heroku by using the online Heroku dashboard UI.
  
 ## NA-Share's current deployment links:
  - Heroku deployment... Link to NA-Share [NA-Share](https://na-share-b53b0f36b98a.herokuapp.com/)
  - GitHub Repository... link to repo [NA-Share](https://github.com/Damitwhy/NA-Share)  
-
 
 ## Technologies Used  
 
