@@ -359,7 +359,9 @@ Congratulations you have deployed to Heroku using the commandline interface or t
 - Add an app-name, choose Region, I've used Europe as I'm deploying from England. Then press create app.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20006.png)
 - goto `settings` tab. then `Config Vars` and `Reveal Vars`.
- 
+ ![Dashboard](/project_readmes/images/Heroku%20deployment%20007.png)
+ ![Dashboard](/project_readmes/images/Heroku%20deployment%20008.png)
+ ![Dashboard](/project_readmes/images/Heroku%20deployment%20009.png)
 - Now add your key and value pairs for `DATA_BASE`, `SECRET_KEY` and for `DISABLE_COLLECTSTATIC` set value to `1`.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20003.png)
 - Now goto the `deploy` tab click on github in the `Deployment Method` section, when there, follow instructions to find your NA-Share cloned repository app and connect it to the Heroku app.
