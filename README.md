@@ -352,7 +352,7 @@ These instructions should help you set up the project in your IDE correctly.
 Congratulations you have deployed to Heroku using the commandline interface or terminal window.
 
 ## Deployment to Heroku using the Heroku Web UI
-- First prep the installation in your IDE by collecting Stactic. making migrations and migrating.
+- First prep the installation in your IDE by collecting Static. making migrations and migrating.
 - Once you have signed in to your Heroku account you will be presented with your [Dashboard](https://dashboard.heroku.com/apps) press the `New` tab/button then `create a new app` from the drop down.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20001.png)
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20002.png)
