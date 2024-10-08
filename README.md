@@ -355,8 +355,9 @@ Congratulations you have deployed to Heroku using the commandline interface or t
 - First prep the installation in your IDE by collecting Stactic. making migrations and migrating.
 - Once you have signed in to your Heroku account you will be presented with your [Dashboard](https://dashboard.heroku.com/apps) press the `New` tab/button then `create a new app` from the drop down.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20001.png)
-- Add an app-name, choose Region, I've used Europe as I'm deploying from England. Then press create app.
  ![Dashboard](/project_readmes/images/Heroku%20deployment%20002.png)
+- Add an app-name, choose Region, I've used Europe as I'm deploying from England. Then press create app.
+ ![Dashboard](/project_readmes/images/Heroku%20deployment%20006.png)
 - goto `settings` tab. then `Config Vars` and `Reveal Vars`.
  
 - Now add your key and value pairs for `DATA_BASE`, `SECRET_KEY` and for `DISABLE_COLLECTSTATIC` set value to `1`.
