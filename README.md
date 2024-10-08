@@ -406,7 +406,7 @@ Congratulations if all went well then you've now deployed to Heroku by using the
   - Stack over flow  
 
 - **Colleagues**  
- - I'd just like to thank my peers and tutors :kissing_heart: at Code Institute Slack channel, Without whom I'd still be scratching my head wondering how all this works. Thank you for your time and patience, for telling me im wrong and helping me get back up to try again :blush: ...Oh and my assessors! :wink:
+  - I'd just like to thank my peers and tutors :kissing_heart: at Code Institute Slack channel, Without whom I'd still be scratching my head wondering how all this works. Thank you for your time and patience, for telling me im wrong and helping me get back up to try again :blush: ...Oh and my assessors! :wink:
 
 ## Contributing
 I welcome contributions! To the NA-Share project.
