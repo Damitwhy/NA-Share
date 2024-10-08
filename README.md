@@ -394,9 +394,10 @@ Congratulations if all went well then you've now deployed to Heroku by using the
 ## Credits  
 - **Images**
   - https://ytcbk-twnex.pyxl.ai/  
-    Tool for creating AI generated websites, I choose to research design templates and found this site provides a free tier level set up and all images with design provided were for free use... Love the design but only used some of the design imagery.
+    Tool for creating AI generated websites, I choose to research design templates and found this site provides a free tier level set up and all images with design provided were for free use... Love the design but only used some of the design imagery in the NA-Share project.
   - Other images sourced via Chat-GPT searches.
   - To use the NA logo, individuals or groups typically need to obtain permission from NA World Services. This ensures that the logo is used in a manner that respects the organization’s guidelines and maintains the integrity of the brand. Verbally I have agreed its use is restricted to this capstone project and will not be put into production, I can use here. Having sent for written permission to use on future real world deployments of this Application, Awaiting response.
+    - Response recieved and am informed the logo used in this project can only be used for educational purposes, the the sake of this assessment. I've decided to change the logo any way while here adding the Install and Deployment instructions for the assessment criteria.
 - **Research**
   - Chat-GPT
   - GitHub Copilot
