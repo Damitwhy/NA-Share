@@ -12,6 +12,16 @@ Here is a table of contents for your document:
 3. [Agile - Workflow - Kanban Board](#agile---workflow---kanban-board)
 4. [Usage](#usage)
 5. [Features](#features)
+6. [Features Left to Implement](#features-left-to-implement)
+7. [Testing](#testing)
+8. [Bugs & Fixes](#bugs--fixes)
+9. [Installation on your IDE locally](#installation-on-your-ide-locally)
+10. [Database Configuration](#database-configuration)
+11. [Deployment to Heroku using the Heroku CLI](#deployment-to-heroku-using-the-heroku-cli)
+12. [Deployment to Heroku using the Heroku Web UI](#deployment-to-heroku-using-the-heroku-web-ui)
+13. [NA-Share's current deployment links](#na-shares-current-deployment-links)
+14. [Technologies Used](#technologies-used)
+15. [Credits](#credits)
 
 
 ## Overview  
@@ -179,7 +189,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 - **Report Content**
   - Ability to fast track a report abuse of service with dated record reporter and Abuser...
 - **Policy of Use**
-  - With legal research and advice.  
+  - With legal research and advice, I would like to impliment a policy statement.  
 - **Like or Rate**  A rating system was created but bugfixes were holding back basic CRUD progress so this remains in the back log for future upgrade.
   - feature to like or rate, shares, comments and users...
 
@@ -220,6 +230,22 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - CSS Tested with https://jigsaw.w3.org/css-validator/    
     - ![CSS Validation Success](/project_readmes/images/CSS-Validation-13-08-24.png), Throws up warnings on Bootstrap issues but NA-Share's style.css sheet shows no errors.  
   - Contrast Testing with WCAG Color contrast checker as a Chrome Extension. found fault with 'a' links being too small for there current colors. Changed Text-weight to compensate. Found that this app also indicated white text on dark background so I've Asked for peer review on Slack and the ten people who've responded, looked and found no issue with the visibility of current weight change.  
+
+### Table of testing
+
+
+| Feature                | Test Case Description                                                                 | Expected Outcome                                                                 | Actual Outcome                                                                   | Status  |
+|------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------|
+| JavaScript Validation  | Validate `script.js` via https://www.site24x7.com/tools/javascript-validator.html      | No errors or warnings                                                            | No errors or warnings                                                            | Pass    |
+| Register               | Test user registration functionality                                                   | User should be able to register successfully                                     | User registered successfully                                                     | Pass    |
+| Share                  | Test Create, Read, Edit, and Delete functionality for shares                           | All CRUD operations should work as expected                                      | All CRUD operations worked as expected                                           | Pass    |
+| Comment                | Test Create, Read, Edit, and Delete functionality for comments                         | All CRUD operations should work as expected                                      | All CRUD operations worked as expected                                           | Pass    |
+| Comment on Comment     | Test Create, Read, Edit, and Delete functionality for comments on comments             | All CRUD operations should work as expected                                      | All CRUD operations worked as expected                                           | Pass    |
+| URLs                   | Test views for all URLs                                                                | No complications or hangs on opening pages, full functionality noted             | No complications or hangs, full functionality noted                              | Pass    |
+| Security               | Test non-authenticated user editing, deletion, creation for all CRUD calls to action   | Non-authenticated users should not be able to perform CRUD operations            | Non-authenticated users were unable to perform CRUD operations                   | Pass    |
+| Admin Page Access      | Test middleware to stop access to /admin page                                          | Non-authenticated users should receive a 403 forbidden access response           | Non-authenticated users received a 403 forbidden access response                 | Pass    |
+| Browser Compatibility  | Run all CRUD type tests on Google Chrome                                               | All CRUD operations should work as expected                                      | All CRUD operations worked as expected                                           | Pass    |
+
 ## Bugs & Fixes
 - **Open and Un-closed Tag**  
   - I Know Right? So this is the bane of every programmer, coder or what ever we call our selves.  So through the project when testing error messages would indicate that I's missed ending tags or some times i'd notice a div wasn't displaying properly so bugs were a constant manageable reality, These errors in code if missed first whilst working on feature were revealed in the testing stages.
