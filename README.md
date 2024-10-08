@@ -248,7 +248,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Bugs & Fixes
 - **Open and Un-closed Tag**  
-  - I Know Right? So this is the bane of every programmer, coder or what ever we call our selves.  So through the project when testing error messages would indicate that I's missed ending tags or some times i'd notice a div wasn't displaying properly so bugs were a constant manageable reality, These errors in code if missed first whilst working on feature were revealed in the testing stages.
+  - I Know Right? So this is the bane of every programmer, coder or what ever we call our selves.  So through the project when testing error messages would indicate that I'd missed ending tags or some times I'd notice a div wasn't displaying properly so bugs were a constant manageable reality, These errors in code if missed first whilst working on feature were revealed in the testing stages.
   - CSS can be a nightmare and picking through code line by line is sometimes the only option, at one point Jigsaw-w3 kept telling me that the error was with ID blah and I couldn't for the life of me find it, until I deleted the ID completely only to find I'd cloned the same code at the bottom of the page where the error actually was.
 - **Current Errors/Bugs**
   - During testing it has been discovered through Dev-tools and confirmed with Jigsaw-w3 that some Style sheets have issues but these styles are held by FontAwesome and Bootstrap so its difficult to understand why all styles still work and do what they're supposed to...
@@ -257,6 +257,11 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
   - I'm very aware that I've warnings over 'a' Links for contrast issues being the size of text being small, so I'd addressed this by making Links Bolder so as not to change the aesthetic. Site looks great, peer review has not shown there to be a problem but in new iterations this issue will be addressed.
 - **Collect Static**
   - What a lot of palaver. In future projects I think I will let Heroku deal with this as so many times I thought I had a bug, made drastic changes only to find I'd not collected static before pushing to the main. Is it a Bug? No but I treat it as such and something to be aware of.
+- **Assessment Criteria**
+  - It was noted that there was no Table of testing in the README.md file and Functional testing should be expanded upon, this was updated.
+  - the Assessment Failed on not having detailed Deployment to Heroku and local installation instructions. this is now fixed.
+  - On assessment it was suggested `please consider a formally delimited footer for the social media icons,` This has been fixed, I've boxed the footer but I'm unhappy with its look but for the sake of the assessment I will revert back once the assessment is complete.
+  - On assessment it was suggested `and there is some unnecessary whitespace below the footer elements on login page.` I have not fixed this issue in large screens as I've created the site with mobile first methodology and in mobile view this issue is not present, to fix this I've attempted to set margin-bottom on footer but as you can see if I increase the size of the Login main area it will force the footer down taking whitespace away but ruin the overall look of the site. So as a suggestion this will remain an issue for new itteration.
 
 ## Installation on your IDE locally
 
@@ -423,7 +428,7 @@ Congratulations if all went well then you've now deployed to Heroku by using the
     Tool for creating AI generated websites, I choose to research design templates and found this site provides a free tier level set up and all images with design provided were for free use... Love the design but only used some of the design imagery in the NA-Share project.
   - Other images sourced via Chat-GPT searches.
   - To use the NA logo, individuals or groups typically need to obtain permission from NA World Services. This ensures that the logo is used in a manner that respects the organization’s guidelines and maintains the integrity of the brand. Verbally I have agreed its use is restricted to this capstone project and will not be put into production, I can use here. Having sent for written permission to use on future real world deployments of this Application, Awaiting response.
-    - Response recieved and am informed the logo used in this project can only be used for educational purposes, the the sake of this assessment. I've decided to change the logo any way while here adding the Install and Deployment instructions for the assessment criteria.
+    - Response recieved and I am informed the logo used in this project can only be used for educational purposes, for the sake of this assessment. I've decided to change the logo now while here adding the Install and Deployment instructions for the assessment criteria fullfillment.
 - **Research**
   - Chat-GPT
   - GitHub Copilot

@@ -373,6 +373,14 @@ a:hover {
     width: auto;
 }
 
+footer {
+    background-color: #CCE6FF;
+    border: 2px solid #6096B7;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
 .messages {
     text-align: center;
     list-style-type: none;
