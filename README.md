@@ -234,6 +234,8 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Installation on your IDE locally
 
+If you're using GitPod your GitPod local environment will be installed automatically, follow these steps to install a local environment to run python and install dependencies.
+
 1. **Clone this Repository**:
    - Create a new repository by cloning this NA-Share GitHub repository:
      ```sh
@@ -287,7 +289,7 @@ The NA-Share project hopes to utilize the same benefits found in the process of 
 
 ## Database Configuration:
 
-- Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB NA-Share is already set up to use PostgreSQL database URL.
+- Django's default database is `db.sqlite3`, which is a file in the root directory. However, you may be better off with an off-site database like PostgreSQL, MySQL, or MongoDB, NA-Share is already set up to use PostgreSQL database URL.
 - To use PostgreSQL, create a `env.py` file in the root directory of your project and add the following environment variables pointing to your Postgresql URL:
   ```sh 
   import os
