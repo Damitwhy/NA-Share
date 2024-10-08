@@ -189,8 +189,11 @@ a:hover {
 }
 
 .logo-png {
-    width: 50px;
+    width: 60px;
     height: auto;
+    border: #333 2px solid;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .note-group-select-from-files {
